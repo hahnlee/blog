@@ -17,7 +17,7 @@ google_analytics: UA-89496100-1
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://sn0wle0pard.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:title/
 permalink_defaults:
 
 # Menu
