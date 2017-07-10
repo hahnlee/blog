@@ -43,7 +43,7 @@ node-webkit은 Atom과 매우 비슷한 길을 걷고 있었습니다. node-webk
 node-webkit도 Chromium을 기반으로한 플랫폼이 되었습니다.
 <hr>
 따라서 Atom을 커스텀 네이티브 레이어에서 node-webkit으로 전환하려는 유혹이 매우 컸습니다.
-그리고 Atom editor 개발자들은 실제로 node-webkit으로 포팅하려 시도햇습니다.
+그리고 Atom editor 개발자들은 실제로 node-webkit으로 포팅하려 시도했습니다.
 
 그 당시에 이미 Atom은 큰 코드베이스가 되어 있었습니다.
 따라서 포팅 작업량이 엄청났으며, Atom은 커스텀된 네이티브 바인딩을 많이 사용하고 있었기 때문에,
