@@ -1,5 +1,5 @@
 ---
-title: "Python의 내부: 소개"
+title: "[번역]Python의 내부: 소개"
 date: 2017-09-02 12:34:11
 tags:
     - Python

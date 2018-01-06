@@ -1,5 +1,5 @@
 ---
-title: React로 Multi-Step 가입 폼 만들기
+title: "[번역]React로 Multi-Step 가입 폼 만들기"
 date: 2017-01-20
 tag:
     - React

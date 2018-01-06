@@ -1,5 +1,5 @@
 ---
-title: Electron의 진화
+title: "[번역]Electron의 진화"
 date: 2017-07-03 21:55:07
 tags:
     - Electron

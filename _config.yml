@@ -23,9 +23,6 @@ permalink_defaults:
 # Menu
 menu:
     Home: /
-    Archives: archives
-    Categories: categories
-    Tags: tags
     About: http://sn0wle0pard.io
 
 # Directory
