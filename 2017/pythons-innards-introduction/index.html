@@ -38,8 +38,8 @@
 
 <section>
     <blockquote>
-<p>이글은 <a href="https://tech.blog.aknin.name/" target="_blank" rel="external">Yaniv Aknin</a>의 <a href="https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/" target="_blank" rel="external">Python’s Innards: Introduction</a>을 번역한 글입니다.
-원글에 따라 이 글도 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="external">CC BY-NC-SA 3.0</a> 라이센스를 따릅니다.</p>
+<p>이글은 <a href="https://tech.blog.aknin.name/" target="_blank" rel="noopener">Yaniv Aknin</a>의 <a href="https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/" target="_blank" rel="noopener">Python’s Innards: Introduction</a>을 번역한 글입니다.
+원글에 따라 이 글도 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA 3.0</a> 라이센스를 따릅니다.</p>
 </blockquote>
 <p>한 친구가 제게 말한적이 있습니다.
 너도 알겠지만 몇몇 사람들에게 C는 그저 어셈블리로 확장되는 매크로야.
@@ -51,7 +51,7 @@
 아니, 정말이지, 그가 도제체 무슨 짓을 한 거야?!
 음, 프로그램으로 돌아가죠.
 어쨌든, Gudio van Rossum<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>의 눈에 Python은 어떻게 생겼을까요?</p>
-<p>이 글은 파이썬 내부 구조에 대한 <a href="https://tech.blog.aknin.name/tag/pythons-innards/" target="_blank" rel="external">시리즈</a>로 나아갈 시작점 이며,
+<p>이 글은 파이썬 내부 구조에 대한 <a href="https://tech.blog.aknin.name/tag/pythons-innards/" target="_blank" rel="noopener">시리즈</a>로 나아갈 시작점 이며,
 저는 무언가를 이해하기 위한 가장 좋은 방법은 설명하는 것 이라고 생각하기 때문에 글을 쓰고 있습니다.
 그리고 저는 제가 Python 코드를 읽으면서 Python의 ‘펑키한 녹색 스프’를 더 많이 시각화 할 수 있기를 바라고 있습니다.
 커리큘럼은 <em>CPython</em>, <em>py3k</em><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>, <em>바이트코드 해석</em>(저는 별로 컴파일 과정의 광팬이 아닙니다.)을 다룰 겁니다.
@@ -62,18 +62,18 @@
 여러분은 CPython에 기여하고 싶다면 이글을 읽어야 합니다.
 여러분은 제 실수를 찾기 위해서 이 글을 읽어야 하고, 제 뒤에서 저를 비웃거나 악플을 달아야 합니다.
 저는 그것들이 단지 애정을 표현하는 <em>여러분들</em>의 특별한 방법이라는 것을 알았습니다.</p>
-<p>저는 주로 Python의 소스코드나 다른 좋은 자료들(Python 문서, 특히 <a href="https://docs.python.org/3/c-api/index.html" target="_blank" rel="external">이것</a>과 <a href="https://docs.python.org/3/extending/index.html" target="_blank" rel="external">이것</a>, PyCon 강연, <a href="https://mail.python.org/mailman/listinfo/python-dev" target="_blank" rel="external">python-dev</a><a href="https://tech.blog.aknin.name/2010/05/07/searching-mailing-list-archives-offline/" target="_blank" rel="external">검색</a> 결과)을 모아 놓은 것에서 자료를 모을 것 입니다.
+<p>저는 주로 Python의 소스코드나 다른 좋은 자료들(Python 문서, 특히 <a href="https://docs.python.org/3/c-api/index.html" target="_blank" rel="noopener">이것</a>과 <a href="https://docs.python.org/3/extending/index.html" target="_blank" rel="noopener">이것</a>, PyCon 강연, <a href="https://mail.python.org/mailman/listinfo/python-dev" target="_blank" rel="noopener">python-dev</a><a href="https://tech.blog.aknin.name/2010/05/07/searching-mailing-list-archives-offline/" target="_blank" rel="noopener">검색</a> 결과)을 모아 놓은 것에서 자료를 모을 것 입니다.
 모든 자료들이 그곳들에 있겠지만,
 자료들을 RSS구독을 할 수 있는 한 곳에 모으려는 제 노력이 여러분의 여정을 더 쉽게 만들어 주기를 바랍니다.
 저는 독자 분들이 C언어 지식, 조금의 OS 이론, (어떤 아키텍쳐든) 조금 적은 어셈블리 지식, 조금 많은 Python 지식 그리고 UNIX 적합성(즉, 편한한 마음으로 출처에서 무언가를 설치할 수 있어야 합니다)을 가지고 있다고 생각하겠습니다.
 만약에 여러분이 이중 하나 (혹은 그 이상)익숙하지 않더라도 두려워 하지는 마세요,
 그렇지만 저는 순조로운 항해를 약속 할 수는 없습니다.
-또한, Python 개발에 사용할 툴체인이 없다면 <a href="https://tech.blog.aknin.name/2010/04/08/contributing-to-python/" target="_blank" rel="external">여기</a>로 가서 두번째 (그리고 관련있는 다음)단락에서 말한 대로 하는 것이 좋을 것 입니다.</p>
+또한, Python 개발에 사용할 툴체인이 없다면 <a href="https://tech.blog.aknin.name/2010/04/08/contributing-to-python/" target="_blank" rel="noopener">여기</a>로 가서 두번째 (그리고 관련있는 다음)단락에서 말한 대로 하는 것이 좋을 것 입니다.</p>
 <p>여러분이 이미 알고 있는 것부터 시작해 봅시다.
 그렇지만 적어도 제가 이해하는 바로는… 이해할 수 있는 모든 것은 중요하다고 생각합니다.
 저는 Python을 기계를 처럼 봅니다.
 Python의 경우는 (다른 인터프리터 언어와 마찬가지로) 가상머신위에서 동작하므로 더 이해하기 쉽습니다.
-이 문맥에서 <em><a href="https://en.wikipedia.org/wiki/Virtual_machine#Process_virtual_machines" target="_blank" rel="external">가상머신</a></em>을 정확하게 이해하세요.
+이 문맥에서 <em><a href="https://en.wikipedia.org/wiki/Virtual_machine#Process_virtual_machines" target="_blank" rel="noopener">가상머신</a></em>을 정확하게 이해하세요.
 VirtualBox보다는 JVM과 같은것 으로 생각하세요
 (매우 기술적인 관점에서 보면 둘은 같습니다, 하지만 현실 세계에서는 일반적으로 이 두 종류의 VM을 구별합니다).
 저는 <em>가상머신</em>을 문자 그대로 이해 하는 것이 가장 쉽다는 것을 알았습니다.
@@ -81,7 +81,7 @@ VirtualBox보다는 JVM과 같은것 으로 생각하세요
 CPU는 단지 모든 입력값(기계어, 데이터)을 받고 상태값(레지스터)를 가지며 입력값과 상태에 따라 (RAM이나 버스에) 출력값을 보내는 복잡한 전자 기계입니다, 맞죠?
 자, CPython은 상태값과 명령 처리방법을 가지고 있는 소프트웨어로 만들어진 기계입니다 (다른 구현체는 다소 다른 설명이 필요할 수도 있음).
 이 소프트웨어 기계는 Python 인터프리터를 호스팅하는 프로세서에서 작동합니다.
-이 점을 기억해 두세요. 저는 (<a href="https://tech.blog.aknin.name/2010/07/04/pythons-innards-for-my-wife/" target="_blank" rel="external">여기서</a> 상세히 설명한 것 처럼) <a href="https://en.wikipedia.org/wiki/Turing_machine" target="_blank" rel="external">기계</a>에 비유하는걸 좋아합니다.</p>
+이 점을 기억해 두세요. 저는 (<a href="https://tech.blog.aknin.name/2010/07/04/pythons-innards-for-my-wife/" target="_blank" rel="noopener">여기서</a> 상세히 설명한 것 처럼) <a href="https://en.wikipedia.org/wiki/Turing_machine" target="_blank" rel="noopener">기계</a>에 비유하는걸 좋아합니다.</p>
 <p>즉, 다음과 <code>$ python -c &#39;print(&quot;Hello, world!&quot;)&#39;</code> 같은 일을 할 때 일어나는 일에 대한 개요를 봅시다.
 Python 바이너리가 실행됩니다,
 표준 C 라이브러리 초기화는 거의 모든 프로세스에서 발생합니다 
@@ -89,13 +89,13 @@ Python 바이너리가 실행됩니다,
 (<code>./Modules/python.c: main</code>코드를 보세요, 곧 <code>./Modules/main.c: Py_Main</code>을 호출 합니다).
 평범한 초기화 작업
 (argument를 파싱하고, 환경변수가 동작에 영향을 주는지 확인하고, 표준 스트림<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>에 접근하고 그에 따라 행동 하는 등등)을 마치고 나면 
-<a href="https://docs.python.org/3/c-api/init.html#Py_Initialize" target="_blank" rel="external">./Python/pythonrun.c: Py_Initialize</a>가 호출 됩니다.
+<a href="https://docs.python.org/3/c-api/init.html#Py_Initialize" target="_blank" rel="noopener">./Python/pythonrun.c: Py_Initialize</a>가 호출 됩니다.
  여러가지 방법으로, 이 함수는 CPython 기계를 실행하는데 필요한 부품을 ‘빌드’하고 모아서 ‘프로세스’를 ‘Python 인터프리터가 있는 프로세스’로 만듭니다.
 무엇보다도 두 가지 매우 중요한 <em>인터프리터 상태</em>와 <em>스레드 상태</em>에 관한 Python 데이터 구조를 생성합니다.
-또한 내장 모듈 <em>sys</em>와 모든 <a href="https://docs.python.org/3/library/functions.html#built-in-functions" target="_blank" rel="external">내장 함수</a>모듈을 호스팅 합니다.
+또한 내장 모듈 <em>sys</em>와 모든 <a href="https://docs.python.org/3/library/functions.html#built-in-functions" target="_blank" rel="noopener">내장 함수</a>모듈을 호스팅 합니다.
 이후 글들에서 이 모든 것들을 깊이 있게 다룰 것입니다.</p>
 <p>이 다음, Python은 실행 방법에 따라 다음 몇 가지 중 하나를 실행합니다.
-대략적으로, 문자열을 실행하거나 (<code>-c</code> 옵션), 모듈을 실행파일로 실행하거나 (<code>-m</code> 옵션), (커맨드라인에서 명시적으로 전달되거나 스크립트의 인터프리터로 사용될 때 커널에 의해 전달된) 파일을 실행 하거나 또는 <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank" rel="external">REPL 루프</a>를 실행합니다
+대략적으로, 문자열을 실행하거나 (<code>-c</code> 옵션), 모듈을 실행파일로 실행하거나 (<code>-m</code> 옵션), (커맨드라인에서 명시적으로 전달되거나 스크립트의 인터프리터로 사용될 때 커널에 의해 전달된) 파일을 실행 하거나 또는 <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank" rel="noopener">REPL 루프</a>를 실행합니다
 (이건 조금 특별한 경우로, 파일 실행이 대화형 인터프리터 위에서 일어나는 경우 입니다)를 실행합니다.
 지금 저희는 <code>-c</code>를 사용해 하나의 문자열을 실행하는 경우를 따르고 있습니다.
 이 단일 문자열을 실행하기 위해, <code>./Python/pythonrun.c: PyRun_SimpleStringFlags</code>가 호출 됩니다.
@@ -108,10 +108,10 @@ Python 바이너리가 실행됩니다,
 저는 컴파일러 전문가가 아니며,
 컴파일러 내부에 별로 관심이 없습니다 그리고 제가 아는 한 Python은 CS(Computer Science) 컴파일 강의를 넘어서는 컴파일 후속 조치가 없습니다.
 우리는 여기서 일어나는 일들에 대한 개요를 (매우)빠르게 살펴볼 것 입니다,
-아마 나중에도 CPython의 동작을 명확히 볼 필요 있을때만 돌아올 것입니다 (파싱에 영향을 미치는 것으로 알려진 <a href="https://docs.python.org/3/reference/simple_stmts.html#the-global-statement" target="_blank" rel="external">gloobal</a>문을 참고하세요).
+아마 나중에도 CPython의 동작을 명확히 볼 필요 있을때만 돌아올 것입니다 (파싱에 영향을 미치는 것으로 알려진 <a href="https://docs.python.org/3/reference/simple_stmts.html#the-global-statement" target="_blank" rel="noopener">gloobal</a>문을 참고하세요).
 그래서, <code>PyRun_SimpleStringFlags</code>의 파서/컴파일러 단계는 크게 다음과 같습니다.
-소스 코드를 토큰화 하고 <a href="https://en.wikipedia.org/wiki/Concrete_syntax_tree" target="_blank" rel="external">구체 구문 트리</a>(Concrete Syntax Tree, CST)를 만들고,
-CST를 <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank" rel="external">추상 구문 트리</a>(Abstract Syntax Tree, AST)로 변환하고 마지막으로 <code>./Python/ast.c: PyAST_FromNode.</code>를 사용하여 AST를 <em>Code Object</em><sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup>로 컴파일 합니다.
+소스 코드를 토큰화 하고 <a href="https://en.wikipedia.org/wiki/Concrete_syntax_tree" target="_blank" rel="noopener">구체 구문 트리</a>(Concrete Syntax Tree, CST)를 만들고,
+CST를 <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank" rel="noopener">추상 구문 트리</a>(Abstract Syntax Tree, AST)로 변환하고 마지막으로 <code>./Python/ast.c: PyAST_FromNode.</code>를 사용하여 AST를 <em>Code Object</em><sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup>로 컴파일 합니다.
 지금은 Code Object를 Python VM의 기계가 작동할 수 있는 기계어 이진 문자열이라고 생각합시다.
 이제 우리는 (다시, Python의 말로) 해석할 준비가 되어 있습니다.</p>
 <p>우리는 (거의) 빈 <code>__main__</code>을 가지고 있고, Code Object를 가지고 있으며, 이제 그것을 <em>평가</em>하려고 합니다.
@@ -173,7 +173,7 @@ C함수 <code>PyNumber_Subtract()</code>를 호출하고,
 가능한 가장 낮은 레벨에서 Python이 두 숫자를 어떻게 뺄셈 하는지는 매우 분명해 보입니다.
 그리고 여기까지 설명하는 데 고작 약 1,500 단어를 사용했습니다!</p>
 <p>frame이 실행되고, <code>PyRun_SimpleStringFlags</code>가 반환된 후,
-메인 함수는 청소를 합니다 (특히, 나중에 우리가 논의할 <a href="https://docs.python.org/3/c-api/init.html#Py_Finalize" target="_blank" rel="external">Py_Finalize</a>).
+메인 함수는 청소를 합니다 (특히, 나중에 우리가 논의할 <a href="https://docs.python.org/3/c-api/init.html#Py_Finalize" target="_blank" rel="noopener">Py_Finalize</a>).
 표준 C 라이브러리 초기화 해제(deinitialization)작업이 완료되고,
 프로세스가 종료됩니다.</p>
 <p>저는 이 글이 “좋은” 개요를 제공하여, 다른 글의 발판으로 사용되길 바랍니다.
@@ -185,10 +185,10 @@ C함수 <code>PyNumber_Subtract()</code>를 호출하고,
 CPython의 객체 시스템은 CPython이 어떻게 작동하는지 이해하는데 있어 핵심적인 역할을 합니다.
 그리고 저는 이 시리즈의 다음글에서 다룰것이라고 생각하빈다. 계속지켜봐 주세요.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">역주 - Keanu Reeves는 메트릭스에서 Neo 역할을 맡아 연기했습니다. 매트릭스에 관한 비유 같습니다.</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">이 시리즈는 명시적으로 언급하지 않는 한 누구도 지지하거나 제휴되어 있지 않는 다는 점을 유의 하세요.
-또한 Python은 <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum" target="_blank" rel="external">Guido van Rossum</a>에 의해 시작 되었지만,
-많은 사람들이 수년 동안 Python 프로젝트와 파생 프로젝트에 <a href="https://en.wikipedia.org/wiki/History_of_Python" target="_blank" rel="external">기여해 왔습니다</a>.
+또한 Python은 <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum" target="_blank" rel="noopener">Guido van Rossum</a>에 의해 시작 되었지만,
+많은 사람들이 수년 동안 Python 프로젝트와 파생 프로젝트에 <a href="https://en.wikipedia.org/wiki/History_of_Python" target="_blank" rel="noopener">기여해 왔습니다</a>.
 저는 Guido나 다른 기여자들을 확인해본 적은 없지만,
-저는 어떤 기여자들도 Guido 보다 Python을 명확하게 보지 못할 것이라고 확신합니다.</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://www.python.org/dev/peps/pep-3000/" target="_blank" rel="external">Python 문서</a>를 참고하세요</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://en.wikipedia.org/wiki/CPython#Unladen_Swallow" target="_blank" rel="external">위키백과</a> 구글이 후원한 CPython의 llvm JIT 구현체</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://ko.wikipedia.org/wiki/%ED%91%9C%EC%A4%80_%EC%8A%A4%ED%8A%B8%EB%A6%BC" target="_blank" rel="external">위키백과</a> 참고</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://docs.python.org/3/c-api/code.html" target="_blank" rel="external">Python 문서</a> 참고</span><a href="#fnref:6" rev="footnote"> ↩</a></li></ol></div></div>
+저는 어떤 기여자들도 Guido 보다 Python을 명확하게 보지 못할 것이라고 확신합니다.</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://www.python.org/dev/peps/pep-3000/" target="_blank" rel="noopener">Python 문서</a>를 참고하세요</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://en.wikipedia.org/wiki/CPython#Unladen_Swallow" target="_blank" rel="noopener">위키백과</a> 구글이 후원한 CPython의 llvm JIT 구현체</span><a href="#fnref:4" rev="footnote"> ↩</a></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">5.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://ko.wikipedia.org/wiki/%ED%91%9C%EC%A4%80_%EC%8A%A4%ED%8A%B8%EB%A6%BC" target="_blank" rel="noopener">위키백과</a> 참고</span><a href="#fnref:5" rev="footnote"> ↩</a></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">6.</span><span style="display: inline-block; vertical-align: top;">역주 - <a href="https://docs.python.org/3/c-api/code.html" target="_blank" rel="noopener">Python 문서</a> 참고</span><a href="#fnref:6" rev="footnote"> ↩</a></li></ol></div></div>
 </section>
 <footer id="article-footer">
     <div id="article-tag">
@@ -223,7 +223,15 @@ CPython의 객체 시스템은 CPython이 어떻게 작동하는지 이해하는
 </div>
 
 </div>
-
+<div class="fb-comments" data-href="https://blog.sn0wle0pard.io/2017/pythons-innards-introduction/" data-width="100%" data-numposts="5"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.11&appId=155425561701021';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </article>
 
 
