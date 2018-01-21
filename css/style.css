@@ -287,10 +287,8 @@ body {
 
 .header {
   display: flex;
-  position: fixed;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid #eeeeee;
