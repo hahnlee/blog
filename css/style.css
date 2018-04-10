@@ -153,7 +153,7 @@ pre code {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin: 0 auto;
   border-radius: 5px; }
 
 table {
@@ -286,17 +286,25 @@ body {
   display: inline-block; }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  z-index: 2;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid #eeeeee;
-  padding: .75rem 1rem; }
+  padding: .75rem 1rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05); }
   .header a {
     color: #333; }
     .header a:hover {
       text-decoration: none; }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1rem; }
 
 .blog-title {
   margin: 0;
