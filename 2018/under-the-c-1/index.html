@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html ⚡>
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
 <title>Under the C: 소개 | sn0wle0pard</title>
 <link rel="stylesheet" href="/css/style.css">
@@ -110,8 +110,11 @@ dis<span class="token punctuation">(</span>co<span class="token punctuation">)</
              10 LOAD_CONST               3 (None)
              12 RETURN_VALUE
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>같은 역할을 하지만 서로 다른 바이트코드를 생성하는 것을 확인 할 수 있다. 사실 이 예제는 파이썬 입장에선 조금 억울 하고, 최적화가 쉽지 않을 수 있다.</p>
-<p>좀 더 쉬워보이는 한가지 예를 더 살펴보자.
+<p>같은 역할을 하지만 서로 다른 바이트코드를 생성하는 것을 확인 할 수 있다.
+사실 이 예제는 파이썬 입장에선 조금 억울 하고, 최적화가 쉽지 않을 수 있다.
+파이썬 인터프리터에게 첫번째 코드는 3줄의 코드이며, 두번째 코드는 한줄의 코드이기 때문이다.
+(파이썬은 괄호안의 줄바꿈을 무시한다)</p>
+<p>그렇다면 한가지 예를 더 살펴 보자.
 PyConKR 2017에서 차영호님이 라이트닝 토크 시간에 발표한,
 <a href="https://docs.google.com/presentation/d/1mpgEviFIolgPLy3tYjK2DIEWRKT671vJdb4RCiXvCyY/" target="_blank" rel="noopener">Back to the Low Level</a>
 에서 코드와 내용을 가져왔다.</p>
@@ -163,7 +166,10 @@ dis<span class="token punctuation">(</span>co<span class="token punctuation">)</
              10 RETURN_VALUE
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>위 코드는 매우 비슷하며, 같은 역할을 하지만, 두 코드는 서로 다른 바이트코드를 만들었고, 연산 횟수도 다르다.</p>
-<h2 id="Under-the-C"><a href="#Under-the-C" class="headerlink" title="Under the C"></a>Under the C</h2><p>위의 두 코드를 C언어레벨에서 확인하면 더 두드러진 차이를 볼 수 있다.</p>
+<h2 id="Under-the-C"><a href="#Under-the-C" class="headerlink" title="Under the C"></a>Under the C</h2><p>위의 두 코드를 C언어레벨에서 확인하면 더 두드러진 차이를 볼 수 있다.
+마찬가지로 PyConKR 2017에서 차영호님이 라이트닝 토크 시간에 발표한,
+<a href="https://docs.google.com/presentation/d/1mpgEviFIolgPLy3tYjK2DIEWRKT671vJdb4RCiXvCyY/" target="_blank" rel="noopener">Back to the Low Level</a>
+에서 코드와 내용을 가져왔다.</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">if</span> A <span class="token operator">!=</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
     <span class="token keyword">pass</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -272,7 +278,7 @@ dis<span class="token punctuation">(</span>print_2<span class="token punctuation
         >>   44 LOAD_CONST               0 (None)
              46 RETURN_VALUE
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>줄번호는 다르지만 같은 바이트코드를 생성하는 걸 볼 수 있다.</p>
+<p>줄번호는 다르지만 같은 바이트코드를 생성하는 걸 볼 수 있다. <code>elif</code>는 그저 문법 설탕이다.</p>
 <h1 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h1><blockquote>
 <p>섣부른 최적화는 만악의 근원이다 — 도널드 커누스</p>
 </blockquote>
