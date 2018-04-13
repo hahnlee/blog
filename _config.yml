@@ -11,7 +11,7 @@ language: ko
 timezone: Asia/Seoul
 avatar: images/avatar.jpeg
 facebook_id: 155425561701021
-google_analytics: UA-89496100-1
+google_analytics: UA-111601591-1
 base_url: https://blog.sn0wle0pard.io
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

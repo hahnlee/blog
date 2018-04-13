@@ -93,9 +93,12 @@ dis(co)
              12 RETURN_VALUE
 ```
 
-같은 역할을 하지만 서로 다른 바이트코드를 생성하는 것을 확인 할 수 있다. 사실 이 예제는 파이썬 입장에선 조금 억울 하고, 최적화가 쉽지 않을 수 있다.
+같은 역할을 하지만 서로 다른 바이트코드를 생성하는 것을 확인 할 수 있다.
+사실 이 예제는 파이썬 입장에선 조금 억울 하고, 최적화가 쉽지 않을 수 있다.
+파이썬 인터프리터에게 첫번째 코드는 3줄의 코드이며, 두번째 코드는 한줄의 코드이기 때문이다.
+(파이썬은 괄호안의 줄바꿈을 무시한다)
 
-좀 더 쉬워보이는 한가지 예를 더 살펴보자.
+그렇다면 한가지 예를 더 살펴 보자.
 PyConKR 2017에서 차영호님이 라이트닝 토크 시간에 발표한,
 [Back to the Low Level](https://docs.google.com/presentation/d/1mpgEviFIolgPLy3tYjK2DIEWRKT671vJdb4RCiXvCyY/)
 에서 코드와 내용을 가져왔다.
@@ -160,6 +163,9 @@ dis(co)
 
 ## Under the C
 위의 두 코드를 C언어레벨에서 확인하면 더 두드러진 차이를 볼 수 있다.
+마찬가지로 PyConKR 2017에서 차영호님이 라이트닝 토크 시간에 발표한,
+[Back to the Low Level](https://docs.google.com/presentation/d/1mpgEviFIolgPLy3tYjK2DIEWRKT671vJdb4RCiXvCyY/)
+에서 코드와 내용을 가져왔다.
 
 ```python
 if A != True:
@@ -284,7 +290,7 @@ dis(print_2)
         >>   44 LOAD_CONST               0 (None)
              46 RETURN_VALUE
 ```
-줄번호는 다르지만 같은 바이트코드를 생성하는 걸 볼 수 있다.
+줄번호는 다르지만 같은 바이트코드를 생성하는 걸 볼 수 있다. `elif`는 그저 문법 설탕이다.
 
 # 마치며
 > 섣부른 최적화는 만악의 근원이다 — 도널드 커누스
