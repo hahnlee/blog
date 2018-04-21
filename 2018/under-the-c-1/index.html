@@ -176,12 +176,10 @@ dis<span class="token punctuation">(</span>co<span class="token punctuation">)</
 <p>파이썬 인터프리터에게 위 코드는 다음의 C 코드와 같다.</p>
 <pre class="line-numbers language-c"><code class="language-c">PyObject <span class="token operator">*</span>T <span class="token operator">=</span> Py_True<span class="token punctuation">;</span>
 <span class="token function">Py_INCREF</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
-PyObject <span class="token operator">*</span>R <span class="token operator">=</span> <span class="token function">PyObject_Compare</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> T<span class="token punctuation">,</span> Py_NE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">Py_DECREF</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">PyObject_IsTrue</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">PyObject_RichCompareBool</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> T<span class="token punctuation">,</span> Py_NE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
-<span class="token function">Py_DECREF</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">Py_DECREF</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>그리고 이 코드는</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">if</span> <span class="token operator">not</span> A<span class="token punctuation">:</span>
     <span class="token keyword">pass</span>
@@ -190,9 +188,6 @@ PyObject <span class="token operator">*</span>R <span class="token operator">=</
 <pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">PyObject_Not</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><a href="https://github.com/python/cpython/blob/master/Objects/object.c#L1401" target="_blank" rel="noopener">PyObject_Not</a>
-함수는 내부에서 <code>PyObject_IsTrue</code>를 호출하고, 그 결과에 따라 다른 값을 반환한다.
-단 그점을 고려해도, 여전히 <code>not</code>을 사용하는 코드는 <code>!= True</code>를 사용하는 코드보다 깔끔하다.</p>
 <p>왜 파이썬 다운 코드를 작성해야하는지 이해할 수 있을 것이다.</p>
 <h2 id="여담"><a href="#여담" class="headerlink" title="여담"></a>여담</h2><p>파이썬다운 코드가 항상 성능 향상을 약속하진 않다, 예를 들어 <code>elif</code>가 있다.</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> dis <span class="token keyword">import</span> dis
