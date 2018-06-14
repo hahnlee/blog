@@ -176,11 +176,9 @@ if A != True:
 ```c
 PyObject *T = Py_True;
 Py_INCREF(T);
-PyObject *R = PyObject_Compare(A, T, Py_NE);
-Py_DECREF(T);
-if (PyObject_IsTrue(R)) {
+if (PyObject_RichCompareBool(A, T, Py_NE)) {
 }
-Py_DECREF(R);
+Py_DECREF(T);
 ```
 
 그리고 이 코드는
@@ -193,10 +191,6 @@ if not A:
 if (PyObject_Not(A)) {
 }
 ```
-[PyObject_Not](https://github.com/python/cpython/blob/master/Objects/object.c#L1401)
-함수는 내부에서 `PyObject_IsTrue`를 호출하고, 그 결과에 따라 다른 값을 반환한다.
-단 그점을 고려해도, 여전히 `not`을 사용하는 코드는 `!= True`를 사용하는 코드보다 깔끔하다.
-
 왜 파이썬 다운 코드를 작성해야하는지 이해할 수 있을 것이다.
 
 ## 여담
