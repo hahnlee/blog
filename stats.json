@@ -24,10 +24,6 @@
       "component---src-layouts-index-js-441550a3a3af030a214d.js",
       "component---src-layouts-index-js-441550a3a3af030a214d.js.map"
     ],
-    "path---page-2": [
-      "path---page-2-a0e39f21c11f6a62c5ab.js",
-      "path---page-2-a0e39f21c11f6a62c5ab.js.map"
-    ],
     "path---index": [
       "path---index-555c52a163ad73ec1f9b.js",
       "path---index-555c52a163ad73ec1f9b.js.map"
@@ -51,21 +47,17 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-templates-post-js": [
-      "component---src-templates-post-js-fbbcabbf5e3e87bfb193.js",
-      "component---src-templates-post-js-fbbcabbf5e3e87bfb193.js.map"
-    ],
-    "component---src-pages-page-2-js": [
-      "component---src-pages-page-2-js-1d4f0f19c1c44398ab65.js",
-      "component---src-pages-page-2-js-1d4f0f19c1c44398ab65.js.map"
+      "component---src-templates-post-js-31ed0b9dde5a58359f76.js",
+      "component---src-templates-post-js-31ed0b9dde5a58359f76.js.map"
     ],
     "path---2018-peoplefund": [
       "path---2018-peoplefund-1b4fbf49b99c8fc2185a.js",
       "path---2018-peoplefund-1b4fbf49b99c8fc2185a.js.map"
     ],
     "app": [
-      "app-491137ea0132e069a2e5.js",
+      "app-2e128d5e7a083b960cc1.js",
       "build-js-styles.css",
-      "app-491137ea0132e069a2e5.js.map",
+      "app-2e128d5e7a083b960cc1.js.map",
       "build-js-styles.css.map"
     ],
     "path---2018-high-density-display-and-images": [
