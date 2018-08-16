@@ -1,108 +1,68 @@
-<!doctype html>
-<html ⚡>
-    <head>
-        <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="theme-color" content="#000000">
-
-<title>Under the C: PyObject | sn0wle0pard</title>
-<link rel="stylesheet" href="/css/style.css">
-
-    <link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-    <body>
-        <header class="header">
-  <div class="header-container">
-    <a class="blog-title" href="/">
-      sn0wle0pard
-    </a>
-    <ul class="blog-nav">
-      
-        <li class="menu-item">
-          <a href="/">Home</a>
-        </li>
-      
-        <li class="menu-item">
-          <a href="http://sn0wle0pard.io">About</a>
-        </li>
-      
-    </ul>
-  </div>
-</header>
-        <main class="container">
-            <article id="article">
-    <header id="article-title" class="text-center">
-    <h1>Under the C: PyObject</h1>
-    <div id="time">
-    <time datetime="2018-04-20T15:00:00.000Z" itemprop="datePublished">2018-04-21</time>
-    </div>
-</header>
-
-<section>
-    <p>파이썬의 모든 것은 객체다. 당연하게 들릴 수 있으나 객체 지향 언어라고 하려 모든것이 객체인건 아니다.
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/component---src-layouts-index-js-efe69f7d533c09d8196c.js" as="script"/><link rel="preload" href="/component---src-templates-post-js-fbbcabbf5e3e87bfb193.js" as="script"/><link rel="preload" href="/path---2018-under-the-c-2-2502eae9d2eefec0519f.js" as="script"/><link rel="preload" href="/app-491137ea0132e069a2e5.js" as="script"/><link rel="preload" href="/commons-605730581979c5cec35b.js" as="script"/><title data-react-helmet="true">Han Lee</title><meta data-react-helmet="true" name="description" content="Sample"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><style id="gatsby-inlined-css">.header{position:fixed;top:0;width:100%;background-color:hsla(0,0%,100%,.95);height:65px;display:flex;justify-content:center;align-items:center}.header a{color:#000}.footer{width:100%;color:#98a7b3;padding:1rem 0;background-color:#f5f5f5;text-align:center}*{box-sizing:border-box}body,html{font-family:Avenir,Apple SD Gothic Neo,Nanum Barun Gothic,Helvetica\,Arial,Malgun Gothic,\\B9D1\C740\ACE0\B515,돋움,Dotum,sans-serif;margin:0;padding:0;font-size:18px;line-height:1.6}#___gatsby,body,html{width:100%;height:100%}.mainRoot{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;min-height:100%;padding-top:65px}.mainRoot>main{-ms-flex:1;flex:1}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}a{color:#268bd2;text-decoration:none}a:focus,a:hover{text-decoration:underline}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:600;line-height:1.1;color:#333;letter-spacing:-.025rem}h1{font-size:2rem}h2{font-size:1.6rem}h3{font-size:1.3rem}h4,h5,h6{font-size:1rem}p{margin:0 0 1rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}dt{font-weight:700}dd{margin-bottom:.5rem}ul{list-style:inside circle;padding-left:0}ul li{margin-bottom:.25rem}ul ol,ul ul{margin-top:.25rem;margin-bottom:.5rem}ol{list-style:inside decimal;padding-left:0}ol li{margin-bottom:.25rem}ol ol,ol ul{margin-top:.25rem;margin-bottom:.5rem}ol+h1,ol+h2,ol+h3,p+h1,p+h2,p+h3,ul+h1,ul+h2,ul+h3{margin-top:1.5rem}hr{border:0;border-top:.5px solid #eee;border-bottom:.5px solid #eee;margin:1.5rem auto}strong{color:#333;font-weight:600}abbr{font-size:85%;font-weight:700;color:#555;text-transform:uppercase}abbr[title]{cursor:help;border-bottom:1px dotted #e5e5e5}blockquote{padding:0 0 0 1rem;margin:0 2rem 1rem 0;color:#999;border-left:5px solid #e5e5e5}blockquote p:last-child{margin-bottom:0}code *,pre *{font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace}code{padding:.25em .5em;font-size:85%;color:#bf616a;border-radius:3px}code,pre{background-color:#f9f9f9}pre{display:block;margin-top:0;margin-bottom:1rem;padding:1rem;font-size:.8rem;line-height:1.4;white-space:pre;white-space:pre-wrap;word-break:break-all}pre code{padding:0;font-size:100%;color:inherit;background-color:transparent}img{display:block;max-width:100%;margin:0 0 1rem;border-radius:5px}table{margin-bottom:1rem;width:100%;border:1px solid #e5e5e5;border-collapse:collapse}td,th{padding:.25rem .5rem;border:1px solid #e5e5e5}tbody tr:nth-child(odd) td,tbody tr:nth-child(odd) th{background-color:#f9f9f9}.lead{font-size:1.25rem}.container{max-width:50rem;padding:4rem 1.5rem;margin-left:auto;margin-right:auto}@media (min-width:38rem){.container{padding:5rem 1rem}}.footnotes p{display:inline-block}.postList{border-bottom:1px solid #ededed;margin-bottom:1rem}.postList a{color:#000}</style></head><body><div id="___gatsby"><div class="mainRoot" data-reactroot="" data-reactid="1" data-react-checksum="-1852730801"><!-- react-empty: 2 --><div class="header" data-reactid="3"><h1 style="margin:0;text-align:center;" data-reactid="4"><a style="text-decoration:none;font-family:serif;font-weight:500;" href="/" data-reactid="5">Han Lee</a></h1></div><main style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0;" data-reactid="6"><div data-reactid="7"><h1 data-reactid="8">Under the C: PyObject</h1><p data-reactid="9">2018/04/21</p><div data-reactid="10"><p>파이썬의 모든 것은 객체다. 당연하게 들릴 수 있으나 객체 지향 언어라고 하려 모든것이 객체인건 아니다.
 예를 들어 자바의 거의 모든것은 객체지만, 원시 자료형 (Primitive Type)은 아니다.
 그러나 파이썬은 숫자도 객체다.</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token number">42</span><span class="token punctuation">.</span><span class="token punctuation">.</span>__add__<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 점을 두개 붙어야 호출 가능하다</span>
-<span class="token number">45.0</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token number">42</span><span class="token punctuation">.</span><span class="token punctuation">.</span>__add__<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>  <span class="token comment"># 점을 두개 붙어야 호출 가능하다</span>
+<span class="token number">45.0</span></code></pre>
+      </div>
 <p>이와 같은 이유로 객체를 알아보는건 파이썬 내부를 알아보는데 좋은 출발점이다.</p>
-<h1 id="PyObject"><a href="#PyObject" class="headerlink" title="PyObject"></a>PyObject</h1><p>파이썬의 객체는 <code>PyObject</code>로 이뤄져 있다.
-<code>PyObject</code>는 <code>Include</code> 폴더의 <code>object.h</code>에 다음과 같이
-<a href="https://github.com/python/cpython/blob/f320be7/Include/object.h#L106" target="_blank" rel="noopener">정의</a>
+<h1>PyObject</h1>
+<p>파이썬의 객체는 <code class="language-text">PyObject</code>로 이뤄져 있다.
+<code class="language-text">PyObject</code>는 <code class="language-text">Include</code> 폴더의 <code class="language-text">object.h</code>에 다음과 같이
+<a href="https://github.com/python/cpython/blob/f320be7/Include/object.h#L106">정의</a>
 되어 있다.</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> _object <span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="c">
+      <pre class="language-c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> _object <span class="token punctuation">{</span>
     _PyObject_HEAD_EXTRA
     Py_ssize_t ob_refcnt<span class="token punctuation">;</span>
     <span class="token keyword">struct</span> _typeobject <span class="token operator">*</span>ob_type<span class="token punctuation">;</span>
-<span class="token punctuation">}</span> PyObject<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>이중 <code>_PyObject_HEAD_EXTRA</code>매크로는 디버깅에만 사용되므로 무시하자.
-따라서 <code>PyObject</code>는 다음의 구조체다.</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> _object <span class="token punctuation">{</span>
+<span class="token punctuation">}</span> PyObject<span class="token punctuation">;</span></code></pre>
+      </div>
+<p>이중 <code class="language-text">_PyObject_HEAD_EXTRA</code>매크로는 디버깅에만 사용되므로 무시하자.
+따라서 <code class="language-text">PyObject</code>는 다음의 구조체다.</p>
+<div class="gatsby-highlight" data-language="c">
+      <pre class="language-c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> _object <span class="token punctuation">{</span>
     Py_ssize_t ob_refcnt<span class="token punctuation">;</span>
     <span class="token keyword">struct</span> _typeobject <span class="token operator">*</span>ob_type<span class="token punctuation">;</span>
-<span class="token punctuation">}</span> PyObject<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>_typeobject</code>는 외부에는 <code>PyTypeObject</code>라는 이름으로 사용된다.
-이름처럼 객체에 관한 정보가 기록 된다. <code>PyTypeObject</code>의 자세한 소스코드는 <a href="https://github.com/python/cpython/blob/f320be7/Include/object.h#L346" target="_blank" rel="noopener">GitHub</a>을 참고하라.
-예를 들어 파이썬 객체의 <code>__doc__</code>정보는 <code>PyTypeObject</code>의 <code>tp_doc</code>필드에 저장된다.</p>
-<p>따라서 필요하다면 C언어로 <code>PyTypeObject</code>를 상속받아 새로운 객체를 만들 수도 있다.
-<code>PyTypeObject</code>의 내용은 다음에 다루기로 하고, 지금은 다른 필드 <code>ob_refcnt</code>를 알아보자.
+<span class="token punctuation">}</span> PyObject<span class="token punctuation">;</span></code></pre>
+      </div>
+<p><code class="language-text">_typeobject</code>는 외부에는 <code class="language-text">PyTypeObject</code>라는 이름으로 사용된다.
+이름처럼 객체에 관한 정보가 기록 된다. <code class="language-text">PyTypeObject</code>의 자세한 소스코드는 <a href="https://github.com/python/cpython/blob/f320be7/Include/object.h#L346">GitHub</a>을 참고하라.
+예를 들어 파이썬 객체의 <code class="language-text">__doc__</code>정보는 <code class="language-text">PyTypeObject</code>의 <code class="language-text">tp_doc</code>필드에 저장된다.</p>
+<p>따라서 필요하다면 C언어로 <code class="language-text">PyTypeObject</code>를 상속받아 새로운 객체를 만들 수도 있다.
+<code class="language-text">PyTypeObject</code>의 내용은 다음에 다루기로 하고, 지금은 다른 필드 <code class="language-text">ob_refcnt</code>를 알아보자.
 변수명에서 눈치 챘겠지만, 레퍼런스 카운팅(이하 RC)을 위한 필드다.</p>
-<h1 id="Reference-Counting"><a href="#Reference-Counting" class="headerlink" title="Reference Counting"></a>Reference Counting</h1><p>파이썬의 주 메모리 관리는 RC로 이뤄진다.
+<h1>Reference Counting</h1>
+<p>파이썬의 주 메모리 관리는 RC로 이뤄진다.
 RC는 객체가 얼마나 사용되는지 레퍼런스 카운트에 기록한다.
 객체가 사용되는 만큼 레퍼런스 카운트를 1씩 증가/감소하며, 레퍼런스 카운트가 0이 되면 메모리에서 해제한다.</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
-    name <span class="token operator">=</span> None
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> <span class="token boolean">None</span>
 
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
 
     <span class="token keyword">def</span> <span class="token function">__del__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Foo("a")가 새로 생성 되었으므로 레퍼런스 카운트는 1이 된다</span>
-b <span class="token operator">=</span> a  <span class="token comment" spellcheck="true"># B도 a를 참조 있으므로 Foo의 레퍼런스 카운트는 2가 된다</span>
+a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment"># Foo("a")가 새로 생성 되었으므로 레퍼런스 카운트는 1이 된다</span>
+b <span class="token operator">=</span> a  <span class="token comment"># B도 a를 참조 있으므로 Foo의 레퍼런스 카운트는 2가 된다</span>
 
-b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># B가 더이상 Foo("a")를 사용하지 않으므로 Foo("a")의 레퍼런스 카운트는 1 줄어 들어 1 이 된다</span>
-a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># a도 더이상 Foo("a")를 사용하지 않으므로 Foo("a")의 레퍼런스 카운트는 1 줄어 0이 되어, 해재하며 소멸자를 호출한다</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>파이썬에서 <code>__init__</code>는 생성자, <code>__del__</code>은 소멸자이다.
-위 코드를  <strong>인터프리터 모드</strong>에서 실행하면 <code>a = None</code>을 실행한 직후 <code>Foo(&quot;a&quot;)가 메모리에서 제거 되었습니다</code>라는 메시지를 볼 수 있을 것이다.
+b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># B가 더이상 Foo("a")를 사용하지 않으므로 Foo("a")의 레퍼런스 카운트는 1 줄어 들어 1 이 된다</span>
+a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># a도 더이상 Foo("a")를 사용하지 않으므로 Foo("a")의 레퍼런스 카운트는 1 줄어 0이 되어, 해재하며 소멸자를 호출한다</span></code></pre>
+      </div>
+<p>파이썬에서 <code class="language-text">__init__</code>는 생성자, <code class="language-text">__del__</code>은 소멸자이다.
+위 코드를  <strong>인터프리터 모드</strong>에서 실행하면 <code class="language-text">a = None</code>을 실행한 직후 <code class="language-text">Foo(&quot;a&quot;)가 메모리에서 제거 되었습니다</code>라는 메시지를 볼 수 있을 것이다.
 이처럼 RC를 사용하면 메모리가 필요 없어진 순간 제거 된다.</p>
-<p>파이썬 내부에선 Reference Count 관리를 위해 <code>Py_INCREF</code>와 <code>Py_DECREF</code>를 사용한다.</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> Py_INCREF(op) (                         \
+<p>파이썬 내부에선 Reference Count 관리를 위해 <code class="language-text">Py_INCREF</code>와 <code class="language-text">Py_DECREF</code>를 사용한다.</p>
+<div class="gatsby-highlight" data-language="c">
+      <pre class="language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> Py_INCREF(op) (                         \
     _Py_INC_REFTOTAL  _Py_REF_DEBUG_COMMA       \
-    ((PyObject *)(op))->ob_refcnt++)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> Py_DECREF(op)                                   \
+    ((PyObject *)(op))->ob_refcnt++)</span></code></pre>
+      </div>
+<div class="gatsby-highlight" data-language="c">
+      <pre class="language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> Py_DECREF(op)                                   \
     do {                                                \
         PyObject *_py_decref_tmp = (PyObject *)(op);    \
         if (_Py_DEC_REFTOTAL  _Py_REF_DEBUG_COMMA       \
@@ -110,161 +70,176 @@ a <span class="token operator">=</span> <span class="token number">0</span>  <sp
             _Py_CHECK_REFCNT(_py_decref_tmp)            \
         else                                            \
             _Py_Dealloc(_py_decref_tmp);                \
-    } while (0)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>_Py_DEC_REFTOTAL</code>, <code>_Py_REF_DEBUG_COMMA</code> 처럼 디버그에서 사용하는 내용을 지우면,
-<code>Py_INCREF</code>는 다음과 같으며,</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token punctuation">(</span><span class="token punctuation">(</span>PyObject <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>op<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">-></span>ob_refcnt<span class="token operator">++</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><code>Py_DECREF</code>는 다음과 같다.</p>
-<pre class="line-numbers language-c"><code class="language-c">PyObject <span class="token operator">*</span>_py_decref_tmp <span class="token operator">=</span> <span class="token punctuation">(</span>PyObject <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>op<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    } while (0)</span></code></pre>
+      </div>
+<p><code class="language-text">_Py_DEC_REFTOTAL</code>, <code class="language-text">_Py_REF_DEBUG_COMMA</code> 처럼 디버그에서 사용하는 내용을 지우면,
+<code class="language-text">Py_INCREF</code>는 다음과 같으며,</p>
+<div class="gatsby-highlight" data-language="c">
+      <pre class="language-c"><code class="language-c"><span class="token punctuation">(</span><span class="token punctuation">(</span>PyObject <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>op<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">-></span>ob_refcnt<span class="token operator">++</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p><code class="language-text">Py_DECREF</code>는 다음과 같다.</p>
+<div class="gatsby-highlight" data-language="c">
+      <pre class="language-c"><code class="language-c">PyObject <span class="token operator">*</span>_py_decref_tmp <span class="token operator">=</span> <span class="token punctuation">(</span>PyObject <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>op<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">--</span><span class="token punctuation">(</span>_py_decref_tmp<span class="token punctuation">)</span><span class="token operator">-></span>ob_refcnt <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
-  <span class="token function">_Py_Dealloc</span><span class="token punctuation">(</span>_py_decref_tmp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+  <span class="token function">_Py_Dealloc</span><span class="token punctuation">(</span>_py_decref_tmp<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
 <p>RC를 사용하면 프로그래머가 큰 신경을 쓰지 않아도, 필요 없다고 판단된 메모리는 그 즉시 해제할 수 있다.
 개인적으로 RC는 <em>비용있는</em> 추상화 방식 중에서는 가장 우아한 방식이라고 생각한다.
 아래의 문제점들만 없다면 말이다.</p>
-<h1 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h1><p>메모리관리에 대해 알아본 프로그래머라면 알겠지만, 아쉽게도 RC는 만병통치약이 아니다.</p>
-<h2 id="오버헤드"><a href="#오버헤드" class="headerlink" title="오버헤드"></a>오버헤드</h2><p>첫번째로 오버헤드를 이야기 할 수 있다.
-우선 <code>PyObject</code>의 <code>ob_refcnt</code> 처럼 레퍼런스 카운트를 저장할 공간이 추가적으로 필요하고,
+<h1>문제</h1>
+<p>메모리관리에 대해 알아본 프로그래머라면 알겠지만, 아쉽게도 RC는 만병통치약이 아니다.</p>
+<h2>오버헤드</h2>
+<p>첫번째로 오버헤드를 이야기 할 수 있다.
+우선 <code class="language-text">PyObject</code>의 <code class="language-text">ob_refcnt</code> 처럼 레퍼런스 카운트를 저장할 공간이 추가적으로 필요하고,
 변수를 할당할때도 추가적으로 레퍼런스 카운트를 관리해야 한다.</p>
-<p><a href="https://blog.sn0wle0pard.io/2018/under-the-c-1/" target="_blank" rel="noopener">저번 글</a>에 나온 내용을 다시 살펴보자.</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">if</span> A <span class="token operator">!=</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
-    <span class="token keyword">pass</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><a href="https://blog.sn0wle0pard.io/2018/under-the-c-1/">저번 글</a>에 나온 내용을 다시 살펴보자.</p>
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">if</span> A <span class="token operator">!=</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span></code></pre>
+      </div>
 <p>파이썬 인터프리터에게 위 코드는 다음의 C 코드와 비슷하다.</p>
-<pre class="line-numbers language-c"><code class="language-c">PyObject <span class="token operator">*</span>T <span class="token operator">=</span> Py_True<span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="c">
+      <pre class="language-c"><code class="language-c">PyObject <span class="token operator">*</span>T <span class="token operator">=</span> Py_True<span class="token punctuation">;</span>
 <span class="token function">Py_INCREF</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">PyObject_RichCompareBool</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> T<span class="token punctuation">,</span> Py_NE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
-<span class="token function">Py_DECREF</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>변수 <code>A</code>와 <code>True</code>를 비교하기 위해 임시 변수 <code>T</code>를 만들었고, T는 <code>Py_True</code>값을 참조 한다.
-아쉽게도 단순히 참조에서 끝나는게 아니라 필요에 따라 <code>Py_INCREF</code>와 <code>Py_DECREF</code>가 호출 된다.</p>
+<span class="token function">Py_DECREF</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>변수 <code class="language-text">A</code>와 <code class="language-text">True</code>를 비교하기 위해 임시 변수 <code class="language-text">T</code>를 만들었고, T는 <code class="language-text">Py_True</code>값을 참조 한다.
+아쉽게도 단순히 참조에서 끝나는게 아니라 필요에 따라 <code class="language-text">Py_INCREF</code>와 <code class="language-text">Py_DECREF</code>가 호출 된다.</p>
 <p>오버헤드는 메모리 관리에 드는 수고를 생각하면 넘어갈 수 있을 수도 있다.
 그러나 아쉽게도 해제할 수 없는 메모리도 있다.</p>
-<h2 id="순환참조"><a href="#순환참조" class="headerlink" title="순환참조"></a>순환참조</h2><p>RC는 안전하지만 완전하진 않다.
+<h2>순환참조</h2>
+<p>RC는 안전하지만 완전하진 않다.
 모든 해제된 메모리는 필요 없는 메모리지만, 모든 필요없는 메모리가 헤제되는건 아니다.</p>
 <p>예를 들어 다음의 코드를 보자,</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
-    child <span class="token operator">=</span> None
-    name <span class="token operator">=</span> None
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
+    child <span class="token operator">=</span> <span class="token boolean">None</span>
+    name <span class="token operator">=</span> <span class="token boolean">None</span>
 
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
 
     <span class="token keyword">def</span> <span class="token function">__del__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Foo("a")의 ref count는 1</span>
-b <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Foo("b")의 ref count는 1</span>
+a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment"># Foo("a")의 ref count는 1</span>
+b <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span>  <span class="token comment"># Foo("b")의 ref count는 1</span>
 
-a<span class="token punctuation">.</span>child <span class="token operator">=</span> b  <span class="token comment" spellcheck="true"># a.child가 Foo("b")를 참조하므로 Foo("b")의 레퍼런스 카운트는 1 증가하여 2가 된다</span>
-b<span class="token punctuation">.</span>child <span class="token operator">=</span> a  <span class="token comment" spellcheck="true"># b.child가 Foo("a")를 참조하므로 Foo("a")의 레퍼런스 카운트는 1 증가하여 2가 된다</span>
+a<span class="token punctuation">.</span>child <span class="token operator">=</span> b  <span class="token comment"># a.child가 Foo("b")를 참조하므로 Foo("b")의 레퍼런스 카운트는 1 증가하여 2가 된다</span>
+b<span class="token punctuation">.</span>child <span class="token operator">=</span> a  <span class="token comment"># b.child가 Foo("a")를 참조하므로 Foo("a")의 레퍼런스 카운트는 1 증가하여 2가 된다</span>
 
-a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># a가 더이상 Foo("a")를 참조하지 않으므로 레퍼런스 카운트는 1 감소해서 1 이다</span>
-b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># b가 더이상 Foo("b")를 참조하지 않으므로 레퍼런스 카운트는 1 감소해서 1 이다</span>
+a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># a가 더이상 Foo("a")를 참조하지 않으므로 레퍼런스 카운트는 1 감소해서 1 이다</span>
+b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># b가 더이상 Foo("b")를 참조하지 않으므로 레퍼런스 카운트는 1 감소해서 1 이다</span>
 
-<span class="token comment" spellcheck="true"># Foo("a")와 Foo("b")모두 접근할 수 없지만, 레퍼런스 카운트가 남아 있으므로 해재되지 않는다</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>위 코드를  <strong>인터프리터 모드</strong>에서 실행하면 <code>a = 0</code>이나 <code>b = 0</code>이 되면 더이상 <code>Foo(&quot;a&quot;)</code>와 <code>Foo(&quot;b&quot;)</code>에 접근 할 수 없다.
-그러나 <code>a.child</code>와 <code>b.child</code>의 참조때문에 올라간 레퍼런스 카운트가 존재해 a와 b가 더이상 child에 접근 못 하더라도 해제가 불가능 하다.</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
-    child <span class="token operator">=</span> None
-    name <span class="token operator">=</span> None
+<span class="token comment"># Foo("a")와 Foo("b")모두 접근할 수 없지만, 레퍼런스 카운트가 남아 있으므로 해재되지 않는다</span></code></pre>
+      </div>
+<p>위 코드를  <strong>인터프리터 모드</strong>에서 실행하면 <code class="language-text">a = 0</code>이나 <code class="language-text">b = 0</code>이 되면 더이상 <code class="language-text">Foo(&quot;a&quot;)</code>와 <code class="language-text">Foo(&quot;b&quot;)</code>에 접근 할 수 없다.
+그러나 <code class="language-text">a.child</code>와 <code class="language-text">b.child</code>의 참조때문에 올라간 레퍼런스 카운트가 존재해 a와 b가 더이상 child에 접근 못 하더라도 해제가 불가능 하다.</p>
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
+    child <span class="token operator">=</span> <span class="token boolean">None</span>
+    name <span class="token operator">=</span> <span class="token boolean">None</span>
 
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
 
     <span class="token keyword">def</span> <span class="token function">__del__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Foo("a")의 ref count는 1</span>
-a<span class="token punctuation">.</span>child <span class="token operator">=</span> a  <span class="token comment" spellcheck="true"># a.child가 Foo("a")를 참조하므로 Foo("a")의 레퍼런스 카운트는 1 증가하여 2가 된다</span>
+a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment"># Foo("a")의 ref count는 1</span>
+a<span class="token punctuation">.</span>child <span class="token operator">=</span> a  <span class="token comment"># a.child가 Foo("a")를 참조하므로 Foo("a")의 레퍼런스 카운트는 1 증가하여 2가 된다</span>
 
-a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># a가 더이상 Foo("a")를 참조하지 않으므로 레퍼런스 카운트는 1 감소해서 1 이다</span>
+a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># a가 더이상 Foo("a")를 참조하지 않으므로 레퍼런스 카운트는 1 감소해서 1 이다</span>
 
-<span class="token comment" spellcheck="true"># Foo("a")에 접근할 수 없지만, 레퍼런스 카운트가 남아 있으므로 해재되지 않는다</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># Foo("a")에 접근할 수 없지만, 레퍼런스 카운트가 남아 있으므로 해재되지 않는다</span></code></pre>
+      </div>
 <p>또 하나, 위처럼 자기 자신을 참조하는 경우도 마찬가지로 해재할 수 없다.
 이 처럼 서로 참조하는 경우를 <strong>순환참조</strong>라고 하며, 레퍼런스 카운트로는 해결하기 까다롭다.</p>
 <p>좀 더 쉬운 예를 하나 보면,</p>
-<pre class="line-numbers language-python"><code class="language-python">x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
-x<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python">x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+x<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span></code></pre>
+      </div>
 <p>파이썬의 경우 위의 코드는 자기자신을 참조한다.</p>
-<h1 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h1><p>이러한 이유로 파이썬은 RC만을 사용하지 않고, 추가적으로 GC도 사용한다.
+<h1>GC</h1>
+<p>이러한 이유로 파이썬은 RC만을 사용하지 않고, 추가적으로 GC도 사용한다.
 엄밀하게 말하면 RC도 GC의 일부지만 이 글에선 RC가 아닌 GC를 말하기로 하자.
-파이썬의 GC는 <code>gcmodule.c</code>에 <a href="https://github.com/python/cpython/blob/master/Modules/gcmodule.c" target="_blank" rel="noopener">정의</a> 되어 있으며,
+파이썬의 GC는 <code class="language-text">gcmodule.c</code>에 <a href="https://github.com/python/cpython/blob/master/Modules/gcmodule.c">정의</a> 되어 있으며,
 자세한 내용은 추후에 다루도록 하겠다.</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
-    child <span class="token operator">=</span> None
-    name <span class="token operator">=</span> None
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
+    child <span class="token operator">=</span> <span class="token boolean">None</span>
+    name <span class="token operator">=</span> <span class="token boolean">None</span>
 
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
 
     <span class="token keyword">def</span> <span class="token function">__del__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># a의 ref count는 1</span>
-b <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># b의 ref count는 1</span>
+a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment"># a의 ref count는 1</span>
+b <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span>  <span class="token comment"># b의 ref count는 1</span>
 
-b<span class="token punctuation">.</span>child <span class="token operator">=</span> a  <span class="token comment" spellcheck="true"># a의 ref count는 2</span>
-a<span class="token punctuation">.</span>child <span class="token operator">=</span> b  <span class="token comment" spellcheck="true"># b의 ref count는 2</span>
+b<span class="token punctuation">.</span>child <span class="token operator">=</span> a  <span class="token comment"># a의 ref count는 2</span>
+a<span class="token punctuation">.</span>child <span class="token operator">=</span> b  <span class="token comment"># b의 ref count는 2</span>
 
-a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># a의 ref count는 1 감소해서 1 이다 (b.child에 참조가 남아있다)</span>
-b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># b의 ref count는 1 감소해서 1 이다 (a.child에 참조가 남아있다)</span>
+a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># a의 ref count는 1 감소해서 1 이다 (b.child에 참조가 남아있다)</span>
+b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># b의 ref count는 1 감소해서 1 이다 (a.child에 참조가 남아있다)</span>
 
 <span class="token keyword">import</span> gc
-gc<span class="token punctuation">.</span>collect<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># GC를 직접 호출해보자 (원래는 필요한 경우 자동으로 호출 된다)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>위의 코드를 실행하면 <code>gc.collect()</code>가 더이상 접근할 수 없는 객체를 해재하는 것을 볼 수 있다.
+gc<span class="token punctuation">.</span>collect<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># GC를 직접 호출해보자 (원래는 필요한 경우 자동으로 호출 된다)</span></code></pre>
+      </div>
+<p>위의 코드를 실행하면 <code class="language-text">gc.collect()</code>가 더이상 접근할 수 없는 객체를 해재하는 것을 볼 수 있다.
 특별한 설정을 하지 않는다면 파이썬은 자동으로 필요할때 gc를 호출해 RC로 해재할 수 없는 객체를 해제해 준다.</p>
 <p>GC도 사용하므로 파이썬의 메모리 관리는 아쉽게도 RC하나만 사용하는 것에 비해 추가적인 비용이 든다.</p>
 <p>다행인 점은 파이썬의 GC는 순환참조를 만들 가능성이 있는 컨테이너 객체를 대상으로 사용되어 모든 객체를 검사하진 않는다.</p>
-<p>실제로, GC는 파이썬 2.0 버전부터 도입 되었으며 <a href="http://www.arctrix.com/nas/python/gc/" target="_blank" rel="noopener">당시 자료</a>를 보면 이전 버전에 비해 약 4%의 성능 저하의 원인으로 생각한다고 한다.</p>
-<p>이런 이유로 성능에 여유가 없거나, 순환참조를 피할 자신이 있다면 <code>gc.disable()</code>로 GC를 꺼도 된다.
-대표적으로 <a href="https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172" target="_blank" rel="noopener">인스타그램</a>은 GC를 사용하지 않는다고 한다.</p>
-<h2 id="덤-약한참조"><a href="#덤-약한참조" class="headerlink" title="덤: 약한참조"></a>덤: 약한참조</h2><p>다른 RC를 사용하는 언어를 사용한 분들은 들어본적이 있겠지만,
+<p>실제로, GC는 파이썬 2.0 버전부터 도입 되었으며 <a href="http://www.arctrix.com/nas/python/gc/">당시 자료</a>를 보면 이전 버전에 비해 약 4%의 성능 저하의 원인으로 생각한다고 한다.</p>
+<p>이런 이유로 성능에 여유가 없거나, 순환참조를 피할 자신이 있다면 <code class="language-text">gc.disable()</code>로 GC를 꺼도 된다.
+대표적으로 <a href="https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172">인스타그램</a>은 GC를 사용하지 않는다고 한다.</p>
+<h2>덤: 약한참조</h2>
+<p>다른 RC를 사용하는 언어를 사용한 분들은 들어본적이 있겠지만,
 순환참조로 인한 메모리 누수를 피하는 또다른 방법은 <strong>약한참조</strong>가 있다.</p>
 <p>쉽게 설명하면 참조는 하되, 레퍼런스 카운트는 올리지 않는 것이다.
-파이썬은 <code>weakref</code>모듈을 통해 약한 참조를 사용할 수 있다.</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
-    child <span class="token operator">=</span> None
-    name <span class="token operator">=</span> None
+파이썬은 <code class="language-text">weakref</code>모듈을 통해 약한 참조를 사용할 수 있다.</p>
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
+    child <span class="token operator">=</span> <span class="token boolean">None</span>
+    name <span class="token operator">=</span> <span class="token boolean">None</span>
 
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
 
     <span class="token keyword">def</span> <span class="token function">__del__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Foo("{}")가 메모리에서 제거 되었습니다'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># a의 ref count는 1</span>
-b <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># b의 ref count는 1</span>
+a <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>  <span class="token comment"># a의 ref count는 1</span>
+b <span class="token operator">=</span> Foo<span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span>  <span class="token comment"># b의 ref count는 1</span>
 
 <span class="token keyword">import</span> weakref
 
-<span class="token comment" spellcheck="true"># weakref를 사용했으므로 레퍼런스 카운트는 변화하지 않는다</span>
-a<span class="token punctuation">.</span>child <span class="token operator">=</span> weakref<span class="token punctuation">.</span>ref<span class="token punctuation">(</span>b<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Foo("b")의 레퍼런스 카운트는 여전히 1 이다</span>
-b<span class="token punctuation">.</span>child <span class="token operator">=</span> weakref<span class="token punctuation">.</span>ref<span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Foo("a")의 레퍼런스 카운트는 여전히 1 이다</span>
+<span class="token comment"># weakref를 사용했으므로 레퍼런스 카운트는 변화하지 않는다</span>
+a<span class="token punctuation">.</span>child <span class="token operator">=</span> weakref<span class="token punctuation">.</span>ref<span class="token punctuation">(</span>b<span class="token punctuation">)</span>  <span class="token comment"># Foo("b")의 레퍼런스 카운트는 여전히 1 이다</span>
+b<span class="token punctuation">.</span>child <span class="token operator">=</span> weakref<span class="token punctuation">.</span>ref<span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment"># Foo("a")의 레퍼런스 카운트는 여전히 1 이다</span>
 
-<span class="token comment" spellcheck="true"># 그러나 접근은 가능하다</span>
-<span class="token comment" spellcheck="true"># child 자체는 weakref 객체이므로 호출을 통해 가리키는 객체를 가져올수 있다</span>
+<span class="token comment"># 그러나 접근은 가능하다</span>
+<span class="token comment"># child 자체는 weakref 객체이므로 호출을 통해 가리키는 객체를 가져올수 있다</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>child<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>child<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
 
-a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># Foo("a")의 레퍼런스 카운트는 1 감소해서 0 이다</span>
-<span class="token comment" spellcheck="true"># 소멸자가 호출된다</span>
+a <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># Foo("a")의 레퍼런스 카운트는 1 감소해서 0 이다</span>
+<span class="token comment"># 소멸자가 호출된다</span>
 
-<span class="token comment" spellcheck="true"># 더이상 접근이 불가능하므로 None이 반환된다</span>
+<span class="token comment"># 더이상 접근이 불가능하므로 None이 반환된다</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>child<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment" spellcheck="true"># Foo("b")의 레퍼런스카운트는 1 감소해서 0 이다</span>
-<span class="token comment" spellcheck="true"># 소멸자가 호출된다</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>weakref</code>는 접근이 가능하면 해당 객체를, 해당객체가 접근 불가능 하면 <code>None</code>을 반환한다.</p>
-<h1 id="RC와-GIL"><a href="#RC와-GIL" class="headerlink" title="RC와 GIL"></a>RC와 GIL</h1><p>CPython은 멀티 <em>스레드</em>를 효율적으로 사용하지 못한다.
+b <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># Foo("b")의 레퍼런스카운트는 1 감소해서 0 이다</span>
+<span class="token comment"># 소멸자가 호출된다</span></code></pre>
+      </div>
+<p><code class="language-text">weakref</code>는 접근이 가능하면 해당 객체를, 해당객체가 접근 불가능 하면 <code class="language-text">None</code>을 반환한다.</p>
+<h1>RC와 GIL</h1>
+<p>CPython은 멀티 <em>스레드</em>를 효율적으로 사용하지 못한다.
 한 파이썬 프로세스는 한번에 한 스레드만 사용하며, 이를 GIL (Global interpreter lock) 이라고 부른다.</p>
 <p>CPython에서 GIL을 제거하려는 시도는 종종 있지만, 아직까지는 GIL이 남아 있다.
 그 이유중 하나가 바로 RC 때문이다.</p>
@@ -276,18 +251,19 @@ b <span class="token operator">=</span> <span class="token number">0</span>  <sp
 <li>PyPy는 GC로 메모리 관리를 하며, GIL이 <em>있다</em></li>
 </ul>
 <p>PyPy가 대표적으로 GC만 사용하나, GIL이 존재한다.
-그러나, PyPy는 2017년 8월 블로그글 <a href="https://morepypy.blogspot.kr/2017/08/lets-remove-global-interpreter-lock.html" target="_blank" rel="noopener">Let’s remove the Global Interpreter Lock</a>를 통해 GIL을 제거할 수 있음을 알렸다.</p>
+그러나, PyPy는 2017년 8월 블로그글 <a href="https://morepypy.blogspot.kr/2017/08/lets-remove-global-interpreter-lock.html">Let's remove the Global Interpreter Lock</a>를 통해 GIL을 제거할 수 있음을 알렸다.</p>
 <p>PyPy의 블로그 글에 따르면 CPython에서 GIL을 제거하기 힘든 두가지 이유는 다음과 같다.</p>
 <ul>
 <li>how do we guard access to mutable data structures with locks and</li>
 <li>what to do with reference counting that needs to be guarded.</li>
 </ul>
 <p>멀티스레드에서 발생하는 문제중 하나는 여러 스레드가 동시에 한 변수를 수정하려는 문제이다.
-멀티스레드를 사용해본 경험이 있다면 <code>lock guard</code>와 <code>mutex</code>등을 보거나 사용해본 점이 있을 것이다.</p>
+멀티스레드를 사용해본 경험이 있다면 <code class="language-text">lock guard</code>와 <code class="language-text">mutex</code>등을 보거나 사용해본 점이 있을 것이다.</p>
 <p>그렇다면 스레드간 공유하는 객체는 읽기만 가능하고, 수정은 못하게 한다면 되지 않을까?
 좋은 접근이지만 RC를 사용하면 쉽지많은 않은 일이다.</p>
 <p>다시 위의 코드를 보자</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> sys
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">import</span> sys
 
 
 <span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">:</span>
@@ -299,27 +275,27 @@ a <span class="token operator">=</span> Foo<span class="token punctuation">(</sp
 <span class="token keyword">def</span> <span class="token function">read_foo</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span>foo<span class="token punctuation">)</span>
 
-read_foo<span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># read_foo의 매개변수 foo가 a를 참조 있으므로 Foo의 레퍼런스 카운트는 증가하였다</span>
-<span class="token comment" spellcheck="true"># read_a 함수가 끝나면 레퍼런스 카운트는 다시 줄어든다</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>getrefcount</code>는 객체의 레퍼런스 카운트 갯수를 구하는 함수다.
-우리가 생각한 레퍼런스 카운트 횟수보다 좀 더 많을 텐데 <a href="https://docs.python.org/3/library/sys.html#sys.getrefcount" target="_blank" rel="noopener">문서</a>의 내용에 따르면, <code>getrefcount</code>함수를 실행하기 위해 매개변수로 참조 카운트가 증가 하여 그렇다.</p>
-<p>내용으로 돌아가면 <code>read_foo</code>는 <code>a</code>의 내용을 읽기만 하고 수정하진 않았지만, 매개변수등 참조가 일어 날때마나 <code>obj_refcnt</code>는 증/감 한다.
+read_foo<span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment"># read_foo의 매개변수 foo가 a를 참조 있으므로 Foo의 레퍼런스 카운트는 증가하였다</span>
+<span class="token comment"># read_a 함수가 끝나면 레퍼런스 카운트는 다시 줄어든다</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+      </div>
+<p><code class="language-text">getrefcount</code>는 객체의 레퍼런스 카운트 갯수를 구하는 함수다.
+우리가 생각한 레퍼런스 카운트 횟수보다 좀 더 많을 텐데 <a href="https://docs.python.org/3/library/sys.html#sys.getrefcount">문서</a>의 내용에 따르면, <code class="language-text">getrefcount</code>함수를 실행하기 위해 매개변수로 참조 카운트가 증가 하여 그렇다.</p>
+<p>내용으로 돌아가면 <code class="language-text">read_foo</code>는 <code class="language-text">a</code>의 내용을 읽기만 하고 수정하진 않았지만, 매개변수등 참조가 일어 날때마나 <code class="language-text">obj_refcnt</code>는 증/감 한다.
 여러 스레드가 동시에 참조를 만든다면 동시수정과 다름 없는 상태가 된다.</p>
 <p>추가로 RC를 사용하고도 이 문제를 피할 방법 자체는 있다.
-예를 들어 <code>std::atomic</code>이 있다(<a href="http://www.cplusplus.com/reference/atomic/atomic/" target="_blank" rel="noopener">C++ 문서</a>).
+예를 들어 <code class="language-text">std::atomic</code>이 있다(<a href="http://www.cplusplus.com/reference/atomic/atomic/">C++ 문서</a>).
 atomic은 DB의 Atomic 성질 처럼 순서대로 진행하는걸 보장하는데,
 즉 두 스레드가 거의 동시에 레퍼런스 카운트를 변화 하려고 하면, 먼저 요청한 스레드의 요청대로 한 obj_refcnt를 변화시키고, 그 다음 스레드 요청을 처리한다.</p>
-<p>대표적인 예로 Rust의 <code>Rc</code>와 <code>ARc</code>가 있다.
+<p>대표적인 예로 Rust의 <code class="language-text">Rc</code>와 <code class="language-text">ARc</code>가 있다.
 Rust 자체는 무비용 추상화로 메모리를 관리하지만, 원한다면 RC로 관리되는 객체를 만들 수 있다.
-이 경우 싱글 스레드면 <code>Rc</code>를 멀티 스레드면 <code>ARc</code>를 사용하면 되는데, <code>ARc</code>는 레퍼런스 카운트가 atomic 하게 동작한다.</p>
+이 경우 싱글 스레드면 <code class="language-text">Rc</code>를 멀티 스레드면 <code class="language-text">ARc</code>를 사용하면 되는데, <code class="language-text">ARc</code>는 레퍼런스 카운트가 atomic 하게 동작한다.</p>
 <p>Atomic을 보장하는 것은 추가적인 오버헤드가 있다는 이야기다.
-실제로 ARc <a href="https://doc.rust-lang.org/std/sync/struct.Arc.html" target="_blank" rel="noopener">문서</a>를 보면,
-원자성 보장은 일반 메모리 접근보다 비용이 많이 들고, 싱글스레드라면 비용을 줄이기 위에 <code>Rc</code>를 쓸 수 있다고 언급하고 있다.</p>
+실제로 ARc <a href="https://doc.rust-lang.org/std/sync/struct.Arc.html">문서</a>를 보면,
+원자성 보장은 일반 메모리 접근보다 비용이 많이 들고, 싱글스레드라면 비용을 줄이기 위에 <code class="language-text">Rc</code>를 쓸 수 있다고 언급하고 있다.</p>
 <p>현재 파이썬의 대부분은 싱글 스레드 환경이며, 멀티스레드를 위해 싱글스레드 저하를 선택할 것인가는 논쟁의 여지가 있다.
 현재로는 파이썬 커뮤니티는 멀티스레드 사용을 위해 싱글스레드 성능이 저하 되는 해결을 받아 들이고 싶어 하지 않는다.
-<a href="https://wiki.python.org/moin/GlobalInterpreterLock?action=show&amp;redirect=GIL" target="_blank" rel="noopener">파이썬 위키</a>의 GIL 항목을 인용 하면</p>
+<a href="https://wiki.python.org/moin/GlobalInterpreterLock?action=show&#x26;redirect=GIL">파이썬 위키</a>의 GIL 항목을 인용 하면</p>
 <blockquote>
 <p>The BDFL has said he will reject any proposal in this direction that slows down single-threaded programs.</p>
 </blockquote>
@@ -328,75 +304,15 @@ Rust 자체는 무비용 추상화로 메모리를 관리하지만, 원한다면
 <p>자비로운 종신독재자(BDFL, Benevolent Dictator for Life)란 소수의 오픈 소스 소프트웨어 개발 리더에게 부여되는 칭호이다. 주로 커뮤니티 내에서 논쟁이 있을 때 최종적으로 결론을 내려줄 수 있는, 프로젝트 창시자인 경우가 많다. 이 표현은 1995년에 파이썬의 창시자 귀도 반 로섬을 가리키는 호칭으로 처음 사용되었다.</p>
 </blockquote>
 <p>개인적으로도 멀티스레드를 위해 싱글스레드 성능저하가 심각하다면 받아 들이고 싶지 않다.</p>
-<p>실제로 파이썬에 atomic 레퍼런스 카운트를 사용하게되면 <a href="https://greek0.net/blog/2015/05/23/python_atomic_refcounting_slowdown/" target="_blank" rel="noopener">약 23%의 성능저하</a>를 보인다고 한다.</p>
+<p>실제로 파이썬에 atomic 레퍼런스 카운트를 사용하게되면 <a href="https://greek0.net/blog/2015/05/23/python_atomic_refcounting_slowdown/">약 23%의 성능저하</a>를 보인다고 한다.</p>
 <p>공유하는 객체만 원자성 보장을 하면 어떨까?
 멀티 스레드를 사용하는 코딩을 해도 스레드간 공유될 객체가 몇 안될 것 같다고 생각한다면,
 파이썬 콘솔을 켜서 다음 코드를 실행해 보길 권한다.</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> sys
-<span class="token operator">>></span><span class="token operator">></span> sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span>None<span class="token punctuation">)</span>
-<span class="token number">2296</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<div class="gatsby-highlight" data-language="python">
+      <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> sys
+<span class="token operator">>></span><span class="token operator">></span> sys<span class="token punctuation">.</span>getrefcount<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+<span class="token number">2296</span></code></pre>
+      </div>
 <p>글을 시작하며 언급한것 처럼 파이썬의 모든건 객체다.
-단순한 값으로 생각할 수 있는 <code>None</code>도 하나의 객체며 여러곳에서 공유하고 있다.
-왜 어려운 문제인지 짐작 할 수 있을 것이다.</p>
-
-</section>
-<footer id="article-footer">
-    <div id="article-tag">
-        
-            
-                <a href='/tags/Python/'>Python</a>
-            
-                <a href='/tags/Under-the-C/'>Under the C</a>
-            
-        
-    </div>
-</footer>
-<div id="share">
-    <div class="article-share-box">
-    <span>SHARE THIS ARTICLE</span>
-    <div class="article-share-links">
-        <a 
-            href="https://www.facebook.com/sharer.php?u="
-            id="share-link-facebook"
-            target="_blank" title="Facebook">
-            <img src="/icon/facebook.svg"/>
-        </a>
-        <a
-            href="https://twitter.com/intent/tweet?url="
-            id="share-link-twitter"
-            target="_blank" title="Twitter">
-            <img src="/icon/twitter.svg"/>
-        </a>
-    </div>
-</div>
-
-</div>
-<div class="fb-comments" data-href="https://blog.sn0wle0pard.io/2018/under-the-c-2/" data-width="100%" data-numposts="5"></div>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.11&appId=155425561701021';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-</article>
-
-
-        </main>
-        
-        
-        <script src="/js/share.js"></script>
-        
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-111601591-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        
-    </body>
-</html>
+단순한 값으로 생각할 수 있는 <code class="language-text">None</code>도 하나의 객체며 여러곳에서 공유하고 있다.
+왜 어려운 문제인지 짐작 할 수 있을 것이다.</p></div></div></main><footer class="footer" data-reactid="11">© 2018 Han Lee. All right Reserved.</footer></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-491137ea0132e069a2e5.js","195351340454287":"component---src-templates-post-js-fbbcabbf5e3e87bfb193.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","35783957827783":"component---src-pages-index-js-40b35b60b507d512337c.js","218538773642512":"component---src-pages-page-2-js-1d4f0f19c1c44398ab65.js","60335399758886":"path----2b087140a3508e3fab41.js","89274574769099":"path---2017-evolution-of-electron-e6a6ca4646ca2c83562a.js","49163586475816":"path---2017-building-a-multi-step-registration-form-with-react-87fa433787195f47f60f.js","251263436928280":"path---2017-pythons-innards-introduction-5cbe2586bcd15c1d02ec.js","239862675585989":"path---2018-high-density-display-and-images-22698d0c20982eb1364a.js","219739772139976":"path---2018-peoplefund-1b4fbf49b99c8fc2185a.js","21257364250153":"path---2018-under-the-c-1-2ac06883bc80137d7872.js","152797583254931":"path---2018-under-the-c-2-2502eae9d2eefec0519f.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-555c52a163ad73ec1f9b.js","135728916539164":"path---page-2-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-efe69f7d533c09d8196c.js"}/*]]>*/</script><script>/*<![CDATA[*/["/commons-605730581979c5cec35b.js","/app-491137ea0132e069a2e5.js","/path---2018-under-the-c-2-2502eae9d2eefec0519f.js","/component---src-templates-post-js-fbbcabbf5e3e87bfb193.js","/component---src-layouts-index-js-efe69f7d533c09d8196c.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>

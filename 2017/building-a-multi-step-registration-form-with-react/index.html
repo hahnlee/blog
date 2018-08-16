@@ -1,60 +1,14 @@
-<!doctype html>
-<html ⚡>
-    <head>
-        <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="theme-color" content="#000000">
-
-<title>[번역]React로 Multi-Step 가입 폼 만들기 | sn0wle0pard</title>
-<link rel="stylesheet" href="/css/style.css">
-
-    <link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-    <body>
-        <header class="header">
-  <div class="header-container">
-    <a class="blog-title" href="/">
-      sn0wle0pard
-    </a>
-    <ul class="blog-nav">
-      
-        <li class="menu-item">
-          <a href="/">Home</a>
-        </li>
-      
-        <li class="menu-item">
-          <a href="http://sn0wle0pard.io">About</a>
-        </li>
-      
-    </ul>
-  </div>
-</header>
-        <main class="container">
-            <article id="article">
-    <header id="article-title" class="text-center">
-    <h1>[번역]React로 Multi-Step 가입 폼 만들기</h1>
-    <div id="time">
-    <time datetime="2017-01-19T15:00:00.000Z" itemprop="datePublished">2017-01-20</time>
-    </div>
-</header>
-
-<section>
-    <blockquote>
-<p>이 글은 <a href="https://www.viget.com" target="_blank" rel="noopener">viget</a>의 <a href="https://www.viget.com/about/team/tmarshall" target="_blank" rel="noopener">Tommy Marshall</a>의<a href="https://www.viget.com/articles/building-a-multi-step-registration-form-with-react" target="_blank" rel="noopener">Building a Multi-Step Registration Form with React</a> 을 허락을 받고 번역한 글 입니다. 오역 및 번역 제안은 댓글로 달아 주시면 감사하겠습니다.</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/component---src-layouts-index-js-efe69f7d533c09d8196c.js" as="script"/><link rel="preload" href="/component---src-templates-post-js-fbbcabbf5e3e87bfb193.js" as="script"/><link rel="preload" href="/path---2017-building-a-multi-step-registration-form-with-react-87fa433787195f47f60f.js" as="script"/><link rel="preload" href="/app-491137ea0132e069a2e5.js" as="script"/><link rel="preload" href="/commons-605730581979c5cec35b.js" as="script"/><title data-react-helmet="true">Han Lee</title><meta data-react-helmet="true" name="description" content="Sample"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><style id="gatsby-inlined-css">.header{position:fixed;top:0;width:100%;background-color:hsla(0,0%,100%,.95);height:65px;display:flex;justify-content:center;align-items:center}.header a{color:#000}.footer{width:100%;color:#98a7b3;padding:1rem 0;background-color:#f5f5f5;text-align:center}*{box-sizing:border-box}body,html{font-family:Avenir,Apple SD Gothic Neo,Nanum Barun Gothic,Helvetica\,Arial,Malgun Gothic,\\B9D1\C740\ACE0\B515,돋움,Dotum,sans-serif;margin:0;padding:0;font-size:18px;line-height:1.6}#___gatsby,body,html{width:100%;height:100%}.mainRoot{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;min-height:100%;padding-top:65px}.mainRoot>main{-ms-flex:1;flex:1}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}a{color:#268bd2;text-decoration:none}a:focus,a:hover{text-decoration:underline}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:600;line-height:1.1;color:#333;letter-spacing:-.025rem}h1{font-size:2rem}h2{font-size:1.6rem}h3{font-size:1.3rem}h4,h5,h6{font-size:1rem}p{margin:0 0 1rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}dt{font-weight:700}dd{margin-bottom:.5rem}ul{list-style:inside circle;padding-left:0}ul li{margin-bottom:.25rem}ul ol,ul ul{margin-top:.25rem;margin-bottom:.5rem}ol{list-style:inside decimal;padding-left:0}ol li{margin-bottom:.25rem}ol ol,ol ul{margin-top:.25rem;margin-bottom:.5rem}ol+h1,ol+h2,ol+h3,p+h1,p+h2,p+h3,ul+h1,ul+h2,ul+h3{margin-top:1.5rem}hr{border:0;border-top:.5px solid #eee;border-bottom:.5px solid #eee;margin:1.5rem auto}strong{color:#333;font-weight:600}abbr{font-size:85%;font-weight:700;color:#555;text-transform:uppercase}abbr[title]{cursor:help;border-bottom:1px dotted #e5e5e5}blockquote{padding:0 0 0 1rem;margin:0 2rem 1rem 0;color:#999;border-left:5px solid #e5e5e5}blockquote p:last-child{margin-bottom:0}code *,pre *{font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace}code{padding:.25em .5em;font-size:85%;color:#bf616a;border-radius:3px}code,pre{background-color:#f9f9f9}pre{display:block;margin-top:0;margin-bottom:1rem;padding:1rem;font-size:.8rem;line-height:1.4;white-space:pre;white-space:pre-wrap;word-break:break-all}pre code{padding:0;font-size:100%;color:inherit;background-color:transparent}img{display:block;max-width:100%;margin:0 0 1rem;border-radius:5px}table{margin-bottom:1rem;width:100%;border:1px solid #e5e5e5;border-collapse:collapse}td,th{padding:.25rem .5rem;border:1px solid #e5e5e5}tbody tr:nth-child(odd) td,tbody tr:nth-child(odd) th{background-color:#f9f9f9}.lead{font-size:1.25rem}.container{max-width:50rem;padding:4rem 1.5rem;margin-left:auto;margin-right:auto}@media (min-width:38rem){.container{padding:5rem 1rem}}.footnotes p{display:inline-block}.postList{border-bottom:1px solid #ededed;margin-bottom:1rem}.postList a{color:#000}</style></head><body><div id="___gatsby"><div class="mainRoot" data-reactroot="" data-reactid="1" data-react-checksum="1814829319"><!-- react-empty: 2 --><div class="header" data-reactid="3"><h1 style="margin:0;text-align:center;" data-reactid="4"><a style="text-decoration:none;font-family:serif;font-weight:500;" href="/" data-reactid="5">Han Lee</a></h1></div><main style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0;" data-reactid="6"><div data-reactid="7"><h1 data-reactid="8">[번역]React로 Multi-Step 가입 폼 만들기</h1><p data-reactid="9">2017/01/20</p><div data-reactid="10"><blockquote>
+<p>이 글은 <a href="https://www.viget.com">viget</a>의 <a href="https://www.viget.com/about/team/tmarshall">Tommy Marshall</a>의<a href="https://www.viget.com/articles/building-a-multi-step-registration-form-with-react">Building a Multi-Step Registration Form with React</a> 을 허락을 받고 번역한 글 입니다. 오역 및 번역 제안은 댓글로 달아 주시면 감사하겠습니다.</p>
 </blockquote>
-<p>저희는 Viget에서 <a href="http://facebook.github.io/react/" target="_blank" rel="noopener">React</a>와 함께 일하는 것을 정말로 즐겼습니다. 저희는 React를 클라이언트 프로젝트, 개인 벤처 그리고 가장 최근에는 <a href="https://viget.com/flourish/introducing-jambells-start-a-holiday-handbell-choir-with-your-phne" target="_blank" rel="noopener">Pointless Corp</a>에 사용하였습니다.</p>
+<p>저희는 Viget에서 <a href="http://facebook.github.io/react/">React</a>와 함께 일하는 것을 정말로 즐겼습니다. 저희는 React를 클라이언트 프로젝트, 개인 벤처 그리고 가장 최근에는 <a href="https://viget.com/flourish/introducing-jambells-start-a-holiday-handbell-choir-with-your-phne">Pointless Corp</a>에 사용하였습니다.</p>
 <p>React의 가장 큰 특징 중 하나는 응용프로그램의 state를 처리하는 방법입니다. React 컴포넌트의 state가 업데이트 될 때마다, React는 업데이트 된 뷰를 다시 렌더링 합니다. 해석: React는 어떤 일이 일어 났을때 사용자에게 뭔가를 보여줄 필요가 있을때 아주 좋습니다.</p>
 <p>저는 컴포넌트의 state를 업데이트 하여 사용자가 어떤 단계에 있는지 표시한 후, 해당 단계에 적절한 필드를 표시하는 multi-step 폼이 이 기능을 보여주는 좋은 예라고 생각 했습니다. 시작하기 전에 우리가 무엇을 만들지 알아 보겠습니다.</p>
-<h3 id="CodePen-라이브-데모와-GitHub-Repo"><a href="#CodePen-라이브-데모와-GitHub-Repo" class="headerlink" title="CodePen 라이브 데모와 GitHub Repo"></a><a href="http://codepen.io/tommymarshall/pen/yyMOzj" target="_blank" rel="noopener">CodePen 라이브 데모</a>와 <a href="https://github.com/tommymarshall/react-multi-step-form/" target="_blank" rel="noopener">GitHub Repo</a></h3><p>현재 단계를 조금 더 확실하게 보여주기 위해 약간의 마크업과 CSS 및 진행바를 추가했습니다.
+<h3><a href="http://codepen.io/tommymarshall/pen/yyMOzj">CodePen 라이브 데모</a>와 <a href="https://github.com/tommymarshall/react-multi-step-form/">GitHub Repo</a></h3>
+<p>현재 단계를 조금 더 확실하게 보여주기 위해 약간의 마크업과 CSS 및 진행바를 추가했습니다.
 그외에는, 우리는 기본적으로 같은 것을 만들 겁니다.</p>
-<h3 id="시작하기"><a href="#시작하기" class="headerlink" title="시작하기"></a>시작하기</h3><p>저희는 4단계 가입 과정을 만들었습니다. 사용자는 다음 과정을 거칠 것입니다:</p>
+<h3>시작하기</h3>
+<p>저희는 4단계 가입 과정을 만들었습니다. 사용자는 다음 과정을 거칠 것입니다:</p>
 <ol>
 <li>기본 계정 정보 입력</li>
 <li>간단한 설문응답</li>
@@ -62,7 +16,8 @@
 <li>성공 메시지 보기</li>
 </ol>
 <p>주어진 단계에 관한 필드만 표시하는 쉬운 방법은 해당 내용을 개별 컴포넌트로 만드는 것 입니다. 그런 다음 사용자가 다음 단계로 이동하면 step state(역주-지금 어느 단계에 있는지 표시하는 state)를 1씩 증가 시킵니다. React는 step state의 변화를 보고 자동으로 컴포넌트를 재렌더링 하여 사용자가 원하는 것을 정확히 보여줍니다. 다음은 기본 코드 입니다:</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// file: Registration.jsx</span>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token comment">// file: Registration.jsx</span>
 
 <span class="token keyword">var</span> React         <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'react'</span><span class="token punctuation">)</span>
 <span class="token keyword">var</span> AccountFields <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./AccountFields'</span><span class="token punctuation">)</span>
@@ -71,31 +26,32 @@
 <span class="token keyword">var</span> Success       <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./Success'</span><span class="token punctuation">)</span>
 
 <span class="token keyword">var</span> Registration <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createClass</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    getInitialState<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token punctuation">{</span>
-            step<span class="token punctuation">:</span> <span class="token number">1</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+	getInitialState<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token punctuation">{</span>
+			step<span class="token punctuation">:</span> <span class="token number">1</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    render<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>step<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AccountFields</span> <span class="token punctuation">/></span></span>
-            <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SurveyFields</span> <span class="token punctuation">/></span></span>
-            <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Confirmation</span> <span class="token punctuation">/></span></span>
-            <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Success</span> <span class="token punctuation">/></span></span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+	render<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>step<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+				<span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AccountFields</span> <span class="token punctuation">/></span></span>
+			<span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+				<span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SurveyFields</span> <span class="token punctuation">/></span></span>
+			<span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+				<span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Confirmation</span> <span class="token punctuation">/></span></span>
+			<span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
+				<span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Success</span> <span class="token punctuation">/></span></span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Registration
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Registration</code></pre>
+      </div>
 <p><em>step</em> 이 1일 경우 (컴포넌트가 처음 로드 될 때) Account 필드를 보여줄 겁니다, 2일 경우에는 설문 조사 질문을 표시하고, 3일 경우 정보를 확인 하는 화면을, 마지막으로 4단계에서 성공 메시지를 표시합니다. 저는 CommonJS 패턴을 사용하여 이러한 컴포넌트를 구성할 것입니다. 이들 각각은 React 컴포넌트가 될 것입니다.</p>
 <p>다음으로, 사용자가 입력할 값을 저장할 객체를 만듭니다. 우리는 이름, 이메일, 비밀번호, 나이 및 좋아하는 색상 필드를 만들 겁니다. 여기선 이 정보를 상위 컴포넌트(Register.jsx)의 맨 위에 fieldValues로 저장하겠습니다.</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"> <span class="token comment" spellcheck="true">// file: Registration.jsx</span>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"> <span class="token comment">// file: Registration.jsx</span>
 
 <span class="token keyword">var</span> fieldValues <span class="token operator">=</span> <span class="token punctuation">{</span>
   name     <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
@@ -105,12 +61,13 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   colors   <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 
-<span class="token comment" spellcheck="true">// The rest of our file</span>
-<span class="token operator">...</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>사용자에게 표시되는 첫번째 컴포넌트인 <code>&lt;AccountFields /&gt;</code>에는 새 계정을 만드는데사용되는 <em>이름, 비밀번호, 이메일</em> 필드가 있습니다. 
-사용자가 “Save and Continue”를 클릭하면 데이터가 저장되고 회원 가입 과정의 두 번째 단계로 넘어갑니다.</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// file: AccountFields.jsx</span>
+<span class="token comment">// The rest of our file</span>
+<span class="token operator">...</span></code></pre>
+      </div>
+<p>사용자에게 표시되는 첫번째 컴포넌트인 <code class="language-text">&lt;AccountFields /&gt;</code>에는 새 계정을 만드는데사용되는 <em>이름, 비밀번호, 이메일</em> 필드가 있습니다.
+사용자가 "Save and Continue"를 클릭하면 데이터가 저장되고 회원 가입 과정의 두 번째 단계로 넘어갑니다.</p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token comment">// file: AccountFields.jsx</span>
 
 <span class="token keyword">var</span> React <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'react'</span><span class="token punctuation">)</span>
 
@@ -120,26 +77,26 @@ module<span class="token punctuation">.</span>exports <span class="token operato
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
              <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span>
-             <span class="token attr-name">defaultValue</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>fieldValues<span class="token punctuation">.</span>name <span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+             <span class="token attr-name">defaultValue</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>fieldValues<span class="token punctuation">.</span>name <span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
 
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Password<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
              <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
-             <span class="token attr-name">defaultValue</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>fieldValues<span class="token punctuation">.</span>password <span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+             <span class="token attr-name">defaultValue</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>fieldValues<span class="token punctuation">.</span>password <span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
 
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Email<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span>
              <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span>
-             <span class="token attr-name">defaultValue</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>fieldValues<span class="token punctuation">.</span>email <span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+             <span class="token attr-name">defaultValue</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>fieldValues<span class="token punctuation">.</span>email <span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
 
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>saveAndContinue <span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Save and Continue<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>saveAndContinue <span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Save and Continue<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
   saveAndContinue<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    <span class="token comment" spellcheck="true">// this.refs를 통해 값을 받습니다.</span>
+    <span class="token comment">// this.refs를 통해 값을 받습니다.</span>
     <span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
       name     <span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refs<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">getDOMNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
       password <span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refs<span class="token punctuation">.</span>password<span class="token punctuation">.</span><span class="token function">getDOMNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>
@@ -151,26 +108,27 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> AccountFields
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong><code>&lt;AccountFields /&gt;</code></strong> 에서 알아야 할 4가지 사항:</p>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> AccountFields</code></pre>
+      </div>
+<p><strong><code class="language-text">&lt;AccountFields /&gt;</code></strong> 에서 알아야 할 4가지 사항:</p>
 <ol>
 <li><em>defaultValue</em>는 input의 기본값을 설정합니다.
 React는HTML에서 기본 input 값을 처리하는 방식의어색함을 해결하기 위해 <em>value</em> 속성 대신에 이것을 사용합니다.
-이 주제에 대해 더 자세히 읽으려면 <a href="http://facebook.github.io/react/docs/forms.html#advanced-topics" target="_blank" rel="noopener">여기</a>를 클릭하세요.</li>
+이 주제에 대해 더 자세히 읽으려면 <a href="http://facebook.github.io/react/docs/forms.html#advanced-topics">여기</a>를 클릭하세요.</li>
 <li>우리는<em>defaultValue</em>를 부모 컴포넌트의 등록 정보(Registration.jsx)에 전달되는<em>this.props.fieldValues</em> 키와 연관시켰습니다. 이로 인해 사용자가 저장하고다음단계로 진행하여도 이전 단계로 돌아가면 이전에 입력한 내용이 표시됩니다</li>
-<li>우리는 refs를 사용해 DOM 노드를 참조하여 값을 얻고 있습니다. React에서 refs가 작동하는 방법을 보려면 <a href="http://facebook.github.io/react/docs/more-about-refs.html#the-ref-attribute" target="_blank" rel="noopener">이 문서</a>를 확인 하세요. 이 방법은 노드를 참고하는 더 쉬운 방법입니다. </li>
-<li>우리는 Registration 컴포넌트(부모)에 <em>saveValues</em>와 <em>nextStep</em>메소드를 만들어야 합니다. 그런 다음 이를 <strong><code>&lt;AccountFields /&gt;</code></strong>(자식)이 접근 할 수 있게 프로퍼티(property)로 전달해야 합니다. 그리고 2단계에서 이전 단계로 갈 수 있으므로 <em>previousStep</em>도 만들어야 합니다. </li>
+<li>우리는 refs를 사용해 DOM 노드를 참조하여 값을 얻고 있습니다. React에서 refs가 작동하는 방법을 보려면 <a href="http://facebook.github.io/react/docs/more-about-refs.html#the-ref-attribute">이 문서</a>를 확인 하세요. 이 방법은 노드를 참고하는 더 쉬운 방법입니다. </li>
+<li>우리는 Registration 컴포넌트(부모)에 <em>saveValues</em>와 <em>nextStep</em>메소드를 만들어야 합니다. 그런 다음 이를 <strong><code class="language-text">&lt;AccountFields /&gt;</code></strong>(자식)이 접근 할 수 있게 프로퍼티(property)로 전달해야 합니다. 그리고 2단계에서 이전 단계로 갈 수 있으므로 <em>previousStep</em>도 만들어야 합니다. </li>
 </ol>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// file: Registration.jsx</span>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token comment">// file: Registration.jsx</span>
 <span class="token operator">...</span>
 
 saveValues<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>fields<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 이 파일의 맨 위에 `fieldValues`가 있다는걸 기억하세요</span>
-    <span class="token comment" spellcheck="true">// 우리는 단순히 `fieldValues`에 있는 키를 Object.assign을 사용하여`fleld`로 객체를 복사하고 있습니다</span>
-    <span class="token comment" spellcheck="true">// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign 를 참고하세요</span>
-    <span class="token comment" spellcheck="true">// 역주 - 한국어 자료 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign</span>
+    <span class="token comment">// 이 파일의 맨 위에 `fieldValues`가 있다는걸 기억하세요</span>
+    <span class="token comment">// 우리는 단순히 `fieldValues`에 있는 키를 Object.assign을 사용하여`fleld`로 객체를 복사하고 있습니다</span>
+    <span class="token comment">// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign 를 참고하세요</span>
+    <span class="token comment">// 역주 - 한국어 자료 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign</span>
     fieldValues <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> fieldValues<span class="token punctuation">,</span> fields<span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -181,107 +139,45 @@ nextStep<span class="token punctuation">:</span> <span class="token keyword">fun
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-<span class="token comment" spellcheck="true">// nextStep과 같지만 숫자를 감소시킵니다</span>
+<span class="token comment">// nextStep과 같지만 숫자를 감소시킵니다</span>
 previousStep<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     step <span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>step <span class="token operator">-</span> <span class="token number">1</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-<span class="token operator">...</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">...</span></code></pre>
+      </div>
 <p>여기에서 새로 만든 메소드를 각각의 자식 컴포넌트에 프로퍼티로 전달하여 호출 할 수 있게 합니다.</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// file: Registration.jsx</span>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token comment">// file: Registration.jsx</span>
 <span class="token operator">...</span>
 
 render<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>step<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
-      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AccountFields</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span>
-                            <span class="token attr-name">nextStep</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>nextStep<span class="token punctuation">}</span></span>
-                            <span class="token attr-name">saveValues</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>saveValues<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AccountFields</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span>
+                            <span class="token attr-name">nextStep</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>nextStep<span class="token punctuation">}</span></span>
+                            <span class="token attr-name">saveValues</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>saveValues<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
     <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
-      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SurveyFields</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span>
-                           <span class="token attr-name">nextStep</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>nextStep<span class="token punctuation">}</span></span>
-                           <span class="token attr-name">previousStep</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>previousStep<span class="token punctuation">}</span></span>
-                           <span class="token attr-name">saveValues</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>saveValues<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SurveyFields</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span>
+                           <span class="token attr-name">nextStep</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>nextStep<span class="token punctuation">}</span></span>
+                           <span class="token attr-name">previousStep</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>previousStep<span class="token punctuation">}</span></span>
+                           <span class="token attr-name">saveValues</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>saveValues<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
     <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
-      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Confirmation</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span>
-                           <span class="token attr-name">previousStep</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>previousStep<span class="token punctuation">}</span></span>
-                           <span class="token attr-name">submitRegistration</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>submitRegistration<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Confirmation</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span>
+                           <span class="token attr-name">previousStep</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>previousStep<span class="token punctuation">}</span></span>
+                           <span class="token attr-name">submitRegistration</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>submitRegistration<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
     <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
-      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Success</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Success</span> <span class="token attr-name">fieldValues</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>fieldValues<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>여러분은 <strong><code>&lt;AccountFields /&gt;</code></strong>는 첫번째 단계 이므로 <em>previousStep</em>로 값을 전달 하지 않고, 이전 단계로 가지 않는 다는 것을 알게 될 것입니다. 또한 <em>saveValue</em> 또는 <em>nextStep</em>을 <strong><code>&lt;Confirmation /&gt;</code></strong>에 전달하는 대신 새로 작성한 <em>submitRegistration</em> 메소드를 전달합니다. 이 메소드는 사용자 입력값(<em>fieldValues</em>)을 제출하고 step을 4로 늘려 <strong><code>&lt;Success /&gt;</code></strong>를 표시합니다.</p>
-<p><strong><code>&lt;SurveyFields /&gt;</code></strong>와  <strong><code>&lt;Confirmation /&gt;</code></strong>그리고 <strong><code>&lt;Success /&gt;</code></strong> 컴포넌트에도 <strong><code>&lt;AccountFields /&gt;</code></strong>를 만드는 과정을 반복합니다. 간략히 하기 위해 코드는 <a href="https://github.com/tommymarshall/react-multi-step-form/blob/master/src/javascript/components/SurveyFields.jsx" target="_blank" rel="noopener">여기</a>와 <a href="https://github.com/tommymarshall/react-multi-step-form/blob/master/src/javascript/components/Confirmation.jsx" target="_blank" rel="noopener">여기</a> 그리고 <a href="https://github.com/tommymarshall/react-multi-step-form/blob/master/src/javascript/components/Success.jsx" target="_blank" rel="noopener">여기</a>서 확인 하실 수 있습니다.</p>
-<h3 id="데이터-저장시-주의-사항"><a href="#데이터-저장시-주의-사항" class="headerlink" title="데이터 저장시 주의 사항"></a>데이터 저장시 주의 사항</h3><p>사용자의 입력을 저장하고 전달하는 방식(<em>fieldValues={fieldValues}</em>)에 주의하세요. 모든 컴포넌트에 이 방식을 매번 적용 해야 할까요? 이 데이터에 의존하는 더 많은 컴포넌트가 있거나 같은 화면에 여러 컴포넌트를 보여주어야 하는 상황을 생각해 보세요. 가장 최신 데이터를 보여줄 한가지 방법을 찾았지만 다른 방법은 없을까요? 보시다시피 위의 구현은 빠르게 지루해 지고 다루기 힘들어 집니다.</p>
-<p>저희는 Facebook이 <a href="http://facebook.github.io/react/blog/2014/05/06/flux.html" target="_blank" rel="noopener">플럭스 스토어(Flux Store)</a>라고 부르는 저장소에 데이터를 저장함으로써 이런 상황을 벗어날 수 있었습니다. 우리는 이 저장소를 사용함으로써 한곳에 데이터를 저장하고 데이터 변경에 반응하는 컴포넌트만 다시 렌더링 할 수 있었습니다. 플럭스의 작동 방식을 조금 더 배우고 싶다면 Pete Hunt의 <a href="https://www.youtube.com/watch?v=nYkdrAPrdcw&amp;list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v#t=621" target="_blank" rel="noopener">강연</a>을 보는 것을 추천합니다.</p>
-<h3 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h3><p>React는 사용자에게 무언가를 보여줄지 처리할때 매우 좋습니다. 이 예제에서 보여지는 부분은 입력 필드(간단한 마크업)이며, 해당 필드가 표시되는 때는 현재 step(Registration component의 state)에 의해 결정됩니다. 이 관계에 대해 생각하는 한가지는 state가 결정하는 모양 입니다. 응용프로그램의 상태에 따라 문자 하나 만큼의 작거나 완전히 다른 컴포넌트를 표시하는 등 다양한 방식으로 간단하고도 예측 가능한 방식으로 렌더링 할 수 있습니다.</p>
-<p>React에 관한 질문이나 제가 한 작업에 대한 피드백이 있으시나요? 자유롭게 댓글로 달아주세요.</p>
-
-</section>
-<footer id="article-footer">
-    <div id="article-tag">
-        
-            
-                <a href='/tags/React/'>React</a>
-            
-                <a href='/tags/번역/'>번역</a>
-            
-                <a href='/tags/JavaScript/'>JavaScript</a>
-            
-                <a href='/tags/Viget/'>Viget</a>
-            
-        
-    </div>
-</footer>
-<div id="share">
-    <div class="article-share-box">
-    <span>SHARE THIS ARTICLE</span>
-    <div class="article-share-links">
-        <a 
-            href="https://www.facebook.com/sharer.php?u="
-            id="share-link-facebook"
-            target="_blank" title="Facebook">
-            <img src="/icon/facebook.svg"/>
-        </a>
-        <a
-            href="https://twitter.com/intent/tweet?url="
-            id="share-link-twitter"
-            target="_blank" title="Twitter">
-            <img src="/icon/twitter.svg"/>
-        </a>
-    </div>
-</div>
-
-</div>
-<div class="fb-comments" data-href="https://blog.sn0wle0pard.io/2017/building-a-multi-step-registration-form-with-react/" data-width="100%" data-numposts="5"></div>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.11&appId=155425561701021';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-</article>
-
-
-        </main>
-        
-        
-        <script src="/js/share.js"></script>
-        
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-111601591-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        
-    </body>
-</html>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>여러분은 <strong><code class="language-text">&lt;AccountFields /&gt;</code></strong>는 첫번째 단계 이므로 <em>previousStep</em>로 값을 전달 하지 않고, 이전 단계로 가지 않는 다는 것을 알게 될 것입니다. 또한 <em>saveValue</em> 또는 <em>nextStep</em>을 <strong><code class="language-text">&lt;Confirmation /&gt;</code></strong>에 전달하는 대신 새로 작성한 <em>submitRegistration</em> 메소드를 전달합니다. 이 메소드는 사용자 입력값(<em>fieldValues</em>)을 제출하고 step을 4로 늘려 <strong><code class="language-text">&lt;Success /&gt;</code></strong>를 표시합니다.</p>
+<p><strong><code class="language-text">&lt;SurveyFields /&gt;</code></strong>와  <strong><code class="language-text">&lt;Confirmation /&gt;</code></strong>그리고 <strong><code class="language-text">&lt;Success /&gt;</code></strong> 컴포넌트에도 <strong><code class="language-text">&lt;AccountFields /&gt;</code></strong>를 만드는 과정을 반복합니다. 간략히 하기 위해 코드는 <a href="https://github.com/tommymarshall/react-multi-step-form/blob/master/src/javascript/components/SurveyFields.jsx">여기</a>와 <a href="https://github.com/tommymarshall/react-multi-step-form/blob/master/src/javascript/components/Confirmation.jsx">여기</a> 그리고 <a href="https://github.com/tommymarshall/react-multi-step-form/blob/master/src/javascript/components/Success.jsx">여기</a>서 확인 하실 수 있습니다.</p>
+<h3>데이터 저장시 주의 사항</h3>
+<p>사용자의 입력을 저장하고 전달하는 방식(<em>fieldValues={fieldValues}</em>)에 주의하세요. 모든 컴포넌트에 이 방식을 매번 적용 해야 할까요? 이 데이터에 의존하는 더 많은 컴포넌트가 있거나 같은 화면에 여러 컴포넌트를 보여주어야 하는 상황을 생각해 보세요. 가장 최신 데이터를 보여줄 한가지 방법을 찾았지만 다른 방법은 없을까요? 보시다시피 위의 구현은 빠르게 지루해 지고 다루기 힘들어 집니다.</p>
+<p>저희는 Facebook이 <a href="http://facebook.github.io/react/blog/2014/05/06/flux.html">플럭스 스토어(Flux Store)</a>라고 부르는 저장소에 데이터를 저장함으로써 이런 상황을 벗어날 수 있었습니다. 우리는 이 저장소를 사용함으로써 한곳에 데이터를 저장하고 데이터 변경에 반응하는 컴포넌트만 다시 렌더링 할 수 있었습니다. 플럭스의 작동 방식을 조금 더 배우고 싶다면 Pete Hunt의 <a href="https://www.youtube.com/watch?v=nYkdrAPrdcw&#x26;list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v#t=621">강연</a>을 보는 것을 추천합니다.</p>
+<h3>결론</h3>
+<p>React는 사용자에게 무언가를 보여줄지 처리할때 매우 좋습니다. 이 예제에서 보여지는 부분은 입력 필드(간단한 마크업)이며, 해당 필드가 표시되는 때는 현재 step(Registration component의 state)에 의해 결정됩니다. 이 관계에 대해 생각하는 한가지는 state가 결정하는 모양 입니다. 응용프로그램의 상태에 따라 문자 하나 만큼의 작거나 완전히 다른 컴포넌트를 표시하는 등 다양한 방식으로 간단하고도 예측 가능한 방식으로 렌더링 할 수 있습니다.</p>
+<p>React에 관한 질문이나 제가 한 작업에 대한 피드백이 있으시나요? 자유롭게 댓글로 달아주세요.</p></div></div></main><footer class="footer" data-reactid="11">© 2018 Han Lee. All right Reserved.</footer></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-491137ea0132e069a2e5.js","195351340454287":"component---src-templates-post-js-fbbcabbf5e3e87bfb193.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","35783957827783":"component---src-pages-index-js-40b35b60b507d512337c.js","218538773642512":"component---src-pages-page-2-js-1d4f0f19c1c44398ab65.js","60335399758886":"path----2b087140a3508e3fab41.js","89274574769099":"path---2017-evolution-of-electron-e6a6ca4646ca2c83562a.js","49163586475816":"path---2017-building-a-multi-step-registration-form-with-react-87fa433787195f47f60f.js","251263436928280":"path---2017-pythons-innards-introduction-5cbe2586bcd15c1d02ec.js","239862675585989":"path---2018-high-density-display-and-images-22698d0c20982eb1364a.js","219739772139976":"path---2018-peoplefund-1b4fbf49b99c8fc2185a.js","21257364250153":"path---2018-under-the-c-1-2ac06883bc80137d7872.js","152797583254931":"path---2018-under-the-c-2-2502eae9d2eefec0519f.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-555c52a163ad73ec1f9b.js","135728916539164":"path---page-2-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-efe69f7d533c09d8196c.js"}/*]]>*/</script><script>/*<![CDATA[*/["/commons-605730581979c5cec35b.js","/app-491137ea0132e069a2e5.js","/path---2017-building-a-multi-step-registration-form-with-react-87fa433787195f47f60f.js","/component---src-templates-post-js-fbbcabbf5e3e87bfb193.js","/component---src-layouts-index-js-efe69f7d533c09d8196c.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
