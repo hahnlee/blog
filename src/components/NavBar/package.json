@@ -1,0 +1,4 @@
+{
+  "name": "@blog/nav-bar",
+  "main": "./NavBar.jsx"
+}

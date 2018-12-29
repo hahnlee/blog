@@ -1,0 +1,29 @@
+.articleCard {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 18rem;
+  height: 24rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  text-decoration: none;
+
+  .title {
+    font-size: 2rem;
+    word-break: keep-all;
+    margin: 0;
+  }
+
+  .timeToRead {
+    text-align: right;
+
+    i {
+      font-size: 1rem;
+      margin-right: .25rem;
+      vertical-align: top;
+    }
+  }
+}
