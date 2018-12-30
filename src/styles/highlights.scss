@@ -1,0 +1,12 @@
+pre, code {
+  font-family: $code-font;
+}
+
+code.language-text {
+  padding: .25em .5em!important;
+  font-size: 85%!important;
+  color: $oc-indigo-9!important;
+  background-color: $oc-gray-1!important;
+  border-radius: 3px!important;
+  text-shadow: none!important;
+}

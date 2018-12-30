@@ -5,7 +5,7 @@ import { NavBar } from '../NavBar'
 import { Footer } from '../Footer'
 
 import styles from './Page.module.scss'
-import './global.scss'
+import '../../styles/global.scss'
 
 
 export const Page = ({ children, title }) => (

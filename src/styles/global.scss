@@ -1,0 +1,228 @@
+@import './reset.scss';
+@import './open-color.scss';
+@import './variables.scss';
+@import './reset.scss';
+@import './highlights.scss';
+
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $base-font;
+  color: $base-color;
+  line-height: 1.6;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+
+  /* Reset Gatsby */
+  > div, > div > div {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.7;
+  margin: 1em 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1, h2, h3, h5 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  color: $base-lighten-color;
+}
+
+h6 {
+  color: $base-lighten-color;
+}
+
+p {
+  color: $text-color;
+  margin: 15px 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:active {
+    color: $link-color;
+  }
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $divider-color;
+  margin: 1.5em auto;
+}
+
+// Yeun's list style
+// https://gist.github.com/yeun/d824fc7b04b756508f4b0143535cec30
+
+ol, ul {
+  > li {
+    &:before {
+      position: absolute;
+      width: $li-bullets-width;
+      margin-left: -$li-bullets-width;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: right;
+    }
+  }
+}
+
+ul {
+  > li:before {
+    content: "\2022";
+    padding-right: $ul-bullets-right-space;
+    font-family: $ul-bullets-font;
+    font-size: $ul-bullets-font-size;
+    line-height: $ul-bullets-font-line-height;
+  }
+}
+
+ol {
+  counter-reset: section;
+
+  > li:before {
+    counter-increment: section;
+    content: counter(section) ".";
+    padding-right: $ol-bullets-right-space;
+    font-family: $ol-bullets-font;
+    font-size: $ol-bullets-font-size;
+    line-height: $ol-bullets-font-line-height;
+  }
+}
+
+ol, ul {
+  > li {
+    margin: 0 auto $li-bottom-space $li-bullets-width;
+    line-height: $li-line-height;
+
+    > ol,
+    > ul {
+      margin-top: $li-bottom-space;
+    }
+  }
+}
+
+li {
+  > ol,
+  > ul {
+    > li {
+      font-size: ($li-child-size-ratio * 1em);
+      margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
+    }
+  }
+}
+
+// Definition list
+dt {
+  float: left;
+  width: $dt-width;
+  overflow: auto;
+  clear: left;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: $li-bottom-space;
+
+  @include mobile {
+    width: 120px;
+  }
+}
+
+dd {
+  margin-left: $dd-position;
+  margin-bottom: $li-bottom-space;
+
+  @include mobile {
+    margin-left: 140px;
+  }
+}
+
+// Table
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid $table-border-color;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: .25rem .5rem;
+  border: 1px solid $table-border-color;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: $table-background-color;
+}
+
+// Blockquote
+blockquote {
+  font-weight: 300;
+  padding: 0 0 0 1.4rem;
+  margin: 0 2rem 1rem 0;
+  border-left: .2em solid $blockquote-border-color;
+
+  p {
+    color: $blockquote-color;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

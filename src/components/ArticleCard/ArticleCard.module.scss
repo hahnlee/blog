@@ -4,17 +4,16 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: 18rem;
   height: 24rem;
   padding: 1rem;
-  margin-bottom: 1rem;
 
   text-decoration: none;
 
   .title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     word-break: keep-all;
     margin: 0;
+    line-height: 1.2;
   }
 
   .timeToRead {

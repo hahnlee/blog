@@ -10,10 +10,18 @@ export const ArticleCard = ({ to, date, title, backgroundColor, color, timeToRea
     to={to}
   >
     <div>
-      <p>{date}</p>
-      <h1 className={styles.title}>{title}</h1>
+      <p style={{ color }}>{date}</p>
+      <h1
+        className={styles.title}
+        style={{ color }}
+      >
+        {title}
+      </h1>
     </div>
-    <p className={styles.timeToRead}>
+    <p
+      className={styles.timeToRead}
+      style={{ color }}
+    >
       <i class="material-icons">timer</i>
       {timeToRead}분
     </p>
