@@ -11,7 +11,11 @@ export default ({ data: { markdownRemark }}) => (
   <Page title={markdownRemark.frontmatter.title}>
     <h1 className={styles.title}>{markdownRemark.frontmatter.title}</h1>
     <p>{markdownRemark.frontmatter.date}</p>
-    <div dangerouslySetInnerHTML={{__html: markdownRemark.html}} />
+    <div
+      className={styles.content}
+      dangerouslySetInnerHTML={{__html: markdownRemark.html}}
+    />
+    <div className="utterances" />
   </Page>
 )
 

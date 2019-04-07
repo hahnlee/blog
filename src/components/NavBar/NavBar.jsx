@@ -7,6 +7,7 @@ import styles from './NavBar.module.scss'
 const LINKS = [
   { title: 'About', url: 'https://hanlee.io' },
   { title: 'GitHub', url: 'https://github.com/hahnlee' },
+  { title: 'RSS', url: 'https://blog.hanlee.io/rss.xml' },
 ]
 
 export const NavBar = () => (
