@@ -4,8 +4,6 @@ date: 2018-04-21
 tags:
   - Python
   - Under the C
-backgroundColor: "#61BFAD"
-color: "#FFFFFF"
 ---
 파이썬의 모든 것은 객체다. 당연하게 들릴 수 있으나 객체 지향 언어라고 하려 모든것이 객체인건 아니다.
 예를 들어 자바의 거의 모든것은 객체지만, 원시 자료형 (Primitive Type)은 아니다.

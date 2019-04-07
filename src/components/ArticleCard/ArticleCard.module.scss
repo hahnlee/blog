@@ -4,21 +4,31 @@
   flex-direction: column;
   justify-content: space-between;
 
-  height: 24rem;
   padding: 1rem;
 
   text-decoration: none;
+  border-bottom: 1px solid #e4e6eb;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .date {
+    margin: 0;
+  }
 
   .title {
     font-size: 1.75rem;
     word-break: keep-all;
-    margin: 0;
+    margin: .5rem 0;
     line-height: 1.2;
+    color: #4d5256;
   }
 
   .timeToRead {
     text-align: right;
     line-height: 1.2;
+    margin: 0;
 
     i {
       font-size: 1rem;

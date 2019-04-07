@@ -6,8 +6,6 @@ tags:
     - React 강좌
     - 강좌
     - JavaScript
-backgroundColor: "#EfE8D8"
-color: "#FF4552"
 ---
 > 2016년 부터 현재까지 가장 화제가 되는 자바스크립트 라이브러리는 단연 React입니다. 본격적인 강좌에 앞서 React에 대해 알아 봅시다.
 

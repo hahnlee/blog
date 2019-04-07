@@ -5,28 +5,25 @@ $nav-bar-height: 56px;
 
 .navBar {
   height: $nav-bar-height;
-  padding: 0 .5rem;
-  position: fixed;
   background: #FFFFFF;
   width: 100%;
-  top: 0;
-  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 3px;
 
   .content {
     display: flex;
     width: 100%;
     height: 100%;
-    max-width: 1200px;
+    max-width: 800px;
+    padding: 1rem;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
   }
 
   .homeLink {
-    color: #61BFAD;
-    font-size: 2rem;
+    color: #4d5256;
+    font-size: 1.5rem;
     font-weight: bold;
-    font-style: italic;
     text-decoration: none;
   }
 

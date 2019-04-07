@@ -6,8 +6,6 @@ tags:
   - 인턴
   - 회고
   - 피플펀드
-backgroundColor: "#FF8B8B"
-color: "#F9F7E8"
 ---
 저에게 작년은 엄청난 한 해 였습니다.
 * [스타수 100 이상의 오픈소스](https://github.com/sn0wle0pard/ipytracer)를 만들었고

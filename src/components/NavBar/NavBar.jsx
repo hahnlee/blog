@@ -5,10 +5,9 @@ import styles from './NavBar.module.scss'
 
 
 const LINKS = [
-  { title: 'ABOUT', url: 'https://hanlee.io' },
-  { title: 'RESUME', url: '/resume.pdf' },
-  { title: 'VIMRC.IO', url: 'https://vimrc.io' },
-  { title: 'KODOCS.IO', url: 'https://kodocs.io' },
+  { title: 'About', url: 'https://hanlee.io' },
+  { title: 'GitHub', url: 'https://github.com/hahnlee' },
+  { title: 'Resume', url: '/resume.pdf' },
 ]
 
 export const NavBar = () => (

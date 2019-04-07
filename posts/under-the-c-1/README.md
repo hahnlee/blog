@@ -4,8 +4,6 @@ date: 2018-04-11 11:41:22
 tags:
   - Python
   - Under the C
-backgroundColor: "#F9F7E8"
-color: "#61BFAD"
 ---
 # 소개
 * Under the C 시리즈는 작년, 파이썬에 [아주 작은 기여](https://github.com/python/cpython/pull/3085)를 하며 공부한 내용을 정리한 글 입니다.

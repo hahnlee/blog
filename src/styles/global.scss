@@ -3,7 +3,7 @@
 @import './variables.scss';
 @import './reset.scss';
 @import './highlights.scss';
-
+@import './colors.scss';
 
 html {
   font-size: $base-font-size;
@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: $base-font;
-  color: $base-color;
+  color: $primary-black;
   line-height: 1.6;
 }
 

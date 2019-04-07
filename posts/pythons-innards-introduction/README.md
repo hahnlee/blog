@@ -5,8 +5,6 @@ tags:
     - Python
     - Python's Innards
     - 번역
-backgroundColor: "#E54B4B"
-color: "#FFFFFF"
 ---
 > 이글은 [Yaniv Aknin](https://tech.blog.aknin.name/)의 [Python's Innards: Introduction](https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/)을 번역한 글입니다.
 원글에 따라 이 글도 [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) 라이센스를 따릅니다.

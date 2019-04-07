@@ -5,8 +5,6 @@ tags:
     - Electron
     - 번역
     - JavaScript
-backgroundColor: "#167C80"
-color: "#FFFFFF"
 ---
 > 이 글은 [Cheng Zhao](https://github.com/zcbenz)의 [Evolution of Electron](http://cheng.guru/blog/2016/11/13/evolution-of-electron.html) ([일본어 번역](http://cheng.guru/blog/2016/11/13/evolution-of-electron-japanese.html))을 허락을 받고 번역한 글 입니다. 오역 및 번역 제안은 댓글로 달아 주시면 감사하겠습니다.
 

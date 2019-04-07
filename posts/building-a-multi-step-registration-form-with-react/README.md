@@ -6,8 +6,6 @@ tag:
     - 번역
     - JavaScript
     - Viget
-backgroundColor: "#005397"
-color: "#E13334"
 ---
 > 이 글은 [viget](https://www.viget.com)의 [Tommy Marshall](https://www.viget.com/about/team/tmarshall)의[Building a Multi-Step Registration Form with React](https://www.viget.com/articles/building-a-multi-step-registration-form-with-react) 을 허락을 받고 번역한 글 입니다. 오역 및 번역 제안은 댓글로 달아 주시면 감사하겠습니다.
 
