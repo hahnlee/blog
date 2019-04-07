@@ -20,10 +20,15 @@ export default class Post extends React.Component {
   }
 
   render() {
-    const { data: { markdownRemark }} = this.props
+    const { data: { markdownRemark } } = this.props
+    const title = markdownRemark.frontmatter.title
     return (
-      <Page title={markdownRemark.frontmatter.title}>
-        <h1 className={styles.title}>{markdownRemark.frontmatter.title}</h1>
+      <Page
+        title={title}
+        ogTitle={title}
+        ogDescription={markdownRemark.excerpt}
+      >
+        <h1 className={styles.title}>{title}</h1>
         <p>{markdownRemark.frontmatter.date}</p>
         <div
           className={styles.content}
@@ -39,6 +44,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       fields {
         slug
       }

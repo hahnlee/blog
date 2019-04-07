@@ -8,7 +8,7 @@ import styles from './Page.module.scss'
 import '../../styles/global.scss'
 
 
-export const Page = ({ children, title }) => (
+export const Page = ({ children, title, ogTitle, ogDescription }) => (
   <div className={styles.page}>
     <Helmet>
       <title>{title}</title>
@@ -18,6 +18,8 @@ export const Page = ({ children, title }) => (
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+      {ogTitle && <meta property="og:title" content={ogTitle} />}
+      {ogDescription && <meta property="og:description" content={ogDescription} />}
     </Helmet>
     <NavBar />
     <main className={styles.content}>
