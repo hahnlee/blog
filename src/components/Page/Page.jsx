@@ -18,13 +18,6 @@ export const Page = ({ children, title }) => (
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-      <script src="https://utteranc.es/client.js"
-        repo="hahnlee/blog"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async
-      />
     </Helmet>
     <NavBar />
     <main className={styles.content}>

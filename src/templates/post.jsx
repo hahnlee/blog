@@ -15,7 +15,13 @@ export default ({ data: { markdownRemark }}) => (
       className={styles.content}
       dangerouslySetInnerHTML={{__html: markdownRemark.html}}
     />
-    <div className="utterances" />
+    <script src="https://utteranc.es/client.js"
+      repo="hahnlee/blog"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async
+    />
   </Page>
 )
 
