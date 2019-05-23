@@ -3,21 +3,6 @@ import { graphql } from 'gatsby'
 
 import { ArticleCard, Page } from '../components'
 
-
-export default ({ data: { allMarkdownRemark: { edges } } }) => (
-  <Page title="Han Lee's Dev Blog">
-    {edges.map(({ node }, index) => (
-      <ArticleCard
-        key={index}
-        to={node.fields.slug}
-        date={node.frontmatter.date}
-        title={node.frontmatter.title}
-        timeToRead={node.timeToRead}
-      />
-    ))}
-  </Page>
-)
-
 export const query = graphql`
 {
   allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
@@ -36,3 +21,25 @@ export const query = graphql`
   }
 }
 `
+
+function IndexPage({ data: { allMarkdownRemark: { edges } } }) {
+  return (
+    <Page
+      title="Han Lee"
+      ogTitle="Han Lee"
+      ogDescription="이한의 개발 블로그"
+    >
+      {edges.map(({ node }, index) => (
+        <ArticleCard
+          key={index}
+          to={node.fields.slug}
+          date={node.frontmatter.date}
+          title={node.frontmatter.title}
+          timeToRead={node.timeToRead}
+        />
+      ))}
+    </Page>
+  )
+}
+
+export default IndexPage

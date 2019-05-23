@@ -13,6 +13,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: '@babel/plugin-proposal-export-default-from',
+  })
+}
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
