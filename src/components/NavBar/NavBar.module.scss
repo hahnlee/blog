@@ -1,13 +1,9 @@
 @import '../../styles/colors.scss';
 
-
-$nav-bar-height: 56px;
-
 .navBar {
-  height: $nav-bar-height;
+  height: 4rem;
   background: #FFFFFF;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 3px;
 
   .content {
     display: flex;

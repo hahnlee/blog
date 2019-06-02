@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 
 import styles from './NavBar.module.scss'
 
-
 const LINKS = [
   { title: 'About', url: 'https://hanlee.io' },
   { title: 'GitHub', url: 'https://github.com/hahnlee' },
@@ -18,7 +17,7 @@ function NavBar() {
           to="/"
           className={styles.homeLink}
         >
-          HAN LEE
+          Han Lee
         </Link>
         <section className={styles.links}>
           {LINKS.map(link => (
