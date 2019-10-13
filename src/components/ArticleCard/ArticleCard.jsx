@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import styles from './ArticleCard.module.scss'
 
-function ArticleCard({ to, date, title, timeToRead }) {
+function ArticleCard({ to, date, title, timeToRead, description }) {
   return (
     <Link
       className={styles.articleCard}
@@ -16,13 +16,8 @@ function ArticleCard({ to, date, title, timeToRead }) {
         >
           {title}
         </h1>
+        <p className={styles.description}>{description}</p>
       </div>
-      <p
-        className={styles.timeToRead}
-      >
-        <i class="material-icons">timer</i>
-        {timeToRead}분
-      </p>
     </Link>
   )
 }

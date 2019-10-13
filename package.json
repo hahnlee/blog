@@ -15,15 +15,19 @@
     "prismjs": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@types/styled-components": "^4.1.19",
     "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-styled-components": "^3.1.9",
+    "gatsby-plugin-typescript": "^2.1.12",
     "gatsby-remark-copy-linked-files": "^2.0.8",
     "gatsby-remark-figure-caption": "^2.0.0",
     "gatsby-remark-images": "^3.0.1",

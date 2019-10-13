@@ -27,7 +27,7 @@ function NavBar() {
               target="_blink"
               rel="noopener noreferrer"
             >
-              {link.title}
+              {link.title.toUpperCase()}
             </a>
           ))}
         </section>

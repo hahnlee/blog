@@ -1,6 +1,8 @@
 ---
 title: "Under the C: 소개"
 date: 2018-04-11 11:41:22
+thumbnail:
+  url: ./thumbnail.jpg
 tags:
   - Python
   - Under the C

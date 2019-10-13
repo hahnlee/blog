@@ -1,6 +1,10 @@
 ---
 title: "스타트업 인턴 회고: peoplefund"
 date: 2018-02-23
+thumbnail:
+  url: ./pf_logo.svg
+  contain: true
+
 tags:
   - 스타트업
   - 인턴

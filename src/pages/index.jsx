@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { ArticleCard, Page } from '../components'
+import Page from '../components/Page'
+import ArticleListItem from '../components/ArticleListItem'
 
 export const query = graphql`
 {
@@ -12,9 +13,16 @@ export const query = graphql`
         fields {
           slug
         }
+        excerpt
         frontmatter {
           date(formatString: "YYYY-MM-DD")
           title
+          thumbnail {
+            url {
+              publicURL
+            }
+            contain
+          }
         }
       }
     }
@@ -30,12 +38,14 @@ function IndexPage({ data: { allMarkdownRemark: { edges } } }) {
       ogDescription="이한의 개발 블로그"
     >
       {edges.map(({ node }, index) => (
-        <ArticleCard
+        <ArticleListItem
           key={index}
           to={node.fields.slug}
           date={node.frontmatter.date}
           title={node.frontmatter.title}
           timeToRead={node.timeToRead}
+          description={node.excerpt}
+          thumbnail={node.frontmatter.thumbnail}
         />
       ))}
     </Page>

@@ -1,6 +1,8 @@
 ---
 title: 고밀도 디스플레이를 위한 이미지 다루기
 date: 2018-01-21
+thumbnail:
+  url: ./thumbnail.png
 tags:
 ---
 # 들어가며

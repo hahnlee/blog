@@ -1,6 +1,8 @@
 ---
 title: "Under the C: PyObject"
 date: 2018-04-21
+thumbnail:
+  url: ./thumbnail.jpg
 tags:
   - Python
   - Under the C

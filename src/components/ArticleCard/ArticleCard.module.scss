@@ -13,15 +13,17 @@
   }
 
   .date {
+    font-size: 12px;
     margin: 0;
   }
 
   .title {
-    font-size: 1.75rem;
+    font-size: 1rem;
     word-break: keep-all;
-    margin: .5rem 0;
+    margin: 0;
     line-height: 1.2;
     color: #4d5256;
+    line-height: 1.61765;
   }
 
   .timeToRead {
@@ -34,5 +36,10 @@
       margin-right: .25rem;
       vertical-align: top;
     }
+  }
+
+  .description {
+    margin: 0;
+    line-height: 1.61765;
   }
 }
