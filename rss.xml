@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Han Lee]]></title><description><![CDATA[이한의 개발 블로그]]></description><link>https://blog.hanlee.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 15 Dec 2019 13:03:46 GMT</lastBuildDate><item><title><![CDATA[공리(公理) 정하기]]></title><description><![CDATA[…]]></description><link>https://blog.hanlee.io/2019/axiom/</link><guid isPermaLink="false">https://blog.hanlee.io/2019/axiom/</guid><pubDate>Sun, 15 Dec 2019 20:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;들어가기전&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Han Lee]]></title><description><![CDATA[이한의 개발 블로그]]></description><link>https://blog.hanlee.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 15 Dec 2019 13:08:28 GMT</lastBuildDate><item><title><![CDATA[공리(公理) 정하기]]></title><description><![CDATA[…]]></description><link>https://blog.hanlee.io/2019/axiom/</link><guid isPermaLink="false">https://blog.hanlee.io/2019/axiom/</guid><pubDate>Sun, 15 Dec 2019 20:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;들어가기전&lt;/h1&gt;
 &lt;p&gt;엄밀하게 말할경우, 논리학에서 말하는 명제와, 공리 모두 맞지 않다. 비유로 생각하고 읽어 달라.&lt;/p&gt;
 &lt;h1&gt;들어가며&lt;/h1&gt;
 &lt;p&gt;운이 좋게 프론트팀을 리드하게 되었다.&lt;/p&gt;
@@ -156,9 +156,9 @@
 &lt;h1&gt;힐베르트의 꿈&lt;/h1&gt;
 &lt;p&gt;수학자 힐베르트는 최소한의 공리로 참인 모든 명제를 증명할 수 있는 완벽한 공리계를 만들고자 했다.
 힐베르트의 꿈은 잠시 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%9F%AC%EC%85%80%EC%9D%98_%EC%97%AD%EC%84%A4&quot;&gt;러셀의 역설&lt;/a&gt;로 위기를 맞았지만, 적절한 공리의 추가로 역설을 해결하고 조금씩 꿈을 향해 가는것 같았다.&lt;/p&gt;
-&lt;p&gt;그런데 러셀의 역설이 해결된지 약 20년뒤 힐베르트의 꿈은 러셀에 의해 무너지게 된다.&lt;/p&gt;
+&lt;p&gt;그런데 러셀의 역설이 해결된지 약 20년뒤 힐베르트의 꿈은 괴델에 의해 무너지게 된다.&lt;/p&gt;
 &lt;h1&gt;불완전성 정리&lt;/h1&gt;
-&lt;p&gt;1931년 러셀은 어떤 공리들을 택해도, 참이지만 증명할 수 없는 명제가 있음을 증명하였다.
+&lt;p&gt;1931년 괴델은 어떤 공리들을 택해도, 참이지만 증명할 수 없는 명제가 있음을 증명하였다.
 이를 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EA%B4%B4%EB%8D%B8%EC%9D%98_%EB%B6%88%EC%99%84%EC%A0%84%EC%84%B1_%EC%A0%95%EB%A6%AC&quot;&gt;불완전성 정리&lt;/a&gt; 라고 한다.&lt;/p&gt;
 &lt;p&gt;따라서 어떤 공리계를 만들어도, 모든것이 증명가능한 완벽한 공리계를 만들 수 없다.&lt;/p&gt;
 &lt;p&gt;재미있는건 힐베르트는 수학자들이 20세기에 풀어야할 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%ED%9E%90%EB%B2%A0%EB%A5%B4%ED%8A%B8_%EB%AC%B8%EC%A0%9C&quot;&gt;23가지 문제&lt;/a&gt;들을 뽑았는데, 이중, 첫번째 문제인 연속체 가설이 참도 거짓도 없는 문제임이 밝혀졌다.&lt;/p&gt;
