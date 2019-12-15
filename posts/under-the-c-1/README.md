@@ -3,6 +3,7 @@ title: "Under the C: 소개"
 date: 2018-04-11 11:41:22
 thumbnail:
   url: ./thumbnail.jpg
+summary: CPython의 구현을 살펴봅시다
 tags:
   - Python
   - Under the C

@@ -11,12 +11,14 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
+      timeToRead
       fields {
         slug
       }
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
+        summary
       }
     }
   }
@@ -35,19 +37,23 @@ function Post({ data: { markdownRemark } }) {
     commentRef.current.appendChild(script)
   }, [])
 
-  const title = markdownRemark.frontmatter.title
+  const {
+    frontmatter: { title, summary, date },
+    timeToRead,
+    html,
+  } = markdownRemark
 
   return (
     <Page
       title={title}
       ogTitle={title}
-      ogDescription={markdownRemark.excerpt}
+      ogDescription={summary}
     >
       <h1 className={styles.title}>{title}</h1>
-      <p>{markdownRemark.frontmatter.date}</p>
+      <p>{date} • {timeToRead}분</p>
       <div
         className={styles.content}
-        dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+        dangerouslySetInnerHTML={{ __html: html }}
       />
       <div ref={commentRef} />
     </Page>

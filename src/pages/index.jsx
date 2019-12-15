@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Page from '../components/Page'
+import NavBar from '../components/NavBar'
 import ArticleListItem from '../components/ArticleListItem'
 
 export const query = graphql`
@@ -17,12 +18,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "YYYY-MM-DD")
           title
-          thumbnail {
-            url {
-              publicURL
-            }
-            contain
-          }
+          summary
         }
       }
     }
@@ -37,6 +33,7 @@ function IndexPage({ data: { allMarkdownRemark: { edges } } }) {
       ogTitle="Han Lee"
       ogDescription="이한의 개발 블로그"
     >
+      <NavBar />
       {edges.map(({ node }, index) => (
         <ArticleListItem
           key={index}
@@ -44,8 +41,7 @@ function IndexPage({ data: { allMarkdownRemark: { edges } } }) {
           date={node.frontmatter.date}
           title={node.frontmatter.title}
           timeToRead={node.timeToRead}
-          description={node.excerpt}
-          thumbnail={node.frontmatter.thumbnail}
+          description={node.frontmatter.summary}
         />
       ))}
     </Page>

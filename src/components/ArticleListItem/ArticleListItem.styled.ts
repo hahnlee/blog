@@ -5,19 +5,7 @@ import Colors from '../../styles/colors'
 
 export const Item = styled(Link)`
   display: flex;
-  min-height: 105px;
-  margin-bottom: 44px;
-
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
-    margin-bottom: 0;
-    padding: 16px 0;
-    border-bottom: 1px solid ${Colors.Grey3};
-
-    &:last-child {
-      border: none;
-    }
-  }
+  padding: 1rem 0;
 `
 
 export const Content = styled.div`
@@ -25,17 +13,18 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h1`
-  color: ${Colors.Grey9};
-  font-size: 16px;
+  color: ${Colors.Grey7};
+  font-size: 1.75rem;
   line-height: 25px;
   margin: 0;
 `
 
 export const Description = styled.p`
-  color: ${Colors.Grey7};
+  color: ${Colors.Grey6};
   font-size: 16px;
   line-height: 25px;
   margin: 0;
+  padding: .5rem 0;
 `
 
 export const Date = styled.p`
@@ -43,6 +32,7 @@ export const Date = styled.p`
   font-size: 12px;
   font-weight: bold;
   color: ${Colors.Grey6};
+  padding: .5rem 0;
 `
 
 interface ThumbnailProps {

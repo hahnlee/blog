@@ -3,6 +3,7 @@ title: "Under the C: PyObject"
 date: 2018-04-21
 thumbnail:
   url: ./thumbnail.jpg
+summary: 파이썬의 모든 자료형의 부모 PyObject를 알아봅시다
 tags:
   - Python
   - Under the C

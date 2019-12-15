@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import NavBar from '../NavBar'
 import Footer from '../Footer'
 
 import styles from './Page.module.scss'
@@ -21,7 +20,6 @@ function Page({ children, title, ogTitle, ogDescription }) {
         {ogTitle && <meta property="og:title" content={ogTitle} />}
         {ogDescription && <meta property="og:description" content={ogDescription} />}
       </Helmet>
-      <NavBar />
       <main className={styles.content}>
         {children}
       </main>

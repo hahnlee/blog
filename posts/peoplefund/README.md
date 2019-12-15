@@ -1,10 +1,10 @@
 ---
-title: "스타트업 인턴 회고: peoplefund"
+title: "스타트업 인턴 회고: PeopleFund"
 date: 2018-02-23
 thumbnail:
   url: ./pf_logo.svg
   contain: true
-
+summary: 10개월의 PeopleFund 재직후기
 tags:
   - 스타트업
   - 인턴
