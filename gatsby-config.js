@@ -25,10 +25,17 @@ module.exports = {
         path: path.resolve(__dirname, 'posts'),
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-remark-images',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-images',
+          'gatsby-remark-prismjs',
+        ]
       },
     },
     'gatsby-plugin-feed',
