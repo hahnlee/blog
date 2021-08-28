@@ -73,7 +73,7 @@ export default function Post({ data }: Props) {
       image={data.mdx.frontmatter.thumbnail.childImageSharp.fluid.src}
       publishedTime={data.mdx.frontmatter.date}
     >
-      <main>
+      <Main>
         <Article>
           <Back to="/">← 글 목록</Back>
           <header>
@@ -84,7 +84,7 @@ export default function Post({ data }: Props) {
           <Back to="/">← 글 목록</Back>
         </Article>
         <section ref={setRef} />
-      </main>
+      </Main>
     </Page>
   )
 }
@@ -102,14 +102,16 @@ const postReset = global({
   },
 })
 
+const Main = styled('main', {
+  paddingBottom: 'env(safe-area-inset-bottom, 0)',
+})
+
 const Article = styled('article', {
   maxWidth: '800px',
   margin: '0 auto',
   padding: '30px',
-  paddingBottom: 'calc(30px + env(safe-area-inset-bottom, 0))',
   '@media(max-width: 600px)': {
     padding: '15px',
-    paddingBottom: 'calc(15px + env(safe-area-inset-bottom, 0))',
   },
 })
 
