@@ -5,6 +5,7 @@ import React from 'react'
 import Page from '../containers/Page'
 import PostItem from '../components/PostItem'
 import NavBar from '../components/NavBar'
+import { globalReset } from '../styles/global'
 
 interface Post {
   id: string
@@ -31,7 +32,7 @@ interface Response {
 }
 
 export default function Home() {
-  globalStyle()
+  globalReset()
 
   const { allMdx } = useStaticQuery<Response>(graphql`
     query {
@@ -78,29 +79,6 @@ export default function Home() {
     </Page>
   )
 }
-
-const globalStyle = global({
-  html: {
-    margin: 0,
-    padding: 0,
-    width: '100%',
-    height: '100%',
-  },
-  body: {
-    margin: 0,
-    padding: 0,
-    width: '100%',
-    height: '100%',
-  },
-  '#___gatsby': {
-    width: '100%',
-    height: '100%',
-  },
-  '#gatsby-focus-wrapper': {
-    width: '100%',
-    height: '100%',
-  },
-})
 
 const Main = styled('main', {
   padding: '60px',

@@ -2,6 +2,7 @@ import { styled, css } from '@stitches/react'
 import { Link } from 'gatsby'
 import Image, { FixedObject } from 'gatsby-image'
 import React from 'react'
+import { colors } from '../styles/colors'
 
 interface Props {
   title: string
@@ -26,7 +27,7 @@ export default function PostItem({
 }
 
 const Container = styled(Link, {
-  color: 'black',
+  color: colors.grey7,
   textDecoration: 'none',
 })
 

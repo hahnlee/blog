@@ -30,6 +30,7 @@ module.exports = {
         path: path.resolve(__dirname, 'posts'),
       },
     },
+    'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

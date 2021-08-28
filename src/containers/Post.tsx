@@ -1,9 +1,11 @@
 import { global, styled } from '@stitches/react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import Page from './Page'
+import { colors } from '../styles/colors'
+import { globalReset } from '../styles/global'
 import 'prismjs/themes/prism.css'
 
 export const pageQuery = graphql`
@@ -45,19 +47,24 @@ interface Props {
 }
 
 export default function Post({ data }: Props) {
-  resetPrism()
+  globalReset()
+  postReset()
 
-  const commentRef = useRef<HTMLElement | null>(null)
+  const [commentRef, setRef] = useState<HTMLElement | null>(null)
 
   useEffect(() => {
+    if (commentRef == null) {
+      return
+    }
+
     const script = document.createElement('script')
     script.src = 'https://utteranc.es/client.js'
     script.async = true
     script.setAttribute('repo', 'hahnlee/blog')
     script.setAttribute('theme', 'github-light')
     script.setAttribute('issue-term', 'pathname')
-    commentRef.current?.appendChild(script)
-  }, [])
+    commentRef.appendChild(script)
+  }, [commentRef])
 
   return (
     <Page
@@ -68,28 +75,50 @@ export default function Post({ data }: Props) {
     >
       <main>
         <Article>
+          <Back to="/">← 글 목록</Back>
           <header>
-            <h1>{data.mdx.frontmatter.title}</h1>
+            <Title>{data.mdx.frontmatter.title}</Title>
             <p>{data.mdx.frontmatter.date}</p>
           </header>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          <Back to="/">← 글 목록</Back>
         </Article>
-        <section ref={commentRef} />
+        <section ref={setRef} />
       </main>
     </Page>
   )
 }
 
-const resetPrism = global({
+const postReset = global({
+  body: {
+    fontFamily: 'sans-serif',
+  },
   ':not(pre) > code[class*="language-"]': {
-    backgroundColor: 'white',
+    backgroundColor: colors.grey0,
   },
   'pre[class*="language-"]': {
-    backgroundColor: 'white',
+    backgroundColor: colors.grey0,
+    borderRadius: 16,
   },
 })
 
 const Article = styled('article', {
   maxWidth: '800px',
   margin: '0 auto',
+  padding: '30px',
+  '@media(max-width: 600px)': {
+    padding: '15px',
+  },
+})
+
+const Title = styled('h1', {
+  fontSize: 36,
+  margin: 0,
+})
+
+const Back = styled(Link, {
+  color: colors.grey6,
+  textDecoration: 'none',
+  margin: '15px 0',
+  display: 'inline-block',
 })
