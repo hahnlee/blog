@@ -3,9 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { FixedObject } from 'gatsby-image'
 import React from 'react'
 import Page from '../containers/Page'
-import Header from '../components/Header'
 import PostItem from '../components/PostItem'
-import SideBar from '../components/SideBar'
+import NavBar from '../components/NavBar'
 
 interface Post {
   id: string
@@ -63,14 +62,7 @@ export default function Home() {
   return (
     <Page>
       <Main>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-        <div style={{ position: 'fixed' }}>
-          <Header />
-          <SideBar />
-        </div>
+        <NavBar />
         <PostList>
           {allMdx.edges.map(({ node }) => (
             <PostItem
@@ -112,8 +104,11 @@ const globalStyle = global({
 
 const Main = styled('main', {
   padding: '60px',
-  height: '100%',
+  minHeight: '100%',
   fontFamily: "'Noto Serif KR', serf",
+  '@media(max-width: 600px)': {
+    padding: '30px',
+  },
 })
 
 const PostList = styled('section', {
@@ -121,5 +116,12 @@ const PostList = styled('section', {
   gridTemplateColumns: '1fr 1fr',
   marginTop: 150,
   marginLeft: 200,
-  gridRowGap: '30px',
+  gridRowGap: '35px',
+  gridColumnGap: '15px',
+  '@media(max-width: 800px)': {
+    gridTemplateColumns: '1fr',
+  },
+  '@media(max-width: 600px)': {
+    margin: '0 auto',
+  },
 })

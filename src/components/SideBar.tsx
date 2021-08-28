@@ -32,16 +32,26 @@ const Menu = styled('div', {
   width: 'min-content',
   paddingTop: 30,
   marginTop: 30,
+  marginBottom: 15,
   borderTop: '1px solid #e9ecef',
+  '@media(max-width: 600px)': {
+    flexDirection: 'row',
+    paddingTop: 10,
+    marginTop: 10,
+  },
 })
 
 const MenuItem = styled('a', {
   color: 'black',
+  marginRight: 15,
   marginBottom: 10,
   '&:active': {
     color: 'black',
   },
   '&:visited': {
     color: 'black',
+  },
+  '@media(max-width: 600px)': {
+    fontSize: 14,
   },
 })

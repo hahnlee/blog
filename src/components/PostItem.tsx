@@ -1,4 +1,4 @@
-import { styled } from '@stitches/react'
+import { styled, css } from '@stitches/react'
 import { Link } from 'gatsby'
 import Image, { FixedObject } from 'gatsby-image'
 import React from 'react'
@@ -10,10 +10,15 @@ interface Props {
   thumbnail: FixedObject
 }
 
-export default function PostItem({ title, description, href, thumbnail }: Props) {
+export default function PostItem({
+  title,
+  description,
+  href,
+  thumbnail,
+}: Props) {
   return (
     <Container to={href}>
-      <Image fixed={thumbnail} alt="" />
+      <Image className={thumbnailImage} fixed={thumbnail} alt="" />
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Container>
@@ -28,9 +33,15 @@ const Container = styled(Link, {
 const Title = styled('h1', {
   margin: 0,
   fontSize: 24,
+  wordBreak: 'keep-all',
 })
 
 const Description = styled('p', {
   margin: 0,
   fontSize: 14,
+  wordBreak: 'keep-all',
+})
+
+const { className: thumbnailImage } = css({
+  marginBottom: 10,
 })
