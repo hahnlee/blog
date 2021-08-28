@@ -20,7 +20,6 @@ export default function SideBar() {
 }
 
 const Container = styled('aside', {
-  position: 'fixed',
   height: '100%',
 })
 
@@ -29,7 +28,7 @@ const Menu = styled('div', {
   flexDirection: 'column',
   width: 'min-content',
   paddingTop: 30,
-  marginTop: 130,
+  marginTop: 30,
   borderTop: '1px solid #e9ecef',
 })
 

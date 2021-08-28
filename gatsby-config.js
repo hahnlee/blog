@@ -25,6 +25,7 @@ module.exports = {
         path: path.resolve(__dirname, 'posts'),
       },
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-remark-images',

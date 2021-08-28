@@ -2,6 +2,7 @@ import { styled, global } from '@stitches/react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { FixedObject } from 'gatsby-image'
 import React from 'react'
+import Page from '../containers/Page'
 import Header from '../components/Header'
 import PostItem from '../components/PostItem'
 import SideBar from '../components/SideBar'
@@ -13,7 +14,7 @@ interface Post {
     summary: string
     thumbnail: {
       childImageSharp: {
-        fixed: FixedObject;
+        fixed: FixedObject
       }
     }
   }
@@ -60,13 +61,16 @@ export default function Home() {
   `)
 
   return (
-    <Main>
+    <Page>
+      <Main>
       <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
         rel="stylesheet"
       />
+      <div style={{ position: 'fixed' }}>
       <Header />
       <SideBar />
+      </div>
       <PostList>
         {allMdx.edges.map(({ node }) => (
           <PostItem
@@ -78,7 +82,8 @@ export default function Home() {
           />
         ))}
       </PostList>
-    </Main>
+      </Main>
+    </Page>
   )
 }
 
@@ -95,7 +100,11 @@ const globalStyle = global({
     width: '100%',
     height: '100%',
   },
-  ___gatsby: {
+  '#___gatsby': {
+    width: '100%',
+    height: '100%',
+  },
+  '#gatsby-focus-wrapper': {
     width: '100%',
     height: '100%',
   },
