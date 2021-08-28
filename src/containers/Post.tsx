@@ -74,15 +74,17 @@ export default function Post({ data }: Props) {
       publishedTime={data.mdx.frontmatter.date}
     >
       <Main>
-        <Article>
+        <Container>
           <Back to="/">← 글 목록</Back>
-          <header>
-            <Title>{data.mdx.frontmatter.title}</Title>
-            <p>{data.mdx.frontmatter.date}</p>
-          </header>
-          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          <Article>
+            <header>
+              <Title>{data.mdx.frontmatter.title}</Title>
+              <p>{data.mdx.frontmatter.date}</p>
+            </header>
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </Article>
           <Back to="/">← 글 목록</Back>
-        </Article>
+        </Container>
         <section ref={setRef} />
       </Main>
     </Page>
@@ -106,10 +108,16 @@ const Main = styled('main', {
   paddingBottom: 'env(safe-area-inset-bottom, 0)',
 })
 
-const Article = styled('article', {
+const Container = styled('div', {
   maxWidth: '800px',
   margin: '0 auto',
   padding: '30px',
+  '@media(max-width: 600px)': {
+    padding: '15px',
+  },
+})
+
+const Article = styled('article', {
   wordBreak: 'keep-all',
   a: {
     color: colors.blue7,
@@ -118,9 +126,6 @@ const Article = styled('article', {
     margin: 0,
     padding: '1px 16px',
     borderLeft: `5px solid ${colors.grey2}`,
-  },
-  '@media(max-width: 600px)': {
-    padding: '15px',
   },
 })
 
