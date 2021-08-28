@@ -57,6 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-remark-prismjs", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.9.0"],
             ["gatsby-source-filesystem", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:3.12.0"],
             ["gatsby-transformer-sharp", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:3.12.0"],
+            ["gh-pages", "npm:3.2.3"],
             ["prismjs", "npm:1.24.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:17.0.2"],
@@ -6524,6 +6525,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-remark-prismjs", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.9.0"],
             ["gatsby-source-filesystem", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:3.12.0"],
             ["gatsby-transformer-sharp", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:3.12.0"],
+            ["gh-pages", "npm:3.2.3"],
             ["prismjs", "npm:1.24.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:17.0.2"],
@@ -9135,6 +9137,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.806-e56bf2367d-cba7104935.zip/node_modules/electron-to-chromium/",
           "packageDependencies": [
             ["electron-to-chromium", "npm:1.3.806"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["email-addresses", [
+        ["npm:3.1.0", {
+          "packageLocation": "./.yarn/cache/email-addresses-npm-3.1.0-332eec577b-e911985f09.zip/node_modules/email-addresses/",
+          "packageDependencies": [
+            ["email-addresses", "npm:3.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -12086,6 +12097,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/get-value-npm-2.0.6-03cd422e0a-5c3b99cb53.zip/node_modules/get-value/",
           "packageDependencies": [
             ["get-value", "npm:2.0.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["gh-pages", [
+        ["npm:3.2.3", {
+          "packageLocation": "./.yarn/cache/gh-pages-npm-3.2.3-de723c58be-0a6e92180c.zip/node_modules/gh-pages/",
+          "packageDependencies": [
+            ["gh-pages", "npm:3.2.3"],
+            ["async", "npm:2.6.3"],
+            ["commander", "npm:2.20.3"],
+            ["email-addresses", "npm:3.1.0"],
+            ["filenamify", "npm:4.3.0"],
+            ["find-cache-dir", "npm:3.3.1"],
+            ["fs-extra", "npm:8.1.0"],
+            ["globby", "npm:6.1.0"]
           ],
           "linkType": "HARD",
         }]

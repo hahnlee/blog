@@ -5,6 +5,11 @@
   "repository": "https://github.com/hahnlee/blog",
   "author": "hahnlee <hanlee.dev@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "dev": "gatsby develop",
+    "deploy": "gh-pages -d public"
+  },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -28,6 +33,7 @@
     "gatsby-remark-prismjs": "^5.9.0",
     "gatsby-source-filesystem": "^3.12.0",
     "gatsby-transformer-sharp": "^3.12.0",
+    "gh-pages": "^3.2.3",
     "prismjs": "^1.24.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
