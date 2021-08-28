@@ -106,8 +106,10 @@ const Article = styled('article', {
   maxWidth: '800px',
   margin: '0 auto',
   padding: '30px',
+  paddingBottom: 'calc(30px + env(safe-area-inset-bottom, 0))',
   '@media(max-width: 600px)': {
     padding: '15px',
+    paddingBottom: 'calc(15px + env(safe-area-inset-bottom, 0))',
   },
 })
 
