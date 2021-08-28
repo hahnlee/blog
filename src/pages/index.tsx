@@ -63,25 +63,25 @@ export default function Home() {
   return (
     <Page>
       <Main>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
-        rel="stylesheet"
-      />
-      <div style={{ position: 'fixed' }}>
-      <Header />
-      <SideBar />
-      </div>
-      <PostList>
-        {allMdx.edges.map(({ node }) => (
-          <PostItem
-            key={node.id}
-            href={node.fields.slug}
-            title={node.frontmatter.title}
-            description={node.frontmatter.summary}
-            thumbnail={node.frontmatter.thumbnail.childImageSharp.fixed}
-          />
-        ))}
-      </PostList>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+        <div style={{ position: 'fixed' }}>
+          <Header />
+          <SideBar />
+        </div>
+        <PostList>
+          {allMdx.edges.map(({ node }) => (
+            <PostItem
+              key={node.id}
+              href={node.fields.slug}
+              title={node.frontmatter.title}
+              description={node.frontmatter.summary}
+              thumbnail={node.frontmatter.thumbnail.childImageSharp.fixed}
+            />
+          ))}
+        </PostList>
       </Main>
     </Page>
   )

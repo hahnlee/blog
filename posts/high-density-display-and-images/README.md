@@ -1,6 +1,6 @@
 ---
 title: 고밀도 디스플레이를 위한 이미지 다루기
-date: 2018-01-21
+date: 2018-01-21T00:00:00+09:00
 thumbnail: ./thumbnail.png
 summary: 레티나 디스플레이에서 또렷한 이미지를 제공해 봅시다
 tags:

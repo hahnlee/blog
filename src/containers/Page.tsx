@@ -23,6 +23,7 @@ export default function Page({ children, type = 'website', title, description = 
         <meta property="og:site_name" content="명시지(形式知) - 기록할 수 있는 지식을 나눕니다" />
         {type === 'article' && <meta property="article:author" content="이한" />}
         {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+        <link rel="alternate" type="application/rss+xml" title="명시지(形式知) - 기록할 수 있는 지식을 나눕니다" href="/rss.xml"></link>
       </Helmet>
       {children}
     </>

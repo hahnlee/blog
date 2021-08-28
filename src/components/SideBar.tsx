@@ -14,6 +14,9 @@ export default function SideBar() {
         <MenuItem role="menuitem" href="/tags/inspiration">
           inspiration
         </MenuItem>
+        <MenuItem role="menuitem" href="/rss.xml">
+          rss
+        </MenuItem>
       </Menu>
     </Container>
   )

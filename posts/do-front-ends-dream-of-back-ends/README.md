@@ -1,6 +1,6 @@
 ---
 title: 프론트엔드는 백엔드의 꿈을 꾸는가?
-date: 2019-04-07 17:00:00
+date: 2019-04-07T17:00:00+09:00
 thumbnail: ./img/thumbnail.png
 summary: 점점 더 복잡해지는 프론트엔드와 백엔드의 유사점을 알아봅시다
 tags:
