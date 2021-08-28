@@ -1,4 +1,3 @@
-import { styled } from '@stitches/react'
 import { graphql } from 'gatsby'
 import { FixedObject } from 'gatsby-image'
 import React from 'react'
@@ -6,6 +5,7 @@ import Page from '../containers/Page'
 import PostItem from '../components/PostItem'
 import NavBar from '../components/NavBar'
 import { globalReset } from '../styles/global'
+import { styled } from '../styles/stitches'
 
 interface Post {
   id: string

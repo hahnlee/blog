@@ -1,4 +1,3 @@
-import { global, styled } from '@stitches/react'
 import { graphql, Link } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -6,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import Page from './Page'
 import { colors } from '../styles/colors'
 import { globalReset } from '../styles/global'
+import { global, styled } from '../styles/stitches'
 import 'prismjs/themes/prism.css'
 
 export const pageQuery = graphql`

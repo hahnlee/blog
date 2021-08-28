@@ -1,7 +1,7 @@
-import { styled } from '@stitches/react'
 import React from 'react'
 import Header from './Header'
 import SideBar from './SideBar'
+import { styled } from '../styles/stitches'
 
 export default function NavBar() {
   return (

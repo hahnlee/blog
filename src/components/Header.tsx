@@ -1,7 +1,7 @@
-import { styled } from '@stitches/react'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
+import { styled } from '../styles/stitches'
 
 export default function Header() {
   const isMobile = useMediaQuery({

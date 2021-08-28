@@ -1,6 +1,6 @@
 import React from 'react'
-import { styled } from '@stitches/react'
 import { colors } from '../styles/colors'
+import { styled } from '../styles/stitches'
 
 export default function SideBar() {
   return (

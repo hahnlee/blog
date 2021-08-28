@@ -1,8 +1,8 @@
-import { styled, css } from '@stitches/react'
 import { Link } from 'gatsby'
 import Image, { FixedObject } from 'gatsby-image'
 import React from 'react'
 import { colors } from '../styles/colors'
+import { styled, css } from '../styles/stitches'
 
 interface Props {
   title: string

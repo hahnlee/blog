@@ -1,5 +1,5 @@
-import { global } from '@stitches/react'
 import { colors } from './colors'
+import { global } from './stitches'
 
 export const globalReset = global({
   html: {
