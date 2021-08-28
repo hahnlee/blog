@@ -1,5 +1,5 @@
 import { styled } from '@stitches/react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { FixedObject } from 'gatsby-image'
 import React from 'react'
 import Page from '../containers/Page'
@@ -31,34 +31,41 @@ interface Response {
   }
 }
 
-export default function Home() {
-  globalReset()
-
-  const { allMdx } = useStaticQuery<Response>(graphql`
-    query {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              summary
-              thumbnail {
-                childImageSharp {
-                  fixed(width: 250, height: 250) {
-                    ...GatsbyImageSharpFixed
-                  }
+export const pageQuery = graphql`
+  query($category: String!) {
+    allMdx(
+      filter: { frontmatter: { category: {eq: $category } } },
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            summary
+            thumbnail {
+              childImageSharp {
+                fixed(width: 250, height: 250) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
-            fields {
-              slug
-            }
+          }
+          fields {
+            slug
           }
         }
       }
     }
-  `)
+  }
+`
+
+interface Props {
+  data: Response
+}
+
+export default function Category({ data: { allMdx } }: Props) {
+  globalReset()
 
   return (
     <Page>

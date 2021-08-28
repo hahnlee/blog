@@ -18,7 +18,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return graphql(`
+  const createPosts = graphql(`
     {
       allMdx {
         edges {
@@ -49,4 +49,30 @@ exports.createPages = ({ graphql, actions }) => {
       }
     )
   })
+
+  const createCategories = graphql(`
+    {
+      allMdx {
+        nodes {
+          frontmatter {
+            category
+          }
+        }
+        distinct(field: frontmatter___category)
+      }
+    }
+  `).then((result) => {
+    const categories = result.data.allMdx.distinct
+    categories.forEach((category) => {
+      createPage({
+        path: `/categories/${category}`,
+        component: path.resolve(__dirname, 'src', 'containers', 'Category.tsx'),
+        context: {
+          category,
+        },
+      })
+    })
+  })
+
+  return Promise.all([createPosts, createCategories])
 }

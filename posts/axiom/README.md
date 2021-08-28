@@ -3,6 +3,7 @@ title: 공리(公理) 정하기
 date: 2019-12-15T20:00:00+09:00
 summary: 규칙을 정해봅시다. 가능한 적게요.
 thumbnail: ./spherical-triangle.png
+category: inspiration
 ---
 # 들어가기전
 엄밀하게 말할경우, 논리학에서 말하는 명제와, 공리 모두 맞지 않다. 비유로 생각하고 읽어 달라.
