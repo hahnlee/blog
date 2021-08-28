@@ -113,6 +113,14 @@ const Article = styled('article', {
   '@media(max-width: 600px)': {
     padding: '15px',
   },
+  a: {
+    color: colors.blue7,
+  },
+  blockquote: {
+    margin: 0,
+    padding: '1px 16px',
+    borderLeft: `5px solid ${colors.grey2}`,
+  }
 })
 
 const Title = styled('h1', {
