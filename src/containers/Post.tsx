@@ -110,9 +110,7 @@ const Article = styled('article', {
   maxWidth: '800px',
   margin: '0 auto',
   padding: '30px',
-  '@media(max-width: 600px)': {
-    padding: '15px',
-  },
+  wordBreak: 'keep-all',
   a: {
     color: colors.blue7,
   },
@@ -120,7 +118,10 @@ const Article = styled('article', {
     margin: 0,
     padding: '1px 16px',
     borderLeft: `5px solid ${colors.grey2}`,
-  }
+  },
+  '@media(max-width: 600px)': {
+    padding: '15px',
+  },
 })
 
 const Title = styled('h1', {
