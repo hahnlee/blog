@@ -75,7 +75,6 @@ export default function Post({ data }: Props) {
     >
       <Main>
         <Container>
-          <Back to="/">← 글 목록</Back>
           <Article>
             <header>
               <Title>{data.mdx.frontmatter.title}</Title>
@@ -121,11 +120,16 @@ const Article = styled('article', {
   wordBreak: 'keep-all',
   a: {
     color: colors.blue7,
+    textDecoration: 'none',
   },
   blockquote: {
     margin: 0,
     padding: '1px 16px',
+    color: colors.grey6,
     borderLeft: `5px solid ${colors.grey2}`,
+    p: {
+      margin: '10px 0',
+    }
   },
 })
 
