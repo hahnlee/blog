@@ -21,7 +21,7 @@ export default function Page({
   return (
     <>
       <Helmet>
-        <title>명시지(形式知) {title ? `| ${title}` : ''}</title>
+        <title>{title ? `${title} | ` : ''}명시지(形式知)</title>
         <meta property="og:type" content={type} />
         <meta property="og:title" content={title ?? '명시지(形式知)'} />
         <meta property="og:description" content={description} />
