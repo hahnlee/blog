@@ -23,18 +23,13 @@ export default function SideBar() {
   )
 }
 
-const Container = styled('aside', {
+const Container = styled('nav', {
   height: '100%',
 })
 
 const Menu = styled('div', {
   display: 'flex',
-  flexDirection: 'column',
   width: 'min-content',
-  paddingTop: 30,
-  marginTop: 30,
-  marginBottom: 15,
-  borderTop: `1px solid ${colors.grey2}`,
   '@media(max-width: 600px)': {
     flexDirection: 'row',
     paddingTop: 10,
@@ -44,8 +39,7 @@ const Menu = styled('div', {
 
 const MenuItem = styled('a', {
   color: colors.grey7,
-  marginRight: 15,
-  marginBottom: 10,
+  marginLeft: 15,
   '&:active': {
     color: colors.grey7,
   },

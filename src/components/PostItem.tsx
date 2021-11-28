@@ -20,8 +20,10 @@ export default function PostItem({
   return (
     <Container to={href}>
       <Image className={thumbnailImage} fixed={thumbnail} alt="" />
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+      <Item>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+      </Item>
     </Container>
   )
 }
@@ -29,6 +31,7 @@ export default function PostItem({
 const Container = styled(Link, {
   color: colors.grey7,
   textDecoration: 'none',
+  display: 'flex',
 })
 
 const Title = styled('h1', {
@@ -41,6 +44,14 @@ const Description = styled('p', {
   margin: 0,
   fontSize: 14,
   wordBreak: 'keep-all',
+})
+
+const Item = styled('div', {
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  paddingLeft: 24,
 })
 
 const { className: thumbnailImage } = css({

@@ -12,9 +12,13 @@ export default function NavBar() {
   )
 }
 
-const Container = styled('nav', {
-  position: 'fixed',
-  '@media(max-width: 600px)': {
-    position: 'static',
-  },
+const Container = styled('header', {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  maxWidth: 800,
+  margin: '0 auto',
+  backgroundColor: 'white',
+  zIndex: 1,
+  padding: '0 16px',
 })
