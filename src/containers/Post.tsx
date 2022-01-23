@@ -92,7 +92,7 @@ const Container = styled('div', {
   margin: '0 auto',
   padding: 30,
   '@media(max-width: 600px)': {
-    padding: '15px',
+    padding: '24px 16px',
   },
 })
 
