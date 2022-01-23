@@ -8,18 +8,15 @@ interface Props {
   title: string
   description: string
   href: string
-  thumbnail: FixedObject
 }
 
 export default function PostItem({
   title,
   description,
   href,
-  thumbnail,
 }: Props) {
   return (
     <Container to={href}>
-      <Image className={thumbnailImage} fixed={thumbnail} alt="" />
       <Item>
         <Title>{title}</Title>
         <Description>{description}</Description>
@@ -37,12 +34,14 @@ const Container = styled(Link, {
 const Title = styled('h1', {
   margin: 0,
   fontSize: 24,
+  lineHeight: '36px',
   wordBreak: 'keep-all',
 })
 
 const Description = styled('p', {
   margin: 0,
-  fontSize: 14,
+  fontSize: 16,
+  color: colors.grey6,
   wordBreak: 'keep-all',
 })
 
@@ -51,9 +50,4 @@ const Item = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  paddingLeft: 24,
-})
-
-const { className: thumbnailImage } = css({
-  marginBottom: 10,
 })

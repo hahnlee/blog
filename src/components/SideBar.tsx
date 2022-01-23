@@ -39,7 +39,7 @@ const Menu = styled('div', {
 
 const MenuItem = styled('a', {
   color: colors.grey7,
-  marginLeft: 15,
+  marginRight: 15,
   '&:active': {
     color: colors.grey7,
   },

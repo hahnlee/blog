@@ -14,6 +14,8 @@ export const globalReset = global({
     width: '100%',
     height: '100%',
     color: colors.grey7,
+    fontFamily: "'Noto Serif KR', serf",
+    fontSize: 18,
   },
   '#___gatsby': {
     width: '100%',

@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Page from './Page'
 import { colors } from '../styles/colors'
 import { globalReset } from '../styles/global'
@@ -50,22 +50,6 @@ export default function Post({ data }: Props) {
   globalReset()
   postReset()
 
-  const [commentRef, setRef] = useState<HTMLElement | null>(null)
-
-  useEffect(() => {
-    if (commentRef == null) {
-      return
-    }
-
-    const script = document.createElement('script')
-    script.src = 'https://utteranc.es/client.js'
-    script.async = true
-    script.setAttribute('repo', 'hahnlee/blog')
-    script.setAttribute('theme', 'github-light')
-    script.setAttribute('issue-term', 'pathname')
-    commentRef.appendChild(script)
-  }, [commentRef])
-
   return (
     <Page
       title={data.mdx.frontmatter.title}
@@ -84,16 +68,12 @@ export default function Post({ data }: Props) {
           </Article>
           <Back to="/">← 글 목록</Back>
         </Container>
-        <section ref={setRef} />
       </Main>
     </Page>
   )
 }
 
 const postReset = global({
-  body: {
-    fontFamily: 'sans-serif',
-  },
   ':not(pre) > code[class*="language-"]': {
     backgroundColor: colors.grey0,
   },
@@ -108,9 +88,9 @@ const Main = styled('main', {
 })
 
 const Container = styled('div', {
-  maxWidth: '800px',
+  maxWidth: 1000,
   margin: '0 auto',
-  padding: '30px',
+  padding: 30,
   '@media(max-width: 600px)': {
     padding: '15px',
   },

@@ -1,5 +1,4 @@
 import { graphql } from 'gatsby'
-import { FixedObject } from 'gatsby-image'
 import React from 'react'
 import Page from '../containers/Page'
 import PostItem from '../components/PostItem'
@@ -12,11 +11,6 @@ interface Post {
   frontmatter: {
     title: string
     summary: string
-    thumbnail: {
-      childImageSharp: {
-        fixed: FixedObject
-      }
-    }
   }
   fields: {
     slug: string
@@ -78,7 +72,6 @@ export default function Category({ data: { allMdx } }: Props) {
               href={node.fields.slug}
               title={node.frontmatter.title}
               description={node.frontmatter.summary}
-              thumbnail={node.frontmatter.thumbnail.childImageSharp.fixed}
             />
           ))}
         </PostList>
@@ -90,7 +83,7 @@ export default function Category({ data: { allMdx } }: Props) {
 const Main = styled('main', {
   minHeight: '100%',
   fontFamily: "'Noto Serif KR', serf",
-  paddingBottom: 'calc(60px + env(safe-area-inset-bottom, 0))',
+  paddingBottom: 'env(safe-area-inset-bottom, 0)',
   '@media(max-width: 600px)': {
     padding: '30px',
     paddingBottom: 'calc(30px + env(safe-area-inset-bottom, 0))',
@@ -100,8 +93,8 @@ const Main = styled('main', {
 const PostList = styled('section', {
   display: 'grid',
   gridTemplateColumns: '1fr',
-  maxWidth: 800,
-  margin: '0 auto',
+  maxWidth: 1000,
+  margin: '20px auto',
   gridRowGap: '35px',
   gridColumnGap: '15px',
 })

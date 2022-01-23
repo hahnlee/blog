@@ -15,5 +15,5 @@ const Title = styled('h1', {
   margin: '0 auto',
   whiteSpace: 'pre',
   fontSize: 36,
-  marginBottom: 16,
+  marginBottom: 8,
 })
