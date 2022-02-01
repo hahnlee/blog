@@ -118,6 +118,11 @@ const Article = styled('article', {
     maxWidth: '100%',
     margin: '0 auto',
   },
+  '.footnotes': {
+    'hr': {
+      borderColor: colors.grey2,
+    }
+  }
 })
 
 const Title = styled('h1', {

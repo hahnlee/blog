@@ -9,11 +9,8 @@ export default function SideBar() {
         <MenuItem role="menuitem" href="https://hanlee.io">
           about
         </MenuItem>
-        <MenuItem role="menuitem" href="/categories/tech">
-          tech
-        </MenuItem>
-        <MenuItem role="menuitem" href="/categories/inspiration">
-          inspiration
+        <MenuItem role="menuitem" href="https://github.com/hahnlee">
+          github
         </MenuItem>
         <MenuItem role="menuitem" href="/rss.xml">
           rss
