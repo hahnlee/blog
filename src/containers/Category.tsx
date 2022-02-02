@@ -93,7 +93,7 @@ const Main = styled('main', {
 const PostList = styled('section', {
   display: 'grid',
   gridTemplateColumns: '1fr',
-  maxWidth: 1000,
+  maxWidth: 800,
   margin: '20px auto',
   gridRowGap: '35px',
   gridColumnGap: '15px',

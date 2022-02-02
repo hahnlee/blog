@@ -74,17 +74,18 @@ export default function Home() {
 
 const Main = styled('main', {
   minHeight: '100%',
+  padding: '0 30px',
   paddingBottom: 'env(safe-area-inset-bottom, 0)',
   '@media(max-width: 600px)': {
-    padding: '30px',
-    paddingBottom: 'calc(30px + env(safe-area-inset-bottom, 0))',
+    padding: '24px 16px',
+    paddingBottom: 'calc(env(safe-area-inset-bottom, 0) + 16px)',
   },
 })
 
 const PostList = styled('section', {
   display: 'grid',
   gridTemplateColumns: '1fr',
-  maxWidth: 1000,
+  maxWidth: 800,
   margin: '20px auto',
   gridRowGap: '35px',
   gridColumnGap: '15px',

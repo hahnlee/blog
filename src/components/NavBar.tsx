@@ -13,7 +13,7 @@ export default function NavBar() {
 }
 
 const Container = styled('header', {
-  maxWidth: 1000,
+  maxWidth: 800,
   margin: '0 auto',
   backgroundColor: 'white',
   zIndex: 1,

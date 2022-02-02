@@ -81,6 +81,9 @@ const postReset = global({
     backgroundColor: colors.grey0,
     borderRadius: 16,
   },
+  '.gatsby-resp-image-wrapper': {
+    margin: '16px auto',
+  },
 })
 
 const Main = styled('main', {
@@ -88,7 +91,7 @@ const Main = styled('main', {
 })
 
 const Container = styled('div', {
-  maxWidth: 1000,
+  maxWidth: 800,
   margin: '0 auto',
   padding: 30,
   '@media(max-width: 600px)': {
@@ -103,14 +106,23 @@ const Article = styled('article', {
     textDecoration: 'none',
   },
   blockquote: {
-    margin: 0,
     padding: '1px 16px',
     color: colors.grey6,
     borderLeft: `5px solid ${colors.grey2}`,
     p: {
       margin: '10px 0',
-    }
+    },
   },
+  iframe: {
+    display: 'block',
+    maxWidth: '100%',
+    margin: '0 auto',
+  },
+  '.footnotes': {
+    'hr': {
+      borderColor: colors.grey2,
+    }
+  }
 })
 
 const Title = styled('h1', {
