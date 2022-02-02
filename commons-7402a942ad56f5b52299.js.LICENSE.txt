@@ -1,5 +1,0 @@
-/**
- * Open color
- * @license MIT
- * @link https://yeun.github.io/open-color/
- */
