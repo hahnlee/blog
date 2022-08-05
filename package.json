@@ -5,6 +5,14 @@
   "author": "hahnlee <hanlee.dev@gmail.com>",
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
+    "@types/node": "^18",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "next": "^12.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
