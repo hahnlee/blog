@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "private": true,
+  "repository": "https://github.com/hahnlee/blog",
+  "author": "hahnlee <hanlee.dev@gmail.com>",
+  "packageManager": "yarn@3.2.2",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
