@@ -16,6 +16,8 @@
     "@stitches/react": "^1.2.8",
     "framer-motion": "^7.0.0",
     "gatsby": "^4.20.0",
+    "gatsby-plugin-feed": "^4.20.0",
+    "gatsby-plugin-google-analytics": "^4.20.0",
     "gatsby-plugin-image": "^2.20.0",
     "gatsby-plugin-mdx": "^3.20.0",
     "gatsby-plugin-sharp": "^4.20.0",
