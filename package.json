@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "dev": "gatsby develop",
-    "deploy": "gh-pages -d public"
+    "dev": "gatsby develop"
   },
   "dependencies": {
     "@mdx-js/mdx": "v1",
@@ -36,7 +35,6 @@
     "@types/prismjs": "^1",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "gh-pages": "^4.0.0",
     "typescript": "^4.7.4"
   },
   "packageManager": "yarn@3.2.2"
