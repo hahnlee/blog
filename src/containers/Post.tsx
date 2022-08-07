@@ -1,26 +1,24 @@
-import { graphql, Link } from 'gatsby'
-import { FluidObject } from 'gatsby-image'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import App from '@components/App'
+import Article from '@components/Article'
+import Author from '@components/Author'
+import NavBar from '@components/NavBar'
+import SEO from '@components/SEO'
+import { styled } from '@styles/stitches'
+import { graphql, HeadProps, PageProps } from 'gatsby'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
-import Page from './Page'
-import { colors } from '../styles/colors'
-import { globalReset } from '../styles/global'
-import { global, styled } from '../styles/stitches'
-import 'prismjs/themes/prism.css'
 
-export const pageQuery = graphql`
+export const query = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
+      timeToRead
       frontmatter {
         title
-        date(formatString: "YYYY-MM-DD")
         summary
         thumbnail {
           childImageSharp {
-            fluid(maxHeight: 500) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData
           }
         }
       }
@@ -28,111 +26,56 @@ export const pageQuery = graphql`
   }
 `
 
-interface Props {
-  data: {
-    mdx: {
-      body: string
-      frontmatter: {
-        title: string
-        summary: string
-        date: string
-        thumbnail: {
-          childImageSharp: {
-            fluid: FluidObject
-          }
-        }
+interface Post {
+  body: string
+  timeToRead: number
+  frontmatter: {
+    title: string
+    summary: string
+    thumbnail: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
       }
     }
   }
 }
 
-export default function Post({ data }: Props) {
-  globalReset()
-  postReset()
+interface Response {
+  mdx: Post
+}
 
+export default function Post({ data }: PageProps<Response>) {
   return (
-    <Page
-      title={data.mdx.frontmatter.title}
-      description={data.mdx.frontmatter.summary}
-      image={data.mdx.frontmatter.thumbnail.childImageSharp.fluid.src}
-      publishedTime={data.mdx.frontmatter.date}
-    >
+    <App>
       <Main>
-        <Container>
-          <Article>
-            <header>
-              <Title>{data.mdx.frontmatter.title}</Title>
-              <p>{data.mdx.frontmatter.date}</p>
-            </header>
-            <MDXRenderer>{data.mdx.body}</MDXRenderer>
-          </Article>
-          <Back to="/">← 글 목록</Back>
-        </Container>
+        <NavBar />
+        <Article title={data.mdx.frontmatter.title}>{data.mdx.body}</Article>
+        <Author />
       </Main>
-    </Page>
+    </App>
   )
 }
 
-const postReset = global({
-  ':not(pre) > code[class*="language-"]': {
-    backgroundColor: colors.grey0,
-  },
-  'pre[class*="language-"]': {
-    backgroundColor: colors.grey0,
-    borderRadius: 16,
-  },
-  '.gatsby-resp-image-wrapper': {
-    margin: '16px auto',
-  },
-})
-
 const Main = styled('main', {
-  paddingBottom: 'env(safe-area-inset-bottom, 0)',
-})
-
-const Container = styled('div', {
-  maxWidth: 800,
+  maxWidth: 1000,
+  padding: 24,
   margin: '0 auto',
-  padding: 30,
-  '@media(max-width: 600px)': {
-    padding: '24px 16px',
-  },
 })
 
-const Article = styled('article', {
-  wordBreak: 'keep-all',
-  a: {
-    color: colors.blue7,
-    textDecoration: 'none',
-  },
-  blockquote: {
-    padding: '1px 16px',
-    color: colors.grey6,
-    borderLeft: `5px solid ${colors.grey2}`,
-    p: {
-      margin: '10px 0',
-    },
-  },
-  iframe: {
-    display: 'block',
-    maxWidth: '100%',
-    margin: '0 auto',
-  },
-  '.footnotes': {
-    'hr': {
-      borderColor: colors.grey2,
-    }
-  }
-})
-
-const Title = styled('h1', {
-  fontSize: 36,
-  margin: 0,
-})
-
-const Back = styled(Link, {
-  color: colors.grey6,
-  textDecoration: 'none',
-  margin: '15px 0',
-  display: 'inline-block',
-})
+export function Head({ data }: HeadProps<Response>) {
+  return (
+    <SEO
+      title={data.mdx.frontmatter.title}
+      description={data.mdx.frontmatter.summary}
+      type="article"
+      image={
+        data.mdx.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images
+          .fallback?.src
+      }
+    >
+      <meta property="article:author" content="이한" />
+      <meta name="twitter:label1" content="읽는 시간" />
+      <meta name="twitter:data1" content={`${data.mdx.timeToRead}분`} />
+    </SEO>
+  )
+}
