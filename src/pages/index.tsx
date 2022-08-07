@@ -1,92 +1,98 @@
-import { useStaticQuery, graphql } from 'gatsby'
-import { FixedObject } from 'gatsby-image'
-import React from 'react'
-import Page from '../containers/Page'
-import PostItem from '../components/PostItem'
-import NavBar from '../components/NavBar'
-import { globalReset } from '../styles/global'
-import { styled } from '../styles/stitches'
+import { styled } from '@styles/stitches'
+import PostListItem from '@components/PostListItem'
+import App from '@components/App'
+import Author from '@components/Author'
+import React, { useMemo } from 'react'
+import { graphql, PageProps } from 'gatsby'
+import { Post } from '@models/post'
+import SEO from '@components/SEO'
 
-interface Post {
-  id: string
-  frontmatter: {
-    title: string
-    summary: string
-    thumbnail: {
-      childImageSharp: {
-        fixed: FixedObject
-      }
-    }
-  }
-  fields: {
-    slug: string
-  }
-}
-
-interface Response {
-  allMdx: {
-    edges: Array<{
-      node: Post
-    }>
-  }
-}
-
-export default function Home() {
-  globalReset()
-
-  const { allMdx } = useStaticQuery<Response>(graphql`
-    query {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              summary
-            }
-            fields {
-              slug
-            }
+export const pageQuery = graphql`
+  query {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            summary
           }
         }
       }
     }
-  `)
+  }
+`
+
+interface Response {
+  allMdx: {
+    edges: Array<{ node: Post }>
+  }
+}
+
+export default function Home({ data: { allMdx } }: PageProps<Response>) {
+  const posts = useMemo(() => allMdx.edges.map((edge) => edge.node), [])
 
   return (
-    <Page>
+    <App>
       <Main>
-        <NavBar />
-        <PostList>
-          {allMdx.edges.map(({ node }) => (
-            <PostItem
-              key={node.id}
-              href={node.fields.slug}
-              title={node.frontmatter.title}
-              description={node.frontmatter.summary}
-            />
+        <Header>
+          <Title>
+            명시지 <Token>形式知</Token>
+          </Title>
+          <Paragraph>기록할 수 있는 지식을 나눕니다</Paragraph>
+          <Author />
+        </Header>
+        <List>
+          {posts.map((post) => (
+            <PostListItem key={post.id} post={post} />
           ))}
-        </PostList>
+        </List>
       </Main>
-    </Page>
+    </App>
   )
 }
 
+export function Head() {
+  return <SEO />
+}
+
 const Main = styled('main', {
-  minHeight: '100%',
-  padding: '0 30px',
-  paddingBottom: 'env(safe-area-inset-bottom, 0)',
-  '@media(max-width: 600px)': {
-    padding: '24px 16px',
-    paddingBottom: 'calc(env(safe-area-inset-bottom, 0) + 16px)',
+  maxWidth: 1000,
+  padding: '100px 24px',
+  margin: '0 auto',
+  '@media screen and (max-width: 1000px)': {
+    padding: '60px 24px',
   },
 })
 
-const PostList = styled('section', {
-  display: 'grid',
-  gridTemplateColumns: '1fr',
-  maxWidth: 800,
-  margin: '20px auto',
-  gridRowGap: '35px',
-  gridColumnGap: '15px',
+const Header = styled('header', {
+  marginBottom: 24,
+})
+
+const Title = styled('h1', {
+  color: '$gray700',
+  fontSize: '1.75rem',
+  fontWeight: 600,
+  margin: 0,
+})
+
+const Token = styled('span', {
+  color: '$gray500',
+  fontSize: '1.25rem',
+})
+
+const Paragraph = styled('p', {
+  margin: 0,
+  marginTop: 6,
+  color: '$gray600',
+  fontWeight: 300,
+  fontSize: '1rem',
+})
+
+const List = styled('ul', {
+  margin: 0,
+  padding: 0,
 })

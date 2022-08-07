@@ -1,0 +1,29 @@
+name: github pages
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v2
+      - name: Setup | node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14
+      - name: Setup | yarn
+        run: yarn install --immutable --immutable-cache
+      - name: Build
+        run: yarn build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
