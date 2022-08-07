@@ -18,4 +18,5 @@ export default function NavBar() {
 
 const Logo = styled('img', {
   width: 50,
+  height: 50,
 })
