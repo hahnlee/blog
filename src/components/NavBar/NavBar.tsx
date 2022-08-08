@@ -10,6 +10,8 @@ export default function NavBar() {
           src="/images/logo.png"
           draggable={false}
           alt="블로그 로고"
+          width={36}
+          height={36}
         />
       </Link>
     </header>

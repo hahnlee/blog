@@ -15,6 +15,7 @@ export const query = graphql`
       timeToRead
       frontmatter {
         title
+        date(formatString: "YYYY-MM-DD")
         summary
         thumbnail {
           childImageSharp {
@@ -31,6 +32,7 @@ interface Post {
   timeToRead: number
   frontmatter: {
     title: string
+    date: string
     summary: string
     thumbnail: {
       childImageSharp: {
@@ -49,7 +51,12 @@ export default function Post({ data }: PageProps<Response>) {
     <App>
       <Main>
         <NavBar />
-        <Article title={data.mdx.frontmatter.title}>{data.mdx.body}</Article>
+        <Article
+          title={data.mdx.frontmatter.title}
+          date={data.mdx.frontmatter.date}
+        >
+          {data.mdx.body}
+        </Article>
         <Author />
       </Main>
     </App>

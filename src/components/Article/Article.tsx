@@ -6,13 +6,15 @@ import { styled } from '@styles/stitches'
 
 interface Props {
   title: string
+  date: string
   children: string
 }
 
-export default function Article({ title, children }: Props) {
+export default function Article({ title, date, children }: Props) {
   return (
     <Container>
       <Title>{title}</Title>
+      <p>{date}</p>
       <MDXRenderer>{children}</MDXRenderer>
     </Container>
   )
@@ -21,4 +23,5 @@ export default function Article({ title, children }: Props) {
 const Title = styled('h1', {
   fontSize: '2rem',
   fontWeight: 600,
+  marginBottom: '0 !important',
 })
