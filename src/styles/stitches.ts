@@ -23,7 +23,7 @@ export const globalStyles = globalCss({
     padding: 0,
     margin: 0,
     fontSize: 16,
-    color: '$gray900',
+    color: '$gray800',
     fontWeight: 400,
     fontFamily: ['Pretendard', 'sans-serif'].join(','),
   },

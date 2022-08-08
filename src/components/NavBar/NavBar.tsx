@@ -7,7 +7,7 @@ export default function NavBar() {
     <header>
       <Link to="/">
         <Logo
-          src="/favicon/android-chrome-192x192.png"
+          src="/images/logo.png"
           draggable={false}
           alt="블로그 로고"
         />
@@ -17,6 +17,6 @@ export default function NavBar() {
 }
 
 const Logo = styled('img', {
-  width: 50,
-  height: 50,
+  width: 36,
+  height: 36,
 })

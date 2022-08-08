@@ -8,6 +8,9 @@ export const Container = styled('article', {
     marginTop: 0,
     marginBottom: 12,
   },
+  'h1, h2, h3': {
+    fontWeight: 600,
+  },
   a: {
     color: '$blue700',
     textDecoration: 'none',
