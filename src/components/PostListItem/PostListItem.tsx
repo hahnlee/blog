@@ -9,24 +9,29 @@ interface Props {
 
 export default function PostListItem({ post }: Props) {
   return (
-    <ListItem to={post.fields.slug}>
-      <Title>{post.frontmatter.title}</Title>
-      <Summery>{post.frontmatter.summary}</Summery>
-    </ListItem>
+    <Container>
+      <ListItem to={post.fields.slug}>
+        <Title>{post.frontmatter.title}</Title>
+        <Summery>{post.frontmatter.summary}</Summery>
+      </ListItem>
+    </Container>
   )
 }
 
-const ListItem = styled(Link, {
-  display: 'block',
-  textDecoration: 'none',
-  padding: '16px 0',
+const Container = styled('li', {
   listStyle: 'none',
-  wordBreak: 'keep-all',
+  padding: '16px 0',
   borderBottom: '1px solid $gray100',
   '&:last-child': {
     border: 'none',
   },
 })
+
+const ListItem = styled(Link, {
+  display: 'block',
+  textDecoration: 'none',
+  wordBreak: 'keep-all',
+ })
 
 const Title = styled('h1', {
   fontSize: '1.25rem',
