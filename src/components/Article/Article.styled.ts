@@ -11,6 +11,15 @@ export const Container = styled('article', {
   'h1, h2, h3': {
     fontWeight: 600,
   },
+  h1: {
+    fontSize: '1.5rem',
+  },
+  h2: {
+    fontSize: '1.25rem',
+  },
+  h3: {
+    fontSize: '1.15rem',
+  },
   a: {
     color: '$blue700',
     textDecoration: 'none',

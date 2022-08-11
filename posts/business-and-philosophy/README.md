@@ -5,6 +5,8 @@ summary: 2021년 회고
 thumbnail: ./images/whiteboard.jpeg
 category: inspiration
 ---
+import YoutubePlayer from '@components/YoutubePlayer'
+
 이직을 하면서 더 큰 회사를 경험해보고 싶었고 더 큰회사는 어떻게 성장하고 있는지, 무엇이 다른지가 궁금하였다.
 큰 회사를 만드는 여러 좋은 책과 자료가 많다.
 아직 내 사업을 시작하지도 않아 이런글을 쓰는게 부끄럽지만, 지난 한 해 느낀 한 가지 다른 생각을 공유하고 싶었다.
@@ -73,7 +75,7 @@ YC의 창업자 폴 그레이엄은 [Billionaires Build](http://paulgraham.com/a
 
 미국의 달착륙은 우주 경쟁이 심화되면서 소련에 뒤쳐지고 있다고 평가되었던[^6] 분위기에서 승부를 뒤집기 위해 선택되었다. 그리고 이 모험은 케네디 대통령이 라이스대학에서 한 "We choose to go to the moon" 연설로 시작한다. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QXqlziZV63k?start=579" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YoutubePlayer id="QXqlziZV63k" start={579} controls={false} />
 
 10년 안으로 달착륙을 하겠다는 이 유명한 연설에서 개인적으로 가장 좋아하는 부분이 있다.
 
