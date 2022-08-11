@@ -40,8 +40,12 @@ export const Container = styled('article', {
     marginBottom: 18,
   },
   'pre[class*="language-"]': {
+    fontSize: 16,
     borderRadius: 8,
     backgroundColor: '$gray000',
+    '.token.operator': {
+      backgroundColor: '$gray000',
+    },
   },
   '.footnotes': {
     hr: {
