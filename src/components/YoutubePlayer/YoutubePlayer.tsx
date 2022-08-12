@@ -14,7 +14,7 @@ export default function YoutubePlayer({
   cc,
   start,
   controls = true,
-  aspectRatio = '1.7',
+  aspectRatio = '16 / 9',
 }: Props) {
   const query = useMemo(() => {
     const params = new URLSearchParams()
