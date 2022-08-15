@@ -20,6 +20,17 @@ export const Container = styled('article', {
   h3: {
     fontSize: '1.15rem',
   },
+  p: {
+    code: {
+      fontSize: 16,
+      lineHight: 16,
+      padding: '1px 4px',
+      borderRadius: 4,
+      marginRight: 2,
+      backgroundColor: '$gray000',
+      border: '1px solid $gray200',
+    },
+  },
   a: {
     color: '$blue700',
     textDecoration: 'none',
@@ -42,9 +53,17 @@ export const Container = styled('article', {
   'pre[class*="language-"]': {
     fontSize: 16,
     borderRadius: 8,
+    border: '1px solid $gray200',
     backgroundColor: '$gray000',
     '.token.operator': {
-      backgroundColor: '$gray000',
+      backgroundColor: 'transparent',
+    },
+    '.gatsby-highlight-code-line': {
+      display: 'block',
+      backgroundColor: '$gray200',
+      marginLeft: -16,
+      marginRight: -16,
+      paddingLeft: 16,
     },
   },
   '.footnotes': {
