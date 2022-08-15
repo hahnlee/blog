@@ -48,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-plugin-mdx", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:3.20.0"],\
             ["gatsby-plugin-sharp", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.20.0"],\
             ["gatsby-plugin-tsconfig-paths", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:1.0.5"],\
+            ["gatsby-remark-external-links", "npm:0.0.4"],\
             ["gatsby-remark-images", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.20.0"],\
             ["gatsby-remark-prismjs", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.20.0"],\
             ["gatsby-source-filesystem", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.20.0"],\
@@ -7522,6 +7523,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["babel-runtime", [\
+        ["npm:6.26.0", {\
+          "packageLocation": "./.yarn/cache/babel-runtime-npm-6.26.0-d38e7946b4-8aeade9466.zip/node_modules/babel-runtime/",\
+          "packageDependencies": [\
+            ["babel-runtime", "npm:6.26.0"],\
+            ["core-js", "npm:2.6.12"],\
+            ["regenerator-runtime", "npm:0.11.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["backo2", [\
         ["npm:1.0.2", {\
           "packageLocation": "./.yarn/cache/backo2-npm-1.0.2-e933aab18a-fda8d0a0f4.zip/node_modules/backo2/",\
@@ -7646,6 +7658,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-plugin-mdx", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:3.20.0"],\
             ["gatsby-plugin-sharp", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.20.0"],\
             ["gatsby-plugin-tsconfig-paths", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:1.0.5"],\
+            ["gatsby-remark-external-links", "npm:0.0.4"],\
             ["gatsby-remark-images", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.20.0"],\
             ["gatsby-remark-prismjs", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.20.0"],\
             ["gatsby-source-filesystem", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.20.0"],\
@@ -8722,6 +8735,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["core-js", [\
+        ["npm:2.6.12", {\
+          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",\
+          "packageDependencies": [\
+            ["core-js", "npm:2.6.12"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:3.24.1", {\
           "packageLocation": "./.yarn/unplugged/core-js-npm-3.24.1-01484c0f43/node_modules/core-js/",\
           "packageDependencies": [\
@@ -12371,6 +12391,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["gatsby-remark-external-links", [\
+        ["npm:0.0.4", {\
+          "packageLocation": "./.yarn/cache/gatsby-remark-external-links-npm-0.0.4-b98629f8b9-2117ce7fa6.zip/node_modules/gatsby-remark-external-links/",\
+          "packageDependencies": [\
+            ["gatsby-remark-external-links", "npm:0.0.4"],\
+            ["babel-runtime", "npm:6.26.0"],\
+            ["is-relative-url", "npm:2.0.0"],\
+            ["unist-util-find", "npm:1.0.2"],\
+            ["unist-util-visit", "npm:1.4.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["gatsby-remark-images", [\
         ["npm:6.20.0", {\
           "packageLocation": "./.yarn/cache/gatsby-remark-images-npm-6.20.0-57e4a0860e-317ce8a3d1.zip/node_modules/gatsby-remark-images/",\
@@ -13769,6 +13802,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["is-absolute-url", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/is-absolute-url-npm-2.1.0-f1cdafe3db-781e8cf8a2.zip/node_modules/is-absolute-url/",\
+          "packageDependencies": [\
+            ["is-absolute-url", "npm:2.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:3.0.3", {\
           "packageLocation": "./.yarn/cache/is-absolute-url-npm-3.0.3-0b1c391bc4-5159b51d06.zip/node_modules/is-absolute-url/",\
           "packageDependencies": [\
@@ -14164,6 +14204,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["is-relative-url", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/is-relative-url-npm-2.0.0-49827d4256-5acb66d637.zip/node_modules/is-relative-url/",\
+          "packageDependencies": [\
+            ["is-relative-url", "npm:2.0.0"],\
+            ["is-absolute-url", "npm:2.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:3.0.0", {\
           "packageLocation": "./.yarn/cache/is-relative-url-npm-3.0.0-a15607a42c-ea9eb9dd98.zip/node_modules/is-relative-url/",\
           "packageDependencies": [\
@@ -14966,6 +15014,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash.get-npm-4.4.2-7bda64ed87-e403047ddb.zip/node_modules/lodash.get/",\
           "packageDependencies": [\
             ["lodash.get", "npm:4.4.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash.iteratee", [\
+        ["npm:4.7.0", {\
+          "packageLocation": "./.yarn/cache/lodash.iteratee-npm-4.7.0-0670a79346-900e8f9c2f.zip/node_modules/lodash.iteratee/",\
+          "packageDependencies": [\
+            ["lodash.iteratee", "npm:4.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -18617,6 +18674,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["regenerator-runtime", [\
+        ["npm:0.11.1", {\
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.11.1-a31e4f8dcd-3c97bd2c7b.zip/node_modules/regenerator-runtime/",\
+          "packageDependencies": [\
+            ["regenerator-runtime", "npm:0.11.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:0.13.9", {\
           "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.9-6d02340eec-65ed455fe5.zip/node_modules/regenerator-runtime/",\
           "packageDependencies": [\
@@ -21016,6 +21080,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/unist-builder-npm-2.0.3-8bf7de2024-e946fdf77d.zip/node_modules/unist-builder/",\
           "packageDependencies": [\
             ["unist-builder", "npm:2.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["unist-util-find", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/unist-util-find-npm-1.0.2-ca5d26e0fb-d13b92e65a.zip/node_modules/unist-util-find/",\
+          "packageDependencies": [\
+            ["unist-util-find", "npm:1.0.2"],\
+            ["lodash.iteratee", "npm:4.7.0"],\
+            ["unist-util-visit", "npm:1.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\

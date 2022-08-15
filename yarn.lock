@@ -4913,6 +4913,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-runtime@npm:^6.26.0":
+  version: 6.26.0
+  resolution: "babel-runtime@npm:6.26.0"
+  dependencies:
+    core-js: ^2.4.0
+    regenerator-runtime: ^0.11.0
+  checksum: 8aeade94665e67a73c1ccc10f6fd42ba0c689b980032b70929de7a6d9a12eb87ef51902733f8fefede35afea7a5c3ef7e916a64d503446c1eedc9e3284bd3d50
+  languageName: node
+  linkType: hard
+
 "backo2@npm:^1.0.2, backo2@npm:~1.0.2":
   version: 1.0.2
   resolution: "backo2@npm:1.0.2"
@@ -5017,6 +5027,7 @@ __metadata:
     gatsby-plugin-mdx: ^3.20.0
     gatsby-plugin-sharp: ^4.20.0
     gatsby-plugin-tsconfig-paths: ^1.0.5
+    gatsby-remark-external-links: ^0.0.4
     gatsby-remark-images: ^6.20.0
     gatsby-remark-prismjs: ^6.20.0
     gatsby-source-filesystem: ^4.20.0
@@ -6009,6 +6020,13 @@ __metadata:
   version: 3.24.1
   resolution: "core-js-pure@npm:3.24.1"
   checksum: 4b8990a65c58e2320ff607f6168656fdcbfb4f60bd4af0ce7b09f5c0e0099b0cfc2632836986cfcb11f6ffe7ea46a5b8679651bc83ca3f41690f5ef7472d6f33
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^2.4.0":
+  version: 2.6.12
+  resolution: "core-js@npm:2.6.12"
+  checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
   languageName: node
   linkType: hard
 
@@ -8684,6 +8702,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-remark-external-links@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "gatsby-remark-external-links@npm:0.0.4"
+  dependencies:
+    babel-runtime: ^6.26.0
+    is-relative-url: ^2.0.0
+    unist-util-find: ^1.0.1
+    unist-util-visit: ^1.1.3
+  checksum: 2117ce7fa66f7c67f05765761f70a3bcca6c294843cd8503b78b62650964c8ac917dcc75aa267d18d6920cb99cf0c7b13c740be2eca93d90e0ad35f015c55eae
+  languageName: node
+  linkType: hard
+
 "gatsby-remark-images@npm:^6.20.0":
   version: 6.20.0
   resolution: "gatsby-remark-images@npm:6.20.0"
@@ -9955,6 +9985,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-absolute-url@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "is-absolute-url@npm:2.1.0"
+  checksum: 781e8cf8a2af54b1b7a92f269244d96c66224030d91120e734ebeebbce044c167767e1389789d8aaf82f9e429cb20ae93d6d0acfe6c4b53d2bd6ebb47a236d76
+  languageName: node
+  linkType: hard
+
 "is-absolute-url@npm:^3.0.0":
   version: 3.0.3
   resolution: "is-absolute-url@npm:3.0.3"
@@ -10298,6 +10335,15 @@ __metadata:
     call-bind: ^1.0.2
     has-tostringtag: ^1.0.0
   checksum: 362399b33535bc8f386d96c45c9feb04cf7f8b41c182f54174c1a45c9abbbe5e31290bbad09a458583ff6bf3b2048672cdb1881b13289569a7c548370856a652
+  languageName: node
+  linkType: hard
+
+"is-relative-url@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "is-relative-url@npm:2.0.0"
+  dependencies:
+    is-absolute-url: ^2.0.0
+  checksum: 5acb66d6374a0c89fb68a770c94eeee3061b7d2e94d1fdff4d780b3054caf681ad33ed9d554eebeaedd897d90b781684c84ed85c7581d5d50767e857af3a199e
   languageName: node
   linkType: hard
 
@@ -11035,6 +11081,13 @@ __metadata:
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
   checksum: e403047ddb03181c9d0e92df9556570e2b67e0f0a930fcbbbd779370972368f5568e914f913e93f3b08f6d492abc71e14d4e9b7a18916c31fa04bd2306efe545
+  languageName: node
+  linkType: hard
+
+"lodash.iteratee@npm:^4.5.0":
+  version: 4.7.0
+  resolution: "lodash.iteratee@npm:4.7.0"
+  checksum: 900e8f9c2f37361aa50f880139e92a00a5c1a000a45c78f00f64f83591090ccd9644800d6869fc563ef47907d9914ec19e871433d7be8e272b7b0516b44910d7
   languageName: node
   linkType: hard
 
@@ -13925,6 +13978,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.11.0":
+  version: 0.11.1
+  resolution: "regenerator-runtime@npm:0.11.1"
+  checksum: 3c97bd2c7b2b3247e6f8e2147a002eb78c995323732dad5dc70fac8d8d0b758d0295e7015b90d3d444446ae77cbd24b9f9123ec3a77018e81d8999818301b4f4
+  languageName: node
+  linkType: hard
+
 "regenerator-runtime@npm:^0.13.3, regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
   version: 0.13.9
   resolution: "regenerator-runtime@npm:0.13.9"
@@ -16087,6 +16147,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unist-util-find@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "unist-util-find@npm:1.0.2"
+  dependencies:
+    lodash.iteratee: ^4.5.0
+    unist-util-visit: ^1.1.0
+  checksum: d13b92e65a94f8f8280ddddb030456e080d64179c6594e028f0a22c8c86b98744fc2336dfa322c817d7f356b42e46eab13321f7824e4529a5b51e538566587a5
+  languageName: node
+  linkType: hard
+
 "unist-util-generated@npm:^1.0.0":
   version: 1.1.6
   resolution: "unist-util-generated@npm:1.1.6"
@@ -16242,7 +16312,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^1.1.0, unist-util-visit@npm:^1.4.1":
+"unist-util-visit@npm:^1.1.0, unist-util-visit@npm:^1.1.3, unist-util-visit@npm:^1.4.1":
   version: 1.4.1
   resolution: "unist-util-visit@npm:1.4.1"
   dependencies:
