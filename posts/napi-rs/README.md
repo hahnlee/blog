@@ -61,7 +61,7 @@ Node API가 가지는 또 다른 장점은, V8의 API들과 독립적인 점 입
 V8은 C++로 작성되어 있어, 여러 C++ 클래스를 직접 사용해야하여 NAN은 C++를 사용해야했습니다. Node API는 C로 개발할 수 있도록 작성되었으며, 덕분에 다양한 언어에서 호환성이 높아졌습니다. (일반적으로 C언어에 호환되는 FFI를 만드는것이 더 쉽습니다.)
 
 또다른 장점은 다른 JS 엔진을 사용해도 네이티브 기능을 사용하는 라이브러리를 호환 시킬 수 있습니다.
-실제로 최근 주목받았던 새로운 JS런타임 [bun](https://github.com/oven-sh/bun)은 자바스크립트 엔진으로 WebKit의 JavascriptCore를 사용하지만 [Node API를 구현하여](https://github.com/oven-sh/bun#node-api-napi) 노드 애드온도 호환 됩니다.
+실제로 최근 주목받았던 새로운 JS런타임 [bun](https://github.com/oven-sh/bun)은 자바스크립트 엔진으로 WebKit의 JavaScriptCore를 사용하지만 [Node API를 구현하여](https://github.com/oven-sh/bun#node-api-napi) 노드 애드온도 호환 됩니다.
 
 이런 이유로 현 시점에서 노드의 네이티브 확장을 위해서는 Node API를 사용하는것이 가장 좋습니다.
 
@@ -196,7 +196,7 @@ console.log(result) // 120
 ## macro
 러스트의 매크로는 아주 강력합니다. C/C++의 매크로는 문자열 치환 정도의 기능을 가지는데 비해 러스트의 매크로는 코드의 맥락을 이해할 수 있고, 컴파일 타임에 경고를 줄 수도 있는등 메타프로그래밍을 지원합니다.
 
-napi-rs는 rust의 강력한 매크크를 사용해 **컴파일 타임**에 함수/클래스의 이름, 함수의 인자 등 을 분석하고, 적절한 헬퍼함수를 삽입하는 등 코드를 변형해 Node API를 사용하게 해줍니다.
+napi-rs는 rust의 강력한 매크로를 사용해 **컴파일 타임**에 함수/클래스의 이름, 함수의 인자 등 을 분석하고, 적절한 헬퍼함수를 삽입하는 등 코드를 변형해 Node API를 사용하게 해줍니다.
 
 러스트의 매크로에 대해 더 알아보고 싶다면 [공식문서의 매크로 항목](https://doc.rust-lang.org/book/first-edition/macros.html)과 [Rust 로 복잡한 매크로를 작성하기: 역폴란드 표기법](https://blog.cloudflare.com/ko-kr/writing-complex-macros-in-rust-reverse-polish-notation-ko-kr/)글을 추천합니다.
 
@@ -209,7 +209,7 @@ napi-rs의 또다른 장점은 편리한 빌드 시스템입니다. napi-rs의 �
 ## node-gyp
 노드의 많은 네이티브 애드온은 [GYP](https://ko.wikipedia.org/wiki/GYP_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4))와 `gyp`를 래핑한 `node-gyp`을 이용합니다. `gyp`은 크롬팀에서 개발한 **크로스 플렛폼**을 지원하는 C/C++ 빌드 도구 입니다.
 
-`gyp`의 정의 파일은 복잡할 뿐만 아니라 파이썬과 같은 외부 의존성을 가지고 있습니다. 실제로 유지보수 등의 문제로 크롬팀은 새로운 빌드도구 [GN](https://ko.wikipedia.org/wiki/GN_(%EB%B9%8C%EB%93%9C_%EC%8B%9C%EC%8A%A4%ED%85%9C))을 개발해 GYP을 더이상 사용하지 않습니다.
+`gyp`의 정의 파일은 복잡할 뿐만 아니라 파이썬과 같은 외부 의존성을 가지고 있습니다. gyp을 만든 크롬팀도 유지보수 등의 문제로 새로운 빌드도구 [GN](https://ko.wikipedia.org/wiki/GN_(%EB%B9%8C%EB%93%9C_%EC%8B%9C%EC%8A%A4%ED%85%9C))을 개발해 GYP을 더이상 사용하지 않습니다.
 
 실제로 노드와 deno를 만든 Ryan Dahl은 node.js에서 후회하는 것 중 하나로 꼽기도 했습니다.
 
