@@ -70,17 +70,21 @@ const Main = styled('main', {
 })
 
 export function Head({ data }: HeadProps<Response>) {
+  const imageUrl =
+    data.mdx.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images
+      .fallback?.src
+
   return (
     <SEO
       title={data.mdx.frontmatter.title}
       description={data.mdx.frontmatter.summary}
       type="article"
-      image={
-        data.mdx.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images
-          .fallback?.src
-      }
+      image={imageUrl}
     >
       <meta property="article:author" content="이한" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content="@hanleedev" />
+      <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:label1" content="읽는 시간" />
       <meta name="twitter:data1" content={`${data.mdx.timeToRead}분`} />
     </SEO>
