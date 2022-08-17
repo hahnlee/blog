@@ -40,7 +40,7 @@ export default function Home({ data: { allMdx } }: PageProps<Response>) {
       <Main>
         <Header>
           <Title>
-            명시지 <Token>形式知</Token>
+            명시지 <Token>明示知</Token>
           </Title>
           <Paragraph>기록할 수 있는 지식을 나눕니다</Paragraph>
           <Author />

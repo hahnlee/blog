@@ -17,20 +17,20 @@ export default function SEO({
 }: Props) {
   return (
     <>
-      <title>{title ? `${title} | ` : ''}명시지(形式知)</title>
+      <title>{title ? `${title} | ` : ''}명시지(明示知)</title>
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={title ?? '명시지(形式知)'} />
+      <meta property="og:title" content={title ?? '명시지(明示知)'} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:author" content="이한" />
       <meta
         property="og:site_name"
-        content="명시지(形式知) - 기록할 수 있는 지식을 나눕니다"
+        content="명시지(明示知) - 기록할 수 있는 지식을 나눕니다"
       />
       <link
         rel="alternate"
         type="application/rss+xml"
-        title="명시지(形式知) - 기록할 수 있는 지식을 나눕니다"
+        title="명시지(明示知) - 기록할 수 있는 지식을 나눕니다"
         href="/rss.xml"
       />
       <link

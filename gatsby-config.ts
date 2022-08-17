@@ -3,7 +3,7 @@ import * as path from 'path'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: '명시지(形式知)',
+    title: '명시지(明示知)',
     description: '기록할 수 있는 지식을 나눕니다',
     siteUrl: 'https://blog.hanlee.io',
   },
@@ -51,7 +51,7 @@ const config: GatsbyConfig = {
       options: {
         feeds: [
           {
-            title: '명시지 (形式知)',
+            title: '명시지 (明示知)',
             query: `
               {
                 allMdx(
