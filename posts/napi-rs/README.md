@@ -52,7 +52,7 @@ NAN은 널리 사용되었으며, 지금도 노드의 네이티브 지원에 대
 이와 같은 이유로 노드 8버전 이전에 node-sass 같은 라이브러리를 사용했다면, 노드의 버전이 올라갔을때 새로운 버전을 받거나, `npm rebuild` 명령어로 라이브러리를 다시 빌드해야지만 사용할 수 있었습니다.
 
 ## Node API (N-API)
-이런 문제를 해결하기 위해 [Node API](https://nodejs.org/api/n-api.html)가 탄생하였습니다. Node API는 노드 버전 8부터 도입되어 현재는 Node API로 이름이 변경되게 됩니다. (이와 같은 이유로 Node API보다는 N-API로 검색하면 더 다양한 자료를 찾을 수 있습니다.)
+이런 문제를 해결하기 위해 [N-API](https://nodejs.org/api/n-api.html)가 탄생하였습니다. N-API는 노드 버전 8부터 도입되었으며, 현재는 Node API로 이름이 변경 되었습니다. (이와 같은 이유로 Node API보다는 N-API로 검색하면 더 다양한 자료를 찾을 수 있습니다.)
 
 Node API의 가장 큰 특징은 NAN과 다르게 [ABI](https://ko.wikipedia.org/wiki/응용_프로그램_이진_인터페이스) 호환성을 가진다는 점입니다. Node API로 작성된 노드 애드온은 재 컴파일을 하지 않아도, 서로 다른 버전의 노드에서 문제 없이 사용할 수 있습니다.
 
