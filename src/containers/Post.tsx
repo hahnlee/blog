@@ -82,7 +82,7 @@ export function Head({ data }: HeadProps<Response>) {
       image={imageUrl}
     >
       <meta property="article:author" content="이한" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@hanleedev" />
       <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:label1" content="읽는 시간" />
