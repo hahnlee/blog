@@ -51,7 +51,7 @@ visit(reader: RecordReader, paragraph: Paragraph, control?: Control) {
 ```
 언제 `HWPTAG_LIST_HEADER`를 만날지 모르니 switch case문을 만나고 `HWPTAG_LIST_HEADER`를 만났을때 파싱하여 결과를 집어 넣었죠. hwp-rs는 다릅니다.
 
-```rs
+```rust
 let mut line_segments = Vec::new();
 if header.aligns > 0 {
     assert!(
