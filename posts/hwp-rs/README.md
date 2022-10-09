@@ -113,7 +113,7 @@ for file in hwp.bin_data:
 아쉽게도, 아직 hwp-rs에 비해 많은 내용을 파싱하진 못합니다. 또한 어떤 API가 필요한지 많은 고민이 있습니다. [피드백을 주시면](https://github.com/hahnlee/hwp-rs/discussions) 좋은 라이브러리를 만드는데 도움 될 것 같습니다.
 
 # 🦀 = ❤
-hwp-rs는 rust로 작성되었습니다. 러스트로 작성한 이유는 첫번째는 제가 러스트를 좋아하기 때문이며, 두번째는 이식성 때문입니다. 러스트는 napi-rs](https://napi.rs/), [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen), [cbindgen](https://github.com/eqrion/cbindgen), [pyo3](https://pyo3.rs/)등 다양한 바인딩 라이브러리가 있습니다.
+hwp-rs는 rust로 작성되었습니다. 러스트로 작성한 이유는 첫번째는 제가 러스트를 좋아하기 때문이며, 두번째는 이식성 때문입니다. 러스트는 [napi-rs](https://napi.rs/), [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen), [cbindgen](https://github.com/eqrion/cbindgen), [pyo3](https://pyo3.rs/)등 다양한 바인딩 라이브러리가 있습니다.
 
 실제로 libhwp는 pyo3를 이용해 파이썬 바인딩을 만들었습니다. 다만 현 버전은 바인딩을 위한 코드를 다시 만드는것에 가깝기 때문에, 효율적으로 작성하는 방법을 찾아야합니다.
 이 점도 많은 고수들의 관심과 도움을 부탁드립니다.
