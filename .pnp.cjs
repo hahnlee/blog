@@ -12129,7 +12129,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-core-utils", "npm:3.20.0"],\
             ["gray-matter", "npm:4.0.3"],\
             ["json5", "npm:2.2.1"],\
-            ["loader-utils", "npm:1.4.0"],\
+            ["loader-utils", "npm:1.4.2"],\
             ["lodash", "npm:4.17.21"],\
             ["mdast-util-to-string", "npm:1.1.0"],\
             ["mdast-util-toc", "npm:3.1.0"],\
@@ -14828,10 +14828,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["loader-utils", [\
-        ["npm:1.4.0", {\
-          "packageLocation": "./.yarn/cache/loader-utils-npm-1.4.0-a56254a277-d150b15e7a.zip/node_modules/loader-utils/",\
+        ["npm:1.4.2", {\
+          "packageLocation": "./.yarn/cache/loader-utils-npm-1.4.2-b4537b2f88-eb6fb622ef.zip/node_modules/loader-utils/",\
           "packageDependencies": [\
-            ["loader-utils", "npm:1.4.0"],\
+            ["loader-utils", "npm:1.4.2"],\
             ["big.js", "npm:5.2.2"],\
             ["emojis-list", "npm:3.0.0"],\
             ["json5", "npm:1.0.1"]\
@@ -22161,7 +22161,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yaml-loader-npm-0.6.0-348c22dc2a-de6f070aaf.zip/node_modules/yaml-loader/",\
           "packageDependencies": [\
             ["yaml-loader", "npm:0.6.0"],\
-            ["loader-utils", "npm:1.4.0"],\
+            ["loader-utils", "npm:1.4.2"],\
             ["yaml", "npm:1.10.2"]\
           ],\
           "linkType": "HARD"\
