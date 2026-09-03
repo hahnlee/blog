@@ -1,11 +1,46 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.20.0"/><meta property="og:type" content="article" data-gatsby-head="true"/><meta property="og:title" content="프론트엔드는 백엔드의 꿈을 꾸는가?" data-gatsby-head="true"/><meta property="og:description" content="점점 더 복잡해지는 프론트엔드와 백엔드의 유사점을 알아봅시다" data-gatsby-head="true"/><meta property="og:image" content="/static/aa8cecf4da2cfc40d1c8287369a3d7df/d202d/thumbnail.png" data-gatsby-head="true"/><meta property="og:author" content="이한" data-gatsby-head="true"/><meta property="og:site_name" content="명시지(明示知) - 기록할 수 있는 지식을 나눕니다" data-gatsby-head="true"/><meta name="msapplication-TileColor" content="#000000" data-gatsby-head="true"/><meta name="theme-color" content="#000000" data-gatsby-head="true"/><meta property="article:author" content="이한" data-gatsby-head="true"/><meta name="twitter:card" content="summary_large_image" data-gatsby-head="true"/><meta name="twitter:creator" content="@hanleedev" data-gatsby-head="true"/><meta name="twitter:image" content="/static/aa8cecf4da2cfc40d1c8287369a3d7df/d202d/thumbnail.png" data-gatsby-head="true"/><meta name="twitter:label1" content="읽는 시간" data-gatsby-head="true"/><meta name="twitter:data1" content="5분" data-gatsby-head="true"/><style data-href="/styles.618336a6b0dc03f16839.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Pretendard;font-weight:900;src:local("Pretendard Black"),url(/static/Pretendard-Black-14a71ec59ff2b3bc6933d54c6ee04ff1.woff2) format("woff2"),url(/static/Pretendard-Black-fe80bd8c7ce9b3af972f6e99a5646522.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:800;src:local("Pretendard ExtraBold"),url(/static/Pretendard-ExtraBold-55bef92e8f01b6b6ef2f8d31fdc0f951.woff2) format("woff2"),url(/static/Pretendard-ExtraBold-82ea4400a5eea299b40c94aac01985ba.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:700;src:local("Pretendard Bold"),url(/static/Pretendard-Bold-0676c8838a37a3b770d85a5534f5fdcb.woff2) format("woff2"),url(/static/Pretendard-Bold-f6866c5eb21ccb9a8749d3a2874a7e6e.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:600;src:local("Pretendard SemiBold"),url(/static/Pretendard-SemiBold-7e5eaaf650b9e738991373a7f173b94a.woff2) format("woff2"),url(/static/Pretendard-SemiBold-a0c72d6162af72df37ec279440595738.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:500;src:local("Pretendard Medium"),url(/static/Pretendard-Medium-ea235f1edb8815831a25b376b479949e.woff2) format("woff2"),url(/static/Pretendard-Medium-f902522b86842449110e07cbc07b8346.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:400;src:local("Pretendard Regular"),url(/static/Pretendard-Regular-6090e6b5524796768e78f23519d16488.woff2) format("woff2"),url(/static/Pretendard-Regular-ab56c53f21ca6b32d15fe0ae8daf5f60.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:300;src:local("Pretendard Light"),url(/static/Pretendard-Light-27c9a07cbc308ce88d1ab3613e3152c7.woff2) format("woff2"),url(/static/Pretendard-Light-40808ea4485a78c05f9213ed583b0046.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:200;src:local("Pretendard ExtraLight"),url(/static/Pretendard-ExtraLight-1a26bede4e9bc7d2e9c0ce548cd4cf83.woff2) format("woff2"),url(/static/Pretendard-ExtraLight-ff5e73a97b5e7a5c5d5fed684594e8ad.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:100;src:local("Pretendard Thin"),url(/static/Pretendard-Thin-41861ab4e67767c4c6ed0b5e361fbca6.woff2) format("woff2"),url(/static/Pretendard-Thin-348f24715998d74e9f5529afd376f55b.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><title data-gatsby-head="true">프론트엔드는 백엔드의 꿈을 꾸는가? | </title><link rel="alternate" type="application/rss+xml" title="명시지(明示知) - 기록할 수 있는 지식을 나눕니다" href="/rss.xml" data-gatsby-head="true"/><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" data-gatsby-head="true"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" data-gatsby-head="true"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" data-gatsby-head="true"/><link rel="manifest" href="/favicon/site.webmanifest" data-gatsby-head="true"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="명시지 (明示知)" href="/rss.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><style id="stitches">--sxs{--sxs:0 t-gdxNDc}@media{:root,.t-gdxNDc{--colors-gray000:#F8F9FA;--colors-gray100:#F1F3F5;--colors-gray200:#E9ECEF;--colors-gray300:#DEE2E6;--colors-gray400:#CED4DA;--colors-gray500:#ADB5BD;--colors-gray600:#868E96;--colors-gray700:#495057;--colors-gray800:#343A40;--colors-gray900:#212529;--colors-blue700:#1C7ED6}}--sxs{--sxs:1 hKePEu}@media{body{padding:0;margin:0;font-size:16px;color:var(--colors-gray800);font-weight:400;font-family:Pretendard,sans-serif}*{box-sizing:border-box}}--sxs{--sxs:2 c-bSvfqS c-hEdiuM c-drslhw c-gGqMDa c-jEDjTQ c-dvRuTq c-bZcNek c-jwOSHF c-dMmbPO c-euCchw c-boZbfK c-gBKazA c-eXJruw c-fzsocY c-eJVyyl c-fXXVzC c-hdzxtM c-dpWDmP c-bxCTAm c-jDcCnV c-bvNJHJ c-bHVmPA}@media{.c-bSvfqS{max-width:1000px;padding:24px;margin:0 auto}.c-hEdiuM{width:36px;height:36px}.c-drslhw{font-size:18px;line-height:1.8;word-break:keep-all}.c-drslhw h1,.c-drslhw h2,.c-drslhw h3,.c-drslhw p{margin-top:0;margin-bottom:12px}.c-drslhw h1,.c-drslhw h2,.c-drslhw h3{font-weight:600}.c-drslhw h1{font-size:1.5rem}.c-drslhw h2{font-size:1.25rem}.c-drslhw h3{font-size:1.15rem}.c-drslhw p code{font-size:16px;line-hight:16;padding:1px 4px;border-radius:4px;margin-right:2px;background-color:var(--colors-gray000);border:1px solid var(--colors-gray200)}.c-drslhw a{color:var(--colors-blue700);text-decoration:none}.c-drslhw blockquote{margin:12px 0;padding:1px 16px;color:var(--colors-gray600);border-left:5px solid var(--colors-gray200)}.c-drslhw blockquote p{margin:4px 0}.c-drslhw iframe{display:block;max-width:100%;margin:0 auto;margin-bottom:18px}.c-drslhw pre[class*="language-"]{font-size:16px;border-radius:8px;border:1px solid var(--colors-gray200);background-color:var(--colors-gray000)}.c-drslhw pre[class*="language-"] .token.operator{background-color:transparent}.c-drslhw pre[class*="language-"] .gatsby-highlight-code-line{display:block;background-color:var(--colors-gray200);margin-left:-16px;margin-right:-16px;padding-left:16px}.c-drslhw .footnotes hr{border-top:none;border-color:var(--colors-gray200)}.c-gGqMDa{font-size:2rem;font-weight:600;margin-bottom:0 !important}.c-jEDjTQ{display:flex;align-items:center;margin-top:24px;background-color:var(--colors-gray000);border-radius:16px;padding:16px}.c-dvRuTq{width:72px;height:72px;border-radius:50%}.c-bZcNek{flex:1;margin-left:24px}.c-jwOSHF{margin:0;font-size:1.25rem;color:var(--colors-gray700);font-weight:600}.c-dMmbPO{margin:6px 0;font-weight:400;color:var(--colors-gray600)}.c-euCchw{font-size:0.85rem;color:var(--colors-gray600);margin-right:8px}.c-boZbfK{max-width:1000px;padding:100px 24px;margin:0 auto}@media screen and (max-width: 1000px){.c-boZbfK{padding:60px 24px}}.c-gBKazA{margin-bottom:24px}.c-eXJruw{color:var(--colors-gray700);font-size:1.75rem;font-weight:600;margin:0}.c-fzsocY{color:var(--colors-gray500);font-size:1.25rem}.c-eJVyyl{margin:0;margin-top:6px;color:var(--colors-gray600);font-weight:300;font-size:1rem}.c-fXXVzC{margin:0;padding:0}.c-hdzxtM{list-style:none;border-bottom:1px solid var(--colors-gray100)}.c-hdzxtM:last-child{border:none}.c-jDcCnV{font-size:1.25rem;color:var(--colors-gray700);font-weight:600;margin:0}.c-bvNJHJ{margin:0;margin-top:6px;color:var(--colors-gray600);font-weight:400}.c-bxCTAm{padding:16px;word-break:keep-all}.c-bxCTAm:hover{border-radius:12px;background-color:var(--colors-gray000)}.c-dpWDmP{display:block;text-decoration:none}.c-bHVmPA{width:100%;border-radius:16px}}</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><main class="c-bSvfqS"><header><a href="/"><img src="/images/logo.png" draggable="false" alt="블로그 로고" width="36" height="36" class="c-hEdiuM"/></a></header><article class="c-drslhw"><h1 class="c-gGqMDa">프론트엔드는 백엔드의 꿈을 꾸는가?</h1><p>2019-04-07</p><p>현재 나는 휴학을 하고 <a href="https://zoyi.co" target="_blank" rel="noopener noreferrer">ZOYI</a>에서 프론트 엔드 개발자로 일하고 있는데,
-3년 전 컴퓨터 공학을 전공으로 선택할 때만 해도 프론트엔드 개발을 할 것이라 생각하지 않았다.</p><p>몇 가지 이유가 있는데, 첫째로 당시에 미래의 웹 페이지는 모두 포토샵과 같은 WYSIWYG 에디터로 만들 것으로 생각했다.</p><p>그때는 <strong>웹앱</strong>을 몰라서 했던 생각이지만, 지금도 정적 페이지, 간단한 쇼핑몰 같은 페이지는 그렇게 될 것으로 생각한다.</p><p>둘째로 JavaScript 언어의 난해함과 내 생각대로 작동하지 않는 CSS였다. 특히 <a href="https://css-tricks.com/centering-css-complete-guide/" target="_blank" rel="noopener noreferrer">세로 중앙정렬</a>은 너무나 이상하게 느껴졌다.
-<span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:500px">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom:53.37423312883436%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHM2JWhAsP/xAAcEAEAAgEFAAAAAAAAAAAAAAACAQMSAAQTFEH/2gAIAQEAAQUCFsZrbjjwRj1qevFrGv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB0QAAICAgMBAAAAAAAAAAAAAAECABEhMQMSYRD/2gAIAQEABj8CcKoz7uHkLOa1cHXsQc4PxfdylahP/8QAGxABAAICAwAAAAAAAAAAAAAAAQARITFRcYH/2gAIAQEAAT8hAlOzZ7EI5DgoU4TtRh9z5bgVjgn/2gAMAwEAAgADAAAAEDff/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QR//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxBtf//EABoQAQEBAQEBAQAAAAAAAAAAAAERIQAxQVH/2gAIAQEAAT8QXK1VgUEHDG+XrpUBe3N99b2UQCQLkZ9zm03ejpooIxv531fkeXv/2Q==&#x27;);background-size:cover;display:block"></span>
-  <img class="gatsby-resp-image-image" alt="여전히 마음에 안들 때도 있다" title="여전히 마음에 안들 때도 있다" src="/static/bef713d33288a3f1cbeb6febf63a19f5/953fe/css-mug.jpg" srcSet="/static/bef713d33288a3f1cbeb6febf63a19f5/520c1/css-mug.jpg 163w,/static/bef713d33288a3f1cbeb6febf63a19f5/45208/css-mug.jpg 325w,/static/bef713d33288a3f1cbeb6febf63a19f5/953fe/css-mug.jpg 500w" sizes="(max-width: 500px) 100vw, 500px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
-    </span>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NT3QYEL4NG"></script><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="generator" content="Gatsby 5.16.1"/><meta property="og:type" content="article" data-gatsby-head="true"/><meta property="og:title" content="프론트엔드는 백엔드의 꿈을 꾸는가?" data-gatsby-head="true"/><meta property="og:description" content="점점 더 복잡해지는 프론트엔드와 백엔드의 유사점을 알아봅시다" data-gatsby-head="true"/><meta property="og:image" content="/static/aa8cecf4da2cfc40d1c8287369a3d7df/d202d/thumbnail.png" data-gatsby-head="true"/><meta property="og:author" content="이한" data-gatsby-head="true"/><meta property="og:site_name" content="명시지(明示知) - 기록할 수 있는 지식을 나눕니다" data-gatsby-head="true"/><meta name="msapplication-TileColor" content="#000000" data-gatsby-head="true"/><meta name="theme-color" content="#000000" data-gatsby-head="true"/><meta property="article:author" content="이한" data-gatsby-head="true"/><meta name="twitter:card" content="summary_large_image" data-gatsby-head="true"/><meta name="twitter:creator" content="@hanleedev" data-gatsby-head="true"/><meta name="twitter:image" content="/static/aa8cecf4da2cfc40d1c8287369a3d7df/d202d/thumbnail.png" data-gatsby-head="true"/><meta name="twitter:label1" content="읽는 시간" data-gatsby-head="true"/><meta name="twitter:data1" content="22분" data-gatsby-head="true"/><link rel="alternate" type="application/rss+xml" title="명시지 (明示知)" href="/rss.xml"/><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/><title data-gatsby-head="true"></title><link rel="alternate" type="application/rss+xml" title="명시지(明示知) - 기록할 수 있는 지식을 나눕니다" href="/rss.xml" data-gatsby-head="true"/><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" data-gatsby-head="true"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" data-gatsby-head="true"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" data-gatsby-head="true"/><link rel="manifest" href="/favicon/site.webmanifest" data-gatsby-head="true"/><style data-href="/styles.9cb6067c16d67fb80972.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Pretendard;font-weight:900;src:local("Pretendard Black"),url(/static/Pretendard-Black-c2be1420d8fb4b99a6714ec0b88892ea.woff2) format("woff2"),url(/static/Pretendard-Black-c51355ddc1caec59603183dc442f1914.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:800;src:local("Pretendard ExtraBold"),url(/static/Pretendard-ExtraBold-26df84c2b3b8cb8a4b0cc1eb1d25766c.woff2) format("woff2"),url(/static/Pretendard-ExtraBold-f6491e200d1fb5c5917b8afeb110a7aa.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:700;src:local("Pretendard Bold"),url(/static/Pretendard-Bold-0c6f5e225ff28f456183ce8d285da657.woff2) format("woff2"),url(/static/Pretendard-Bold-1f1dbbbf311ffffcc770f52f12550199.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:600;src:local("Pretendard SemiBold"),url(/static/Pretendard-SemiBold-d5ded8ad2884e7855bb109f16c527ae7.woff2) format("woff2"),url(/static/Pretendard-SemiBold-9f6b39f88e7e6a3fd0b21d7ff73ac1df.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:500;src:local("Pretendard Medium"),url(/static/Pretendard-Medium-a9645bebe1a0010e66dcd7d5a93c973b.woff2) format("woff2"),url(/static/Pretendard-Medium-edd5e28caa1cc4a9e0b7a16d58e7fd04.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:400;src:local("Pretendard Regular"),url(/static/Pretendard-Regular-38bed7de46e7b9049cedbede041d23ed.woff2) format("woff2"),url(/static/Pretendard-Regular-303253288b0ba99db532e29a364b0c09.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:300;src:local("Pretendard Light"),url(/static/Pretendard-Light-1fc5521353ec20635e8edadd77b53bc4.woff2) format("woff2"),url(/static/Pretendard-Light-7d1a33b829142e833fb9b85c2a619b78.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:200;src:local("Pretendard ExtraLight"),url(/static/Pretendard-ExtraLight-6a3dddfd84c05761ef44539091c6ce37.woff2) format("woff2"),url(/static/Pretendard-ExtraLight-caca3ea2e764095a60e95c22eddf1a0c.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:100;src:local("Pretendard Thin"),url(/static/Pretendard-Thin-bb7cedf4446fa24dda9d412f3bd5eaa2.woff2) format("woff2"),url(/static/Pretendard-Thin-e7b3f421a3a379ef413751225b24843e.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><script>
+      
+      
+      if(!(navigator.doNotTrack == "1" || window.doNotTrack == "1")) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NT3QYEL4NG', {"send_page_view":false});
+      }
+      </script><style id="stitches">--sxs{--sxs:0 t-gdxNDc}@media{:root,.t-gdxNDc{--colors-gray000:#F8F9FA;--colors-gray100:#F1F3F5;--colors-gray200:#E9ECEF;--colors-gray300:#DEE2E6;--colors-gray400:#CED4DA;--colors-gray500:#ADB5BD;--colors-gray600:#868E96;--colors-gray700:#495057;--colors-gray800:#343A40;--colors-gray900:#212529;--colors-blue700:#1C7ED6}}--sxs{--sxs:1 hKePEu}@media{body{padding:0;margin:0;font-size:16px;color:var(--colors-gray800);font-weight:400;font-family:Pretendard,sans-serif}*{box-sizing:border-box}}--sxs{--sxs:2 c-bSvfqS c-hEdiuM c-drslhw c-gGqMDa c-jEDjTQ c-dvRuTq c-bZcNek c-jwOSHF c-dMmbPO c-euCchw c-boZbfK c-gBKazA c-eXJruw c-fzsocY c-eJVyyl c-fXXVzC c-hdzxtM c-dpWDmP c-bxCTAm c-jDcCnV c-bvNJHJ c-bHVmPA}@media{.c-bSvfqS{max-width:1000px;padding:24px;margin:0 auto}.c-hEdiuM{width:36px;height:36px}.c-drslhw{font-size:18px;line-height:1.8;word-break:keep-all}.c-drslhw h1,.c-drslhw h2,.c-drslhw h3,.c-drslhw p{margin-top:0;margin-bottom:12px}.c-drslhw h1,.c-drslhw h2,.c-drslhw h3{font-weight:600}.c-drslhw h1{font-size:1.5rem}.c-drslhw h2{font-size:1.25rem}.c-drslhw h3{font-size:1.15rem}.c-drslhw p code{font-size:16px;line-hight:16;padding:1px 4px;border-radius:4px;margin-right:2px;background-color:var(--colors-gray000);border:1px solid var(--colors-gray200)}.c-drslhw a{color:var(--colors-blue700);text-decoration:none}.c-drslhw blockquote{margin:12px 0;padding:1px 16px;color:var(--colors-gray600);border-left:5px solid var(--colors-gray200)}.c-drslhw blockquote p{margin:4px 0}.c-drslhw iframe{display:block;max-width:100%;margin:0 auto;margin-bottom:18px}.c-drslhw pre[class*="language-"]{font-size:16px;border-radius:8px;border:1px solid var(--colors-gray200);background-color:var(--colors-gray000)}.c-drslhw pre[class*="language-"] .token.operator{background-color:transparent}.c-drslhw pre[class*="language-"] .gatsby-highlight-code-line{display:block;background-color:var(--colors-gray200);margin-left:-16px;margin-right:-16px;padding-left:16px}.c-drslhw .footnotes hr{border-top:none;border-color:var(--colors-gray200)}.c-gGqMDa{font-size:2rem;font-weight:600;margin-bottom:0 !important}.c-jEDjTQ{display:flex;align-items:center;margin-top:24px;background-color:var(--colors-gray000);border-radius:16px;padding:16px}.c-dvRuTq{width:72px;height:72px;border-radius:50%}.c-bZcNek{flex:1;margin-left:24px}.c-jwOSHF{margin:0;font-size:1.25rem;color:var(--colors-gray700);font-weight:600}.c-dMmbPO{margin:6px 0;font-weight:400;color:var(--colors-gray600)}.c-euCchw{font-size:0.85rem;color:var(--colors-gray600);margin-right:8px}.c-boZbfK{max-width:1000px;padding:100px 24px;margin:0 auto}@media screen and (max-width: 1000px){.c-boZbfK{padding:60px 24px}}.c-gBKazA{margin-bottom:24px}.c-eXJruw{color:var(--colors-gray700);font-size:1.75rem;font-weight:600;margin:0}.c-fzsocY{color:var(--colors-gray500);font-size:1.25rem}.c-eJVyyl{margin:0;margin-top:6px;color:var(--colors-gray600);font-weight:300;font-size:1rem}.c-fXXVzC{margin:0;padding:0}.c-hdzxtM{list-style:none;border-bottom:1px solid var(--colors-gray100)}.c-hdzxtM:last-child{border:none}.c-jDcCnV{font-size:1.25rem;color:var(--colors-gray700);font-weight:600;margin:0}.c-bvNJHJ{margin:0;margin-top:6px;color:var(--colors-gray600);font-weight:400}.c-bxCTAm{padding:16px;word-break:keep-all}.c-bxCTAm:hover{border-radius:12px;background-color:var(--colors-gray000)}.c-dpWDmP{display:block;text-decoration:none}.c-bHVmPA{width:100%;border-radius:16px}}</style></head><body><div id="___gatsby"><link rel="preload" as="image" href="/images/logo.png"/><link rel="preload" as="image" href="/images/profile.png"/><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><main class="c-bSvfqS"><header><a href="/"><img src="/images/logo.png" draggable="false" alt="블로그 로고" width="36" height="36" class="c-hEdiuM"/></a></header><article class="c-drslhw"><h1 class="c-gGqMDa">프론트엔드는 백엔드의 꿈을 꾸는가?</h1><p>2019-04-07</p><p>현재 나는 휴학을 하고 <a href="https://zoyi.co" target="_blank" rel="noopener noreferrer">ZOYI</a>에서 프론트 엔드 개발자로 일하고 있는데,
+3년 전 컴퓨터 공학을 전공으로 선택할 때만 해도 프론트엔드 개발을 할 것이라 생각하지 않았다.</p>
+<p>몇 가지 이유가 있는데, 첫째로 당시에 미래의 웹 페이지는 모두 포토샵과 같은 WYSIWYG 에디터로 만들 것으로 생각했다.</p>
+<p>그때는 <strong>웹앱</strong>을 몰라서 했던 생각이지만, 지금도 정적 페이지, 간단한 쇼핑몰 같은 페이지는 그렇게 될 것으로 생각한다.</p>
+<p>둘째로 JavaScript 언어의 난해함과 내 생각대로 작동하지 않는 CSS였다. 특히 <a href="https://css-tricks.com/centering-css-complete-guide/" target="_blank" rel="noopener noreferrer">세로 중앙정렬</a>은 너무나 이상하게 느껴졌다.
+<span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.37423312883436%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHM2JWhAsP/xAAcEAEAAgEFAAAAAAAAAAAAAAACAQMSAAQTFEH/2gAIAQEAAQUCFsZrbjjwRj1qevFrGv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB0QAAICAgMBAAAAAAAAAAAAAAECABEhMQMSYRD/2gAIAQEABj8CcKoz7uHkLOa1cHXsQc4PxfdylahP/8QAGxABAAICAwAAAAAAAAAAAAAAAQARITFRcYH/2gAIAQEAAT8hAlOzZ7EI5DgoU4TtRh9z5bgVjgn/2gAMAwEAAgADAAAAEDff/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QR//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxBtf//EABoQAQEBAQEBAQAAAAAAAAAAAAERIQAxQVH/2gAIAQEAAT8QXK1VgUEHDG+XrpUBe3N99b2UQCQLkZ9zm03ejpooIxv531fkeXv/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="여전히 마음에 안들 때도 있다"
+        title=""
+        src="/static/bef713d33288a3f1cbeb6febf63a19f5/953fe/css-mug.jpg"
+        srcset="/static/bef713d33288a3f1cbeb6febf63a19f5/520c1/css-mug.jpg 163w,
+/static/bef713d33288a3f1cbeb6febf63a19f5/45208/css-mug.jpg 325w,
+/static/bef713d33288a3f1cbeb6febf63a19f5/953fe/css-mug.jpg 500w"
+        sizes="(max-width: 500px) 100vw, 500px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></span>
 다행히 ES6 이후의 JS의 변화와 <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">지원 노력</a>으로 (내 기준으로) 난해한 언어는 아니며,
-CSS는 사용과 공부, flex와 같은 새로운 스타일로 적응 할 수 있었다.</p><p>하지만 무엇 보다도, <a href="https://vimrc.io/" target="_blank" rel="noopener noreferrer">vimrc.io</a>를 만들때 사용한, <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>의 만족감이 큰 역할을 했다.</p><h1>진료는 의사에게 약은 약사에게</h1><p>React의 가장 만족스러운 점은 <strong>관심사의 분리</strong> 이다. 예를 들어 게시물 목록을 간단히 React로 작성해보면 다음과 같다.</p><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&#x27;react&#x27;</span>
+CSS는 사용과 공부, flex와 같은 새로운 스타일로 적응 할 수 있었다.</p>
+<p>하지만 무엇 보다도, <a href="https://vimrc.io/" target="_blank" rel="noopener noreferrer">vimrc.io</a>를 만들때 사용한, <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>의 만족감이 큰 역할을 했다.</p>
+<h1>진료는 의사에게 약은 약사에게</h1>
+<p>React의 가장 만족스러운 점은 <strong>관심사의 분리</strong> 이다. 예를 들어 게시물 목록을 간단히 React로 작성해보면 다음과 같다.</p>
+<span><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
 
 <span class="token keyword">class</span> <span class="token class-name">PostList</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   state <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -19,21 +54,21 @@ CSS는 사용과 공부, flex와 같은 새로운 스타일로 적응 할 수 �
   <span class="token punctuation">}</span>
 
   <span class="token function">fetchPosts</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&#x27;SOME_API&#x27;</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'SOME_API'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>res<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&#x27;로딩에 실패하였습니다&#x27;</span><span class="token punctuation">)</span>
+          <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'로딩에 실패하였습니다'</span><span class="token punctuation">)</span>
         <span class="token punctuation">}</span>
         <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> posts <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> posts <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
           posts<span class="token punctuation">,</span>
           <span class="token literal-property property">isLoading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
           <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
           <span class="token literal-property property">error</span><span class="token operator">:</span> e<span class="token punctuation">.</span>message<span class="token punctuation">,</span>
           <span class="token literal-property property">isLoading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
@@ -47,61 +82,76 @@ CSS는 사용과 공부, flex와 같은 새로운 스타일로 적응 할 수 �
 
     <span class="token keyword">if</span> <span class="token punctuation">(</span>isLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">return</span> <span class="token punctuation">(</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>spinner<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>spinner<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
       <span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 
     <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">return</span> <span class="token punctuation">(</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>error<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
           </span><span class="token punctuation">{</span>error<span class="token punctuation">}</span><span class="token plain-text">
-        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
       <span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 
     <span class="token keyword">if</span> <span class="token punctuation">(</span>posts<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">return</span> <span class="token punctuation">(</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">게시글이 없습니다</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">게시글이 없습니다</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
       <span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
-        </span><span class="token punctuation">{</span>posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span>posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
         <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
-      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div><p>여전히 한 파일에 있지만, 각 영역은 철저히 자신의 역할만 책임진다.</p><ul><li><code>fetchPosts</code>함수는 API를 요청하고, 그 결과를 처리한다.<ul><li>fetchPosts  함수는 HTML 렌더링은 신경쓰지 않고 데이터만 처리한다.</li></ul></li><li><code>render</code>함수는 상태에 따라 필요한 HTML을 렌더링한다.<ul><li>React 같은 라이브러리의 장점은, 매번 새로 렌더링을 하기 때문에, 이전 상태를 고려 하지 않고 지금의 상태만 처리하면 된다.</li></ul></li></ul><p>이제 원한다면 두 함수를 완전히 분리할 수도 있다.</p><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&#x27;react&#x27;</span>
+<span class="token punctuation">}</span></code></pre></div></span>
+<p>여전히 한 파일에 있지만, 각 영역은 철저히 자신의 역할만 책임진다.</p>
+<ul>
+<li><code>fetchPosts</code>함수는 API를 요청하고, 그 결과를 처리한다.<!-- -->
+<ul>
+<li>fetchPosts 함수는 HTML 렌더링은 신경쓰지 않고 데이터만 처리한다.</li>
+</ul>
+</li>
+<li><code>render</code>함수는 상태에 따라 필요한 HTML을 렌더링한다.<!-- -->
+<ul>
+<li>React 같은 라이브러리의 장점은, 매번 새로 렌더링을 하기 때문에, 이전 상태를 고려 하지 않고 지금의 상태만 처리하면 된다.</li>
+</ul>
+</li>
+</ul>
+<p>이제 원한다면 두 함수를 완전히 분리할 수도 있다.</p>
+<span><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
 
 <span class="token keyword">function</span> <span class="token function">PostList</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> isLoading<span class="token punctuation">,</span> posts<span class="token punctuation">,</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>isLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>spinner<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>spinner<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 
   <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>error<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
         </span><span class="token punctuation">{</span>error<span class="token punctuation">}</span><span class="token plain-text">
-      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 
   <span class="token keyword">if</span> <span class="token punctuation">(</span>posts<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">게시글이 없습니다</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">게시글이 없습니다</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
-      </span><span class="token punctuation">{</span>posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
       <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
-    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
@@ -117,21 +167,21 @@ CSS는 사용과 공부, flex와 같은 새로운 스타일로 적응 할 수 �
   <span class="token punctuation">}</span>
 
   <span class="token function">fetchPosts</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&#x27;SOME_API&#x27;</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'SOME_API'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>res<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&#x27;로딩에 실패하였습니다&#x27;</span><span class="token punctuation">)</span>
+          <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'로딩에 실패하였습니다'</span><span class="token punctuation">)</span>
         <span class="token punctuation">}</span>
         <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> posts <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> posts <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
           posts<span class="token punctuation">,</span>
           <span class="token literal-property property">isLoading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
           <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
           <span class="token literal-property property">error</span><span class="token operator">:</span> e<span class="token punctuation">.</span>message<span class="token punctuation">,</span>
           <span class="token literal-property property">isLoading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
@@ -147,50 +197,245 @@ CSS는 사용과 공부, flex와 같은 새로운 스타일로 적응 할 수 �
         <span class="token attr-name">isLoading</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>isLoading<span class="token punctuation">}</span></span>
         <span class="token attr-name">error</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>error<span class="token punctuation">}</span></span>
         <span class="token attr-name">posts</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>posts<span class="token punctuation">}</span></span>
-      <span class="token punctuation">/&gt;</span></span>
+      <span class="token punctuation">/></span></span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div><p><code>PostList</code>는 렌더링만 책임을 지며, <code>PostContainer</code>는 주로 데이터를 가져오는 것을 책임진다.
-이러한 접근법은 재사용성을 크게 강화하는데, 이제 다른 컴포넌트에서도 <code>PostList</code>가 원하는 데이터 형식만 맞춘다면, 동일한 컴포넌트를 여러곳에서 사용할 수 있게 된다.</p><p>이렇듯, React는 관심사의 분리와 렌더링과 DOM 이벤트 관리를 쉽게 도와주었지만, <strong>데이터 관리</strong>라는 어마어마한 폭탄도 가져왔다.</p><h1>골드버그 장치</h1><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:650px">
-      <a class="gatsby-resp-image-link" href="/static/51f064f134d28d890afd1d0e06d70c01/a24e6/goldberg.jpg" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:52.760736196319016%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGrwhZSMD//xAAcEAACAgIDAAAAAAAAAAAAAAAAAQIEERIDEyH/2gAIAQEAAQUCk9DiyxPBeiuiHlnVM//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB4QAAIBAwUAAAAAAAAAAAAAAAABEQIhURIxQWHB/9oACAEBAAY/AqnK09jc87IuycXRU8rwk//EABsQAQACAwEBAAAAAAAAAAAAAAEAESExYXGB/9oACAEBAAE/IUsUM8ciUBZkl/Jk0XuAQKa+lxICm3PE2Bl7P//aAAwDAQACAAMAAAAQEw//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAdEAEBAAICAwEAAAAAAAAAAAABEQAhMVFBcZGh/9oACAEBAAE/EAE0hQC0FXs/cF3glCHpPmFAzaHxoy/9wKBAs4dd4wORAoohrjlfuG+kBWi6M//Z&#x27;);background-size:cover;display:block"></span>
-  <img class="gatsby-resp-image-image" alt="Professor Butts and the Self-Operating Napkin - 루브 골드버그" title="Professor Butts and the Self-Operating Napkin - 루브 골드버그" src="/static/51f064f134d28d890afd1d0e06d70c01/8ea4d/goldberg.jpg" srcSet="/static/51f064f134d28d890afd1d0e06d70c01/520c1/goldberg.jpg 163w,/static/51f064f134d28d890afd1d0e06d70c01/45208/goldberg.jpg 325w,/static/51f064f134d28d890afd1d0e06d70c01/8ea4d/goldberg.jpg 650w,/static/51f064f134d28d890afd1d0e06d70c01/a24e6/goldberg.jpg 800w" sizes="(max-width: 650px) 100vw, 650px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
+<span class="token punctuation">}</span></code></pre></div></span>
+<p><code>PostList</code>는 렌더링만 책임을 지며, <code>PostContainer</code>는 주로 데이터를 가져오는 것을 책임진다.
+이러한 접근법은 재사용성을 크게 강화하는데, 이제 다른 컴포넌트에서도 <code>PostList</code>가 원하는 데이터 형식만 맞춘다면, 동일한 컴포넌트를 여러곳에서 사용할 수 있게 된다.</p>
+<p>이렇듯, React는 관심사의 분리와 렌더링과 DOM 이벤트 관리를 쉽게 도와주었지만, <strong>데이터 관리</strong>라는 어마어마한 폭탄도 가져왔다.</p>
+<h1>골드버그 장치</h1>
+<span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/51f064f134d28d890afd1d0e06d70c01/a24e6/goldberg.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGrwhZSMD//xAAcEAACAgIDAAAAAAAAAAAAAAAAAQIEERIDEyH/2gAIAQEAAQUCk9DiyxPBeiuiHlnVM//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB8QAAIBAgcAAAAAAAAAAAAAAAABESFRAhASMUFhwf/aAAgBAQAGPwJuVp7G552RVk2qjE7rzL//xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhMWFxgf/aAAgBAQABPyFLVDPHIlAWZJfyZNF7gECmvpcSAptzxNhMvZ//2gAMAwEAAgADAAAAEJMP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHRABAQACAgMBAAAAAAAAAAAAAREAITFRQXGRof/aAAgBAQABPxABtIUAtBV7P3Bd4JQh6T5hwM2h8aMv/cCgQLOHXeMDkQKKIa45X7hv5AVoujP/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Professor Butts and the Self-Operating Napkin - 루브 골드버그"
+        title=""
+        src="/static/51f064f134d28d890afd1d0e06d70c01/8ea4d/goldberg.jpg"
+        srcset="/static/51f064f134d28d890afd1d0e06d70c01/520c1/goldberg.jpg 163w,
+/static/51f064f134d28d890afd1d0e06d70c01/45208/goldberg.jpg 325w,
+/static/51f064f134d28d890afd1d0e06d70c01/8ea4d/goldberg.jpg 650w,
+/static/51f064f134d28d890afd1d0e06d70c01/a24e6/goldberg.jpg 800w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
   </a>
-    </span></p><blockquote><p>나쁜 프로그래머는 코드에 대해 걱정 하고, 좋은 프로그래머는 데이터 구조와 관계를 걱정 한다</p></blockquote><p>리누스 토발즈의 <a href="https://lwn.net/Articles/193245" target="_blank" rel="noopener noreferrer">발언</a>이며, 개인적으로 토발즈의 발언중 가장 좋아하는 발언이다.</p><p>React-Redux 앱을 만들면 더더욱 데이터와 그 흐름의 중요성을 느끼게 된다.
+    </span></span>
+<blockquote>
+<p>나쁜 프로그래머는 코드에 대해 걱정 하고, 좋은 프로그래머는 데이터 구조와 관계를 걱정 한다</p>
+</blockquote>
+<p>리누스 토발즈의 <a href="https://lwn.net/Articles/193245" target="_blank" rel="noopener noreferrer">발언</a>이며, 개인적으로 토발즈의 발언중 가장 좋아하는 발언이다.</p>
+<p>React-Redux 앱을 만들면 더더욱 데이터와 그 흐름의 중요성을 느끼게 된다.
 일부는 React의 단방향 데이터흐름, Redux의 구조 때문이지만 (그러나 두 특징 모두 버그를 줄이고, 역할을 나누는데 큰 도움을 준다),
-보다 근본적으로는 기능에 따른 독립적인 또는 공통의 상태들이 필요하기 때문이다.</p><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:310px">
-      <a class="gatsby-resp-image-link" href="/static/2b831df5c26f1f372d6b753fac0e8579/56e1b/list-select.png" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:107.36196319018406%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVQ4y42T247jRBCG/QS8AFe8BRIPgHgKngCJh+ACCXG65o4rBAjtLOdZ0A4LoxUMTDRJJhnHh/iQTGIndhzn6PbhQ93JhpkBR1j6VG131V9VXW3NdX1OWmM+b4bYfY/LVo9mx6R9Y3PVMbgxXUxngNk/gjPEbltYhot23vF4+YuClz6DRw2Ps1+ec/LknLPnDZ48+4M/r27o2R5d01Xi/8Jw6fZ9+k8vMRo62lXP443vV7z6dcZZy6HTNVTGnu2r7D3LQzdddGnrkMLOgBvbQ7Nsl7bh0jQ8LMvhuufsHPYcFXogqpseWsdw1Ythuai1db+l7v/F2FltPA5xhgHWICQYB7iDMd4wwL8NFYMj+Acb4A7H6l1zg5jXfxS89l1B04t49PgbTp/+ypcn32LYLtN4TjCJCWuQe9MkpbpyiZ0RWsuPeeWrUk35ZzPmutmka/TxBiNuxxMVMA6jWiZRQs9yeO/dj9B1C20WRZyaCSf6nEk44aLRou8OifaVHUMKyg6k4Dvvf0zXsNFug4hkOmU+nTIKdhmlo6xOItejGtReMCWcztishbLabJ6SpAtm6YJkvmCx3LBcbViut6zWW+IkZVbDi714Niecp8TzBVqeF7T0JY3OknSx4eKygWn1aXduMEybsiyRPkUNcq8E8GOq+RotjLb88GzG6W8Jlpti2Sb+YITnDxkMRypAiLwWKbpcb/j98U+kYSwrzGnpC1XhPF3h+gOqisOjAmtEs0woH5n4zbfepu/5u5apcqgERVFQFKVyVNwJzvftPURVWZRURUWRl2hCCLKcHSKnqirKstrb8mBlgrq2sywnkz55jiak0KxFFl2QiRJvMD5cm2mUqF9KXpFSVV5zlrLSSYJYbdDEcoiwPyDvf0iWXNPSh3R0i2vdxnaHnP/VpqXb6qyy/2pdfpM3oemQRyma2C7J/E8R3iesFwGrdf7PRCrundVR5ACLQg6lQp6jEFsyUbFabQ4TvDsMUVfdvuUXa+2+Y34vWDyYcp3oXcG/AaYLHHYxmxMCAAAAAElFTkSuQmCC&#x27;);background-size:cover;display:block"></span>
-  <img class="gatsby-resp-image-image" alt="유저 채팅 목록" title="유저 채팅 목록" src="/static/2b831df5c26f1f372d6b753fac0e8579/56e1b/list-select.png" srcSet="/static/2b831df5c26f1f372d6b753fac0e8579/5e043/list-select.png 163w,/static/2b831df5c26f1f372d6b753fac0e8579/56e1b/list-select.png 310w" sizes="(max-width: 310px) 100vw, 310px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
+보다 근본적으로는 기능에 따른 독립적인 또는 공통의 상태들이 필요하기 때문이다.</p>
+<span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 310px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2b831df5c26f1f372d6b753fac0e8579/56e1b/list-select.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 107.36196319018406%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC5UlEQVR42o2Uy27TQBSG5xUQD8CCB2DHayCegwdgUYkVa1ixAqkrQCBVtIhSqiKgikIv0NzapLk5dhzHSWwnsXN3xvHPmcmFCpKmlj7F8fznP+fMGZtpmoFXMRubcRtFpYyTeAax8xwS6QLOUllki2UoqoHidZCHmshByZfBDi6quPUuxO33IT4ndBxGjrH3/RiR0yS+Rc+kcb5UQU7RV5JVK1APEyhcFMES+Qoe7vfxYH+A04yKTE5BSa/JrIpWXWu2MC0byJGWKSUdeWpVUCyVkSloss05NzGTzLQsW9Tl3gku6f6mFf1X4eyX2ZaNdMVBWndgNWzZqlYxoekmqjULZt1eS7VuwTDqMEnPLk0X9z4GuL87QbJsYXvnE77+iGJrZxeqXoXT8tCwW7Cc9lLEWtPtgMdUNPUGWExv4+6HCe5shfilOkglU1RlBXWrKREBqxDrrXYHqXQWG0+eQqEZsHazhcOSi4jqwbEsnCUvUDZqi+zrDEUH2UIJL15uyo5YrUFZnCk1EthNVwrNuoNaw1lUugqhsSl5rz+SSVin24PbmSLuxcJgQAx9iUfP1+F6XTR7fbjdPthoFOD3eRexdB9tr4ejk1PkCgriiXP5G4YA5wGCYLKSiRCVbATdIbVsDfEl0sZB1KW986BqKiyxP3SEbKclA4ThMsZjjskkpMG42HuzjW7bAwuCAOlCD5dKH91eDxXDpKpCiRCvMpsbikvVdDx6vEF76ICJBYScDPiiBSG8GnT1/zJEjChAFMeE2CdPn4eLFgTTCufCCXyfL8z/xffHGJCZzzkZchI7UYydnxhRkHiXDdOiV69Gx6IlvyAmHQ3KAV8YiKqXwKtNjOmEsHGnCK4+Q6A+x8jLI1M0UZBfoAr0agNH8TQK9H6La2XrVF2QLoN7dGy438fYeE0Z3mLQ9+gc+jL472Am1056AWmFMeNSzGcDCDAcjuS9Px/GDYYimWnY1IzPHtwgcA1/AAw6Hq9N6d8nAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="유저 채팅 목록"
+        title=""
+        src="/static/2b831df5c26f1f372d6b753fac0e8579/56e1b/list-select.png"
+        srcset="/static/2b831df5c26f1f372d6b753fac0e8579/5e043/list-select.png 163w,
+/static/2b831df5c26f1f372d6b753fac0e8579/56e1b/list-select.png 310w"
+        sizes="(max-width: 310px) 100vw, 310px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
   </a>
-    </span></p><ul><li>어떤 데이터는 <strong>여러곳</strong>에 연관되어 있지만, 어떤건 아니다<ul><li>위의 유저 채팅 목록 처럼, 리스트는 여러 곳에서 필요한 부분만 가져가서 사용하지만, 선택 여부는 일부 컴포넌트만 가지고 있다.</li></ul></li><li>어떤 데이터들은 <em>여러곳에서</em> 서로 다르게 가공하여 사용할 수도 있다.<ul><li>어떤 컴포넌트는 데이터를 모두 활용해야 한다.</li><li>어떤 컴포넌트는 조건에 따라서 일부 데이터만 사용한다.</li><li>서로 다른 데이터를 합치거나, 평균을 구하거나, 가공할 필요가 생긴다 (예: 차트)</li></ul></li></ul><p>데이터의 구조와 규모 뿐만 아니라 이들을 가공하는것도 만만하지 않다.</p><ul><li>어떤 작업(가공)은 지나치게 오래걸린다.</li><li>어떤 작업들은 선행 작업들이 필요하다.</li></ul><h1>데이터는 어디서 왔으며, 무엇이고, 어디로 가는가?</h1><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:650px">
-      <a class="gatsby-resp-image-link" href="/static/150fc1aa0aa5c86d478de84486b98a7e/40434/where-do-we-come-from-what-are-we-where-are-we-going.jpg" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:36.809815950920246%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAByWhEan//xAAYEAACAwAAAAAAAAAAAAAAAAAAARESIf/aAAgBAQABBQJkYrI//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxAAAwEAAAAAAAAAAAAAAAAAABAh0f/aAAgBAQAGPwLVD//EABgQAQEBAQEAAAAAAAAAAAAAAAEhABFx/9oACAEBAAE/IaeiqvKyE9aZFc93/9oADAMBAAIAAwAAABCED//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxCXG//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAgEBPxBuCld//8QAGRABAQEBAQEAAAAAAAAAAAAAAREAITFR/9oACAEBAAE/EBZfU0feY2ai35NGQXZxv//Z&#x27;);background-size:cover;display:block"></span>
-  <img class="gatsby-resp-image-image" alt="우리는 어디서 왔으며, 무엇이고, 어디로 가는가? - 폴 고갱" title="우리는 어디서 왔으며, 무엇이고, 어디로 가는가? - 폴 고갱" src="/static/150fc1aa0aa5c86d478de84486b98a7e/8ea4d/where-do-we-come-from-what-are-we-where-are-we-going.jpg" srcSet="/static/150fc1aa0aa5c86d478de84486b98a7e/520c1/where-do-we-come-from-what-are-we-where-are-we-going.jpg 163w,/static/150fc1aa0aa5c86d478de84486b98a7e/45208/where-do-we-come-from-what-are-we-where-are-we-going.jpg 325w,/static/150fc1aa0aa5c86d478de84486b98a7e/8ea4d/where-do-we-come-from-what-are-we-where-are-we-going.jpg 650w,/static/150fc1aa0aa5c86d478de84486b98a7e/40434/where-do-we-come-from-what-are-we-where-are-we-going.jpg 654w" sizes="(max-width: 650px) 100vw, 650px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
+    </span></span>
+<ul>
+<li>어떤 데이터는 <strong>여러곳</strong>에 연관되어 있지만, 어떤건 아니다<!-- -->
+<ul>
+<li>위의 유저 채팅 목록 처럼, 리스트는 여러 곳에서 필요한 부분만 가져가서 사용하지만, 선택 여부는 일부 컴포넌트만 가지고 있다.</li>
+</ul>
+</li>
+<li>어떤 데이터들은 <em>여러곳에서</em> 서로 다르게 가공하여 사용할 수도 있다.<!-- -->
+<ul>
+<li>어떤 컴포넌트는 데이터를 모두 활용해야 한다.</li>
+<li>어떤 컴포넌트는 조건에 따라서 일부 데이터만 사용한다.</li>
+<li>서로 다른 데이터를 합치거나, 평균을 구하거나, 가공할 필요가 생긴다 (예: 차트)</li>
+</ul>
+</li>
+</ul>
+<p>데이터의 구조와 규모 뿐만 아니라 이들을 가공하는것도 만만하지 않다.</p>
+<ul>
+<li>어떤 작업(가공)은 지나치게 오래걸린다.</li>
+<li>어떤 작업들은 선행 작업들이 필요하다.</li>
+</ul>
+<h1>데이터는 어디서 왔으며, 무엇이고, 어디로 가는가?</h1>
+<p><span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/150fc1aa0aa5c86d478de84486b98a7e/40434/where-do-we-come-from-what-are-we-where-are-we-going.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36.809815950920246%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAByWhEan//xAAYEAACAwAAAAAAAAAAAAAAAAAAARESIf/aAAgBAQABBQJkYrI//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAQUAAAAAAAAAAAAAAAAAAQAQIUFh/9oACAEBAAY/ArJ1oX//xAAYEAEBAQEBAAAAAAAAAAAAAAABIREAcf/aAAgBAQABPyGlR0ZXOjreRXPe/9oADAMBAAIAAwAAABCED//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxCXG//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q7Bprf//EABoQAQEAAwEBAAAAAAAAAAAAAAERACExUbH/2gAIAQEAAT8QNzDTR7r5hmaFb5JkQgt9Gf/Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="우리는 어디서 왔으며, 무엇이고, 어디로 가는가? - 폴 고갱"
+        title=""
+        src="/static/150fc1aa0aa5c86d478de84486b98a7e/8ea4d/where-do-we-come-from-what-are-we-where-are-we-going.jpg"
+        srcset="/static/150fc1aa0aa5c86d478de84486b98a7e/520c1/where-do-we-come-from-what-are-we-where-are-we-going.jpg 163w,
+/static/150fc1aa0aa5c86d478de84486b98a7e/45208/where-do-we-come-from-what-are-we-where-are-we-going.jpg 325w,
+/static/150fc1aa0aa5c86d478de84486b98a7e/8ea4d/where-do-we-come-from-what-are-we-where-are-we-going.jpg 650w,
+/static/150fc1aa0aa5c86d478de84486b98a7e/40434/where-do-we-come-from-what-are-we-where-are-we-going.jpg 654w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
   </a>
-    </span>
-여기에 서버로부터 데이터를 가져온다면 더 가정해야할 것들이 생긴다.</p><ul><li><p>어떤 API<em>들</em>은 다른 API에 의존적이다.</p><ul><li>한 API의 결과에 따라 호출이 될수도 아닐 수도 있다.</li><li>한 API가 호출된 후 호출해야 한다.</li><li>성능 문제로 (예: 너무 잦은 렌더링) 한번에 묶어서 결과를 처리 해야 할 수도 있다.</li></ul></li><li><p>API의 프로토콜, 형식이 모두 다를 수 있다.</p><ul><li>많은 경우 JSON HTTP API를 사용할 것이다.</li><li>실시간 데이터 처리를 위해 WebSocket을 사용 할 수도 있다.</li><li>HTTP 프로토콜을 사용해도, graphql처럼 한 엔드 포인트에 서로 다른 정보를 넘겨야 할 수도 있다.</li><li>IndexDB, WebSQL, LocalStorage을 이용해 로컬에서 데이터를 사용할 수도 있다.</li></ul></li></ul><p>이처럼 지금의 프론트엔드 특히 웹앱은 <em>어떻게 보일것인가</em>는 물론 <strong>데이터를 어떻게 관리할 것인 가</strong>도 고민해야 하며, 데이터의 규모와 복잡도는 앞으로도 커질 수 있다.</p><h1>거인의 어깨 위</h1><p>위의 고민은 꼭 프론트만 가지고 있는건 아니다.</p><ul><li>어떤 API<em>들</em>은 다른 API에 의존적이다.</li><li>API의 프로토콜, 형식이 모두 다를 수 있다.<ul><li>서로 다른 DB 엔진에서 가져올 수도 있다. (RDBMS, NoSQL)</li></ul></li><li>어떤 데이터들은 <em>여러곳에서</em> 서로 다르게 가공하여 사용할 수도 있다.<ul><li>일반적으로 SQL의 JOIN을 사용하는 API가 적어도 하나는 있을 것이다.</li></ul></li><li>어떤 작업은 지나치게 오래 걸린다</li></ul><p>백엔드 생태계는 이런 상황을 먼저 겪었으며, 각각의 해법들 (SQL, Repository, Task Queue)을 만들며 발전하게 되었다.</p><h1>수렴진화</h1><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:310px">
-      <a class="gatsby-resp-image-link" href="/static/88a96e209ef973468c52cbca3f085851/60f7a/convergent-evolution.jpg" style="display:block" target="_blank" rel="noopener">
-    <span class="gatsby-resp-image-background-image" style="padding-bottom:52.760736196319016%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABr8tJEMNK/8QAGRAAAwEBAQAAAAAAAAAAAAAAAQIRAAMQ/9oACAEBAAEFAnuHc1WvhRQZv//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB0QAAEDBQEAAAAAAAAAAAAAAAEAEBECISJRcYH/2gAIAQEABj8CtJ4sqh4tMIDf/8QAGxABAAICAwAAAAAAAAAAAAAAAQARMUEhUXH/2gAIAQEAAT8hZ2OoqQni2CW8GqeIg5iKY3qUn//aAAwDAQACAAMAAAAQTM//xAAXEQADAQAAAAAAAAAAAAAAAAABEBFB/9oACAEDAQE/EBNX/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARQf/aAAgBAgEBPxA3F//EABoQAQADAQEBAAAAAAAAAAAAAAEAESExUZH/2gAIAQEAAT8QeEk4db6rAFdd6WZFIKSjb4zFAnjMfu2KsexwNoPWf//Z&#x27;);background-size:cover;display:block"></span>
-  <img class="gatsby-resp-image-image" alt="어류, 해양 포유류, 해양 파충류의 수렴진화" title="어류, 해양 포유류, 해양 파충류의 수렴진화" src="/static/88a96e209ef973468c52cbca3f085851/60f7a/convergent-evolution.jpg" srcSet="/static/88a96e209ef973468c52cbca3f085851/520c1/convergent-evolution.jpg 163w,/static/88a96e209ef973468c52cbca3f085851/60f7a/convergent-evolution.jpg 310w" sizes="(max-width: 310px) 100vw, 310px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
+    </span></span>
+여기에 서버로부터 데이터를 가져온다면 더 가정해야할 것들이 생긴다.</p>
+<ul>
+<li>
+<p>어떤 API<em>들</em>은 다른 API에 의존적이다.</p>
+<ul>
+<li>한 API의 결과에 따라 호출이 될수도 아닐 수도 있다.</li>
+<li>한 API가 호출된 후 호출해야 한다.</li>
+<li>성능 문제로 (예: 너무 잦은 렌더링) 한번에 묶어서 결과를 처리 해야 할 수도 있다.</li>
+</ul>
+</li>
+<li>
+<p>API의 프로토콜, 형식이 모두 다를 수 있다.</p>
+<ul>
+<li>많은 경우 JSON HTTP API를 사용할 것이다.</li>
+<li>실시간 데이터 처리를 위해 WebSocket을 사용 할 수도 있다.</li>
+<li>HTTP 프로토콜을 사용해도, graphql처럼 한 엔드 포인트에 서로 다른 정보를 넘겨야 할 수도 있다.</li>
+<li>IndexDB, WebSQL, LocalStorage을 이용해 로컬에서 데이터를 사용할 수도 있다.</li>
+</ul>
+</li>
+</ul>
+<p>이처럼 지금의 프론트엔드 특히 웹앱은 <em>어떻게 보일것인가</em>는 물론 <strong>데이터를 어떻게 관리할 것인가</strong>도 고민해야 하며, 데이터의 규모와 복잡도는 앞으로도 커질 수 있다.</p>
+<h1>거인의 어깨 위</h1>
+<p>위의 고민은 꼭 프론트만 가지고 있는건 아니다.</p>
+<ul>
+<li>어떤 API<em>들</em>은 다른 API에 의존적이다.</li>
+<li>API의 프로토콜, 형식이 모두 다를 수 있다.<!-- -->
+<ul>
+<li>서로 다른 DB 엔진에서 가져올 수도 있다. (RDBMS, NoSQL)</li>
+</ul>
+</li>
+<li>어떤 데이터들은 <em>여러곳에서</em> 서로 다르게 가공하여 사용할 수도 있다.<!-- -->
+<ul>
+<li>일반적으로 SQL의 JOIN을 사용하는 API가 적어도 하나는 있을 것이다.</li>
+</ul>
+</li>
+<li>어떤 작업은 지나치게 오래 걸린다</li>
+</ul>
+<p>백엔드 생태계는 이런 상황을 먼저 겪었으며, 각각의 해법들 (SQL, Repository, Task Queue)을 만들며 발전하게 되었다.</p>
+<h1>수렴진화</h1>
+<span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 310px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/88a96e209ef973468c52cbca3f085851/60f7a/convergent-evolution.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.760736196319016%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABr8tJEMNK/8QAGRAAAwEBAQAAAAAAAAAAAAAAAQIRAAMQ/9oACAEBAAEFAnuHc1WvhRQZv//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB0QAAEDBQEAAAAAAAAAAAAAAAEAEBECISJRcYH/2gAIAQEABj8CtJ4sqh4tMIDf/8QAGxABAAICAwAAAAAAAAAAAAAAAQARMUEhUXH/2gAIAQEAAT8hZ2OoqQni2CW8GqeIg5iKY3qUn//aAAwDAQACAAMAAAAQTM//xAAXEQADAQAAAAAAAAAAAAAAAAABEBFB/9oACAEDAQE/EBNX/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARQf/aAAgBAgEBPxA3F//EABoQAQADAQEBAAAAAAAAAAAAAAEAESExUZH/2gAIAQEAAT8QeEk4db6rAFdd6WZFIKSjb4zFAnjMfu2KsexwNoPWf//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="어류, 해양 포유류, 해양 파충류의 수렴진화"
+        title=""
+        src="/static/88a96e209ef973468c52cbca3f085851/60f7a/convergent-evolution.jpg"
+        srcset="/static/88a96e209ef973468c52cbca3f085851/520c1/convergent-evolution.jpg 163w,
+/static/88a96e209ef973468c52cbca3f085851/60f7a/convergent-evolution.jpg 310w"
+        sizes="(max-width: 310px) 100vw, 310px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
   </a>
-    </span></p><blockquote><p>React 생태계는 백엔드와 닮아서 좋아요.</p></blockquote><p>회사에서 같이 일하는 개발자에게 들었던 말이다. 처음 이 말을 들었을때는 잘 이해하지 못했지만, 점점 공감이 가기 시작했다.</p><p><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:650px">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom:57.668711656441715%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACoUlEQVQoz1VQy24TMRQdCQnxBVUqr6oi9ZG06ZSX2PIXfAObDGwoTXm0ZZEFLCqxZYHYsqgEC5BYUBV1hxAikyhVm2acNDNJZjLvGXtsXzROH9TW0T0+vvf4Xiv1P/uVntnX2u22Vq/XNV3XJbcsS7MsU/Jmo6EZRkdqpmlqrVZL0/W61tB1GQ2j86TZbD6qVCo3lF7XAIwxmKYJYRiC53kScRxLhFEk9SiKLrUwhCAIJHLuOA50ez2o1WrTytj16Mh2WJqmlNIsC8I4G3tBRgjNMsYl2FnMGJNgZ5oE53mZ8IPQ29x+XVCGtiNcP4A4TnJRpIQIxpjIF8AEQoDcMsJVTPIA4iQN19Y3CortjIXr+UApFXGcAKEU+CQHvrYY/D7lkp97SderkMlRHIfrGy8Kiuf5YuS4QAgRcZJASggwPimu7QF8+ptzBn7I4KjNgDEOGWPAOZcPXxomE0PX84XtuJCmqYjyDv8z3DkQsFvPO0ygcUjh2ZaAOCF5MZwvzv/v8HlBsYa2GLvexciU0gvDtz8BdvXJ+EcdgLVNgCybnL//OIR605S/wTgHP4zC9epGQfF8nyVJIjJKWRTHnBKSv8kBBN854PxzU0h+dMJ5dZtxQnneMn/zbo9/+dbg8j+yDEjgB9rTakFxXA9cLwDGGKSEQpRxSBkA4wDWmIATkLPRAGwnuxjVDxKIksldJ2Gwb/rkw1Z1WjlunxgdA3cHg4HRN03cMQe4aw5xrz/EppnDwsPRCDuOjT3PwbZt49HIxq47xiPbxuOBZewf908//mo33798PKWoqjqtqipaUVVULpfR/ZVldO9WGd25XUZldRmtrK6ipaUlNL9QRDOzi2ixWELFUgnN3pxDc3PzaGahhB7eLaJXD0oF5frUtX/vnCy5yctqRwAAAABJRU5ErkJggg==&#x27;);background-size:cover;display:block"></span>
-  <img class="gatsby-resp-image-image" alt="데모용 대시보드" title="데모용 대시보드" src="/static/524b728ed624e308a268416c4ca4bde5/663f3/dashboard.png" srcSet="/static/524b728ed624e308a268416c4ca4bde5/5e043/dashboard.png 163w,/static/524b728ed624e308a268416c4ca4bde5/e5cc6/dashboard.png 325w,/static/524b728ed624e308a268416c4ca4bde5/663f3/dashboard.png 650w,/static/524b728ed624e308a268416c4ca4bde5/d880f/dashboard.png 975w,/static/524b728ed624e308a268416c4ca4bde5/4c573/dashboard.png 1300w,/static/524b728ed624e308a268416c4ca4bde5/3fb98/dashboard.png 2752w" sizes="(max-width: 650px) 100vw, 650px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
-    </span>
-현재 ZOYI에서는 크게 두 팀이 있는데, 그 중 <a href="http://walkinsights.com/" target="_blank" rel="noopener noreferrer">워크인사이트</a>오프라인 고객분석을 하는데, 데이터를 시각화 하여 보여주는 대시보드 개발에 참여했다.</p><p><a href="https://board.walkinsights.com/#/demo" target="_blank" rel="noopener noreferrer">데모 대시보드</a>를 개편하는 일을 맡았을때, 데모 대시보드는 여러 이유로 다른 API와 다른 방식으로 데이터를 가져와야 했다.</p><p>이때 최대한 컴포넌트와 리듀서 구조는 유지하고 싶었고, (위의 발언을 한 개발자는) 스프링프레임워크와 같은 백엔드에서 주로 사용한 Repository 패턴을 추천해 주었다.</p><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">class</span> <span class="token class-name">UserRepositry</span> <span class="token punctuation">{</span>
+    </span></span>
+<blockquote>
+<p>React 생태계는 백엔드와 닮아서 좋아요.</p>
+</blockquote>
+<p>회사에서 같이 일하는 개발자에게 들었던 말이다. 처음 이 말을 들었을때는 잘 이해하지 못했지만, 점점 공감이 가기 시작했다.</p>
+<p><span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.668711656441715%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACR0lEQVR42pVSPW8TQRC9hj9AG6VHQqaJCxo3LtJQ8EegwEE0IP4BFCCkoJQIkNJEQXIqEC7iiAghOcGKkhh/3Maxz3dn36d3b327O8zeOY4RNKz0dveeZt68mT2jebz/sG/1N7rdbuXk5KTSbDYr7Xa7YllWBs2fnp5WTNNccK1WK4u9iieEbCD3YGtr+6YR+B4NggCiKFKASykFQgj4j6WklOB5Hj04OCgYnh/EjjtWjLEUl4hiKjw/FAnnIkXlVG/6XIIQchk6T4VhFNVqtYJhO2MWxlOYUqr0yRKODiWovPgccyvq3w71hvl0d3fvjjEeT1gYxTDjXLsEzlFQ5kJffgk4JHn7V5weyTKw3WvBPRTElhm2iM6YStCdRirz0i/rAO8aOl5ATCWct0XmXs9Y66jrNoD+IRiESDDFkgQFE0hF7ubNIcDHI31PoHvB4fEzBZTNgGKMkHnVvxzajsv8EFuezTJBzmcLwdffFHw4yt0ORgCPngLg/LPvWr0DjZ+XC4dhHOeCfhBQ3SYKSu0y4YlKszeRavNQqO1jmd0vLamePBc4lrzaq7f7aqfaVLlJCdM4nO5UqwUjCCPGktnif6KYz1U+HzdMwafXj+L5YvHS8ZRj+2mW5+H21WH0x2d02OmZZz3zom/btmlZI9IbjggZ2mQwdMhwYBPN2bZDJhOXBMGEuK5LHMclvu8RF7nJaGQ2esP+5vfOWf3T+1tGuVxeKZVKq1dY11ifn0u8RrG4fC9m37cR90vF1Rf37q4Ya2s3fgPQLzrQjR9hsQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="데모용 대시보드"
+        title=""
+        src="/static/524b728ed624e308a268416c4ca4bde5/663f3/dashboard.png"
+        srcset="/static/524b728ed624e308a268416c4ca4bde5/5e043/dashboard.png 163w,
+/static/524b728ed624e308a268416c4ca4bde5/e5cc6/dashboard.png 325w,
+/static/524b728ed624e308a268416c4ca4bde5/663f3/dashboard.png 650w,
+/static/524b728ed624e308a268416c4ca4bde5/d880f/dashboard.png 975w,
+/static/524b728ed624e308a268416c4ca4bde5/4c573/dashboard.png 1300w,
+/static/524b728ed624e308a268416c4ca4bde5/3fb98/dashboard.png 2752w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></span>
+현재 ZOYI에서는 크게 두 팀이 있는데, 그 중 <a href="http://walkinsights.com/" target="_blank" rel="noopener noreferrer">워크인사이트</a>오프라인 고객분석을 하는데, 데이터를 시각화 하여 보여주는 대시보드 개발에 참여했다.</p>
+<p><a href="https://board.walkinsights.com/#/demo" target="_blank" rel="noopener noreferrer">데모 대시보드</a>를 개편하는 일을 맡았을때, 데모 대시보드는 여러 이유로 다른 API와 다른 방식으로 데이터를 가져와야 했다.</p>
+<p>이때 최대한 컴포넌트와 리듀서 구조는 유지하고 싶었고, (위의 발언을 한 개발자는) 스프링프레임워크와 같은 백엔드에서 주로 사용한 Repository 패턴을 추천해 주었다.</p>
+<span><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">class</span> <span class="token class-name">UserRepositry</span> <span class="token punctuation">{</span>
   <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token parameter">userId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&#x27;USER_API_ENDPOINT&#x27;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'USER_API_ENDPOINT'</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// fetch api 함수를 흉내낸 함수</span>
 <span class="token keyword">function</span> <span class="token function">mockFetch</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
       <span class="token literal-property property">ok</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-      <span class="token function-variable function">json</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> data<span class="token punctuation">,</span>
+      <span class="token function-variable function">json</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> data<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
@@ -199,130 +444,193 @@ CSS는 사용과 공부, flex와 같은 새로운 스타일로 적응 할 수 �
   <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token parameter">userId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token function">mockFetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#x27;Demo User&#x27;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Demo User'</span><span class="token punctuation">,</span>
       <span class="token comment">// ...</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div><p>처음에는 데모페이지에 사용하는 API가 추가될때마다 두개의 Repository가 생기는게 귀찮았지만, 점점 진가가 발휘되었다.</p><ul><li>UserReducer - DemoUserReducer, UserAction - DemoUserAction 등등 로직은 곂치지만, 재사용하지 못한 데이터 레이어를 활용 할 수 있었다.</li><li>테스트를 할때 Repository만 교체해주면 되었다.<ul><li>물론 fetch api를 mocking 할 수도 있지만, 이 편이 더 깔끔했다.</li></ul></li></ul><p>물론 이런 해결법을 우리만 사용하는건 아니다.</p><h2>MobX</h2><p>사내에서 그리고 많은 React 앱들이 상태관리를 위해 Redux를 사용하지만, 다른 상태관리 라이브러리들도 많다.</p><p>Redux를 제외한 라이브러리중 단연 눈에띄는 라이브러리는 <a href="https://github.com/mobxjs/mobx" target="_blank" rel="noopener noreferrer">MobX</a>인데, 재미있게도 MobX에서는 Repository 패턴을 권장한다.
-MobX의 Store, Repository 사용법은 Java의 Spring과 꽤 유사한데, 자세한 내용은 우아  한 형제들의 <a href="http://woowabros.github.io/experience/2019/01/02/kimcj-react-mobx.html" target="_blank" rel="noopener noreferrer">React에서 Mobx 경험기 (Redux와 비교기)</a> 글을 추천한다.</p><h2>Immutable.js</h2><p><a href="https://immutable-js.github.io" target="_blank" rel="noopener noreferrer">Immutable.js</a>는 Facebook에서 JS의 불변성을 위해 만든 라이브러리다. 현재 일하고 있는 <a href="https://channel.io" target="_blank" rel="noopener noreferrer">채널</a> 팀에서는 Immutable.js를 적극적으로 활용하고 있는데, Immutable.js의 진가는 <a href="https://immutable-js.github.io/immutable-js/docs/#/Record" target="_blank" rel="noopener noreferrer">Record</a>라고 생각한다.</p><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> PersonRecord <span class="token operator">=</span> <span class="token function">Record</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#x27;Aristotle&#x27;</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">2400</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div></span>
+<p>처음에는 데모페이지에 사용하는 API가 추가될때마다 두개의 Repository가 생기는게 귀찮았지만, 점점 진가가 발휘되었다.</p>
+<ul>
+<li>UserReducer - DemoUserReducer, UserAction - DemoUserAction 등등 로직은 곂치지만, 재사용하지 못한 데이터 레이어를 활용 할 수 있었다.</li>
+<li>테스트를 할때 Repository만 교체해주면 되었다.<!-- -->
+<ul>
+<li>물론 fetch api를 mocking 할 수도 있지만, 이 편이 더 깔끔했다.</li>
+</ul>
+</li>
+</ul>
+<p>물론 이런 해결법을 우리만 사용하는건 아니다.</p>
+<h2>MobX</h2>
+<p>사내에서 그리고 많은 React 앱들이 상태관리를 위해 Redux를 사용하지만, 다른 상태관리 라이브러리들도 많다.</p>
+<p>Redux를 제외한 라이브러리중 단연 눈에띄는 라이브러리는 <a href="https://github.com/mobxjs/mobx" target="_blank" rel="noopener noreferrer">MobX</a>인데, 재미있게도 MobX에서는 Repository 패턴을 권장한다.
+MobX의 Store, Repository 사용법은 Java의 Spring과 꽤 유사한데, 자세한 내용은 우아한 형제들의 <a href="http://woowabros.github.io/experience/2019/01/02/kimcj-react-mobx.html" target="_blank" rel="noopener noreferrer">React에서 Mobx 경험기 (Redux와 비교기)</a> 글을 추천한다.</p>
+<h2>Immutable.js</h2>
+<p><a href="https://immutable-js.github.io" target="_blank" rel="noopener noreferrer">Immutable.js</a>는 Facebook에서 JS의 불변성을 위해 만든 라이브러리다. 현재 일하고 있는 <a href="https://channel.io" target="_blank" rel="noopener noreferrer">채널</a> 팀에서는 Immutable.js를 적극적으로 활용하고 있는데, Immutable.js의 진가는 <a href="https://immutable-js.github.io/immutable-js/docs/#/Record" target="_blank" rel="noopener noreferrer">Record</a>라고 생각한다.</p>
+<span><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> PersonRecord <span class="token operator">=</span> <span class="token function">Record</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Aristotle'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">2400</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token keyword">extends</span> <span class="token class-name">PersonRecord</span> <span class="token punctuation">{</span>
   <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&#x27;name&#x27;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 
   <span class="token function">setName</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">&#x27;name&#x27;</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div><p>채널에서는 대부분의 데이터를 Record를 활용해 표현하며, <code>models</code>폴더에 따로 관리하고 있다. Reducer에서 필요한 방식으로 사용하고 있다.
-위의 Person Model은 마치 <a href="https://docs.djangoproject.com/en/2.1/topics/db/models/" target="_blank" rel="noopener noreferrer">Django Models</a>처럼 보인다.</p><p>게다가 여러 데이터를 업데이트 할때도 <code>setIn</code>과 같은 함수를 사용하니 더더욱 백엔드에서 사용한 모델들 처럼 느껴진다.</p><h2>Reselect</h2><p><a href="https://github.com/reduxjs/reselect" target="_blank" rel="noopener noreferrer">Reselect</a>는 Redux의 Selector를 구현 하는데 도움을 주는 라이브러리다.
-Redux의 Selector는 <code>react-reudx</code>의 <code>connect</code>함수의  <code>mapStateToProps</code> 부분이라고 생각하면 된다.</p><p>처음 Reudx를 사용하게 되면, 보통 <code>mapStateToProps</code> 부분에서 아래처럼 사용하게 된다.</p><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;react-redux&#x27;</span>
+<span class="token punctuation">}</span></code></pre></div></span>
+<p>채널에서는 대부분의 데이터를 Record를 활용해 표현하며, <code>models</code>폴더에 따로 관리하고 있다. Reducer에서 필요한 방식으로 사용하고 있다.
+위의 Person Model은 마치 <a href="https://docs.djangoproject.com/en/2.1/topics/db/models/" target="_blank" rel="noopener noreferrer">Django Models</a>처럼 보인다.</p>
+<p>게다가 여러 데이터를 업데이트 할때도 <code>setIn</code>과 같은 함수를 사용하니 더더욱 백엔드에서 사용한 모델들 처럼 느껴진다.</p>
+<h2>Reselect</h2>
+<p><a href="https://github.com/reduxjs/reselect" target="_blank" rel="noopener noreferrer">Reselect</a>는 Redux의 Selector를 구현 하는데 도움을 주는 라이브러리다.
+Redux의 Selector는 <code>react-reudx</code>의 <code>connect</code>함수의  <code>mapStateToProps</code> 부분이라고 생각하면 된다.</p>
+<p>처음 Reudx를 사용하게 되면, 보통 <code>mapStateToProps</code> 부분에서 아래처럼 사용하게 된다.</p>
+<span><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span>
 
-<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">user</span><span class="token operator">:</span> state<span class="token punctuation">.</span>UserReducer<span class="token punctuation">.</span>user<span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>UserInfo<span class="token punctuation">)</span></code></pre></div><p>그런데 <code>UserInfo</code>가 서로 다른 리듀서에서 데이터를 가져올 뿐만 아니라, 그 값을 가공하게 된다면? <code>render</code> 함수에서 가공할 수도 있겠지만, 그리 좋은 방법은 아니다.
-이때 Reselect를 쓰면 다음과 같이 구현할 수 있다 (코드는 reselect 문서에서 가져와 수정했다)</p><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;react-redux&#x27;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> createSelector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;reselect&#x27;</span>
+<span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>UserInfo<span class="token punctuation">)</span></code></pre></div></span>
+<p>그런데 <code>UserInfo</code>가 서로 다른 리듀서에서 데이터를 가져올 뿐만 아니라, 그 값을 가공하게 된다면? <code>render</code> 함수에서 가공할 수도 있겠지만, 그리 좋은 방법은 아니다.
+이때 Reselect를 쓰면 다음과 같이 구현할 수 있다 (코드는 reselect 문서에서 가져와 수정했다)</p>
+<span><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createSelector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'reselect'</span>
 
-<span class="token keyword">const</span> <span class="token function-variable function">shopItemsSelector</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>shop<span class="token punctuation">.</span>items
-<span class="token keyword">const</span> <span class="token function-variable function">taxPercentSelector</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>shop<span class="token punctuation">.</span>taxPercent
+<span class="token keyword">const</span> <span class="token function-variable function">shopItemsSelector</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token operator">=></span> state<span class="token punctuation">.</span>shop<span class="token punctuation">.</span>items
+<span class="token keyword">const</span> <span class="token function-variable function">taxPercentSelector</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token operator">=></span> state<span class="token punctuation">.</span>shop<span class="token punctuation">.</span>taxPercent
 
 <span class="token keyword">const</span> subtotalSelector <span class="token operator">=</span> <span class="token function">createSelector</span><span class="token punctuation">(</span>
   shopItemsSelector<span class="token punctuation">,</span>
-  <span class="token parameter">items</span> <span class="token operator">=&gt;</span> items<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">acc<span class="token punctuation">,</span> item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> acc <span class="token operator">+</span> item<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token parameter">items</span> <span class="token operator">=></span> items<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">acc<span class="token punctuation">,</span> item</span><span class="token punctuation">)</span> <span class="token operator">=></span> acc <span class="token operator">+</span> item<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> taxSelector <span class="token operator">=</span> <span class="token function">createSelector</span><span class="token punctuation">(</span>
   subtotalSelector<span class="token punctuation">,</span>
   taxPercentSelector<span class="token punctuation">,</span>
-  <span class="token punctuation">(</span><span class="token parameter">subtotal<span class="token punctuation">,</span> taxPercent</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> subtotal <span class="token operator">*</span> <span class="token punctuation">(</span>taxPercent <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span>
+  <span class="token punctuation">(</span><span class="token parameter">subtotal<span class="token punctuation">,</span> taxPercent</span><span class="token punctuation">)</span> <span class="token operator">=></span> subtotal <span class="token operator">*</span> <span class="token punctuation">(</span>taxPercent <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span>
 
 <span class="token keyword">export</span> <span class="token keyword">const</span> totalSelector <span class="token operator">=</span> <span class="token function">createSelector</span><span class="token punctuation">(</span>
   subtotalSelector<span class="token punctuation">,</span>
   taxSelector<span class="token punctuation">,</span>
-  <span class="token punctuation">(</span><span class="token parameter">subtotal<span class="token punctuation">,</span> tax</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">total</span><span class="token operator">:</span> subtotal <span class="token operator">+</span> tax <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">(</span><span class="token parameter">subtotal<span class="token punctuation">,</span> tax</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">total</span><span class="token operator">:</span> subtotal <span class="token operator">+</span> tax <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span>
 
-<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">total</span><span class="token operator">:</span> <span class="token function">totalSelector</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>Tax<span class="token punctuation">)</span></code></pre></div><p>위 코드를 보면 <code>subtotalSelector</code>와 <code>taxSelector</code>는 각각 다른 리듀서에서 데이터를 가져와 가공하며, <code>totalSelector</code>는 다시 두 셀렉터를 사용해 가공한다.
-Redux는 <strong>하나의 상태트리</strong>만 가지기 때문에 <code>state</code>에서 모든 데이터를 가져올 수 있기에 가능한 방식이다.</p><p>reselect를 사용하면 Reducer는 자신의 데이터만 가지고 있고, 여러 Selector를 활용해 가공하게 되니 Reducer의 역할을 DB의 Table 처럼 만들어 준다.
-게다가 <a href="https://github.com/reduxjs/reselect#creating-a-memoized-selector" target="_blank" rel="noopener noreferrer">Memoized</a>기능도 있어, 불필요한 렌더링을 줄여준다.</p><h2>Normalizr</h2><p><a href="https://github.com/paularmstrong/normalizr" target="_blank" rel="noopener noreferrer">normalizr</a>는 데이터 정규화 라이브러리이다.
+<span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>Tax<span class="token punctuation">)</span></code></pre></div></span>
+<p>위 코드를 보면 <code>subtotalSelector</code>와 <code>taxSelector</code>는 각각 다른 리듀서에서 데이터를 가져와 가공하며, <code>totalSelector</code>는 다시 두 셀렉터를 사용해 가공한다.
+Redux는 <strong>하나의 상태트리</strong>만 가지기 때문에 <code>state</code>에서 모든 데이터를 가져올 수 있기에 가능한 방식이다.</p>
+<p>reselect를 사용하면 Reducer는 자신의 데이터만 가지고 있고, 여러 Selector를 활용해 가공하게 되니 Reducer의 역할을 DB의 Table 처럼 만들어 준다.
+게다가 <a href="https://github.com/reduxjs/reselect#creating-a-memoized-selector" target="_blank" rel="noopener noreferrer">Memoized</a>기능도 있어, 불필요한 렌더링을 줄여준다.</p>
+<h2>Normalizr</h2>
+<p><a href="https://github.com/paularmstrong/normalizr" target="_blank" rel="noopener noreferrer">normalizr</a>는 데이터 정규화 라이브러리이다.
 Redux를 사용해보면 중첩된 (nested)된 데이터는 불변성을 유지하기가 꽤 귀찮은데, 이를 쉽게 하기 위해 데이터 형식을 가공하게 해준다.
-공식문서의 코드를 가져와 보면</p><p>다음의 데이터는</p><div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;123&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Paul&quot;</span>
+공식문서의 코드를 가져와 보면</p>
+<p>다음의 데이터는</p>
+<span><div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"123"</span><span class="token punctuation">,</span>
+  <span class="token property">"author"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Paul"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;My awesome blog post&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;comments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"My awesome blog post"</span><span class="token punctuation">,</span>
+  <span class="token property">"comments"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
-      <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;324&quot;</span><span class="token punctuation">,</span>
-      <span class="token property">&quot;commenter&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2&quot;</span><span class="token punctuation">,</span>
-        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Nicole&quot;</span>
+      <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"324"</span><span class="token punctuation">,</span>
+      <span class="token property">"commenter"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"2"</span><span class="token punctuation">,</span>
+        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Nicole"</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">]</span>
-<span class="token punctuation">}</span></code></pre></div><p>다음의 코드를 이용해</p><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> normalize<span class="token punctuation">,</span> schema <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;normalizr&#x27;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div></span>
+<p>다음의 코드를 이용해</p>
+<span><div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> normalize<span class="token punctuation">,</span> schema <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'normalizr'</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Define a users schema</span>
-<span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema<span class="token punctuation">.</span>Entity</span><span class="token punctuation">(</span><span class="token string">&#x27;users&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema<span class="token punctuation">.</span>Entity</span><span class="token punctuation">(</span><span class="token string">'users'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Define your comments schema</span>
-<span class="token keyword">const</span> comment <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema<span class="token punctuation">.</span>Entity</span><span class="token punctuation">(</span><span class="token string">&#x27;comments&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> comment <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema<span class="token punctuation">.</span>Entity</span><span class="token punctuation">(</span><span class="token string">'comments'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">commenter</span><span class="token operator">:</span> user
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Define your article</span>
-<span class="token keyword">const</span> article <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema<span class="token punctuation">.</span>Entity</span><span class="token punctuation">(</span><span class="token string">&#x27;articles&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> article <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema<span class="token punctuation">.</span>Entity</span><span class="token punctuation">(</span><span class="token string">'articles'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">author</span><span class="token operator">:</span> user<span class="token punctuation">,</span>
   <span class="token literal-property property">comments</span><span class="token operator">:</span> <span class="token punctuation">[</span>comment<span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> normalizedData <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>originalData<span class="token punctuation">,</span> article<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><p>다음 처럼 변환된다.</p><div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token punctuation">{</span>
-  <span class="token literal-property property">result</span><span class="token operator">:</span> <span class="token string">&quot;123&quot;</span><span class="token punctuation">,</span>
+<span class="token keyword">const</span> normalizedData <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>originalData<span class="token punctuation">,</span> article<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></span>
+<p>다음 처럼 변환된다.</p>
+<span><div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token literal-property property">result</span><span class="token operator">:</span> <span class="token string">"123"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">entities</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token string-property property">&quot;articles&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token string-property property">&quot;123&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&quot;123&quot;</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">author</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">&quot;My awesome blog post&quot;</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">comments</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">&quot;324&quot;</span> <span class="token punctuation">]</span>
+    <span class="token string-property property">"articles"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">"123"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">"123"</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">author</span><span class="token operator">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"My awesome blog post"</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">comments</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">"324"</span> <span class="token punctuation">]</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token string-property property">&quot;users&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token string-property property">&quot;1&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span> <span class="token string-property property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Paul&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token string-property property">&quot;2&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2&quot;</span><span class="token punctuation">,</span> <span class="token string-property property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Nicole&quot;</span> <span class="token punctuation">}</span>
+    <span class="token string-property property">"users"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">"1"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"Paul"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string-property property">"2"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"Nicole"</span> <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token string-property property">&quot;comments&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token string-property property">&quot;324&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&quot;324&quot;</span><span class="token punctuation">,</span> <span class="token string-property property">&quot;commenter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2&quot;</span> <span class="token punctuation">}</span>
+    <span class="token string-property property">"comments"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">"324"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">"324"</span><span class="token punctuation">,</span> <span class="token string-property property">"commenter"</span><span class="token operator">:</span> <span class="token string">"2"</span> <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div><p>변환하기전 데이터를 보면 <code>comments[0].commenter</code>의 데이터를 변경하였을때, Reducer에서 변경을 인지하게 만들기가 까다로운데 비해, 변환 후 코드는 더 쉬워진다.
-Entity를 이용해 API Respose의 구조를 표현하는 곳도 재미 있지만, 더욱 재미 있는건, 변환후 데이터인데 마치 DB에서 Foreign key를 사용한것 처럼, ID만 가지고 있는걸 볼 수 있다.</p><p>추가로 변환된 데이터들을 Immutable.js를 이용해 저장하면 <code>Users.get(id)</code>처럼 마치 백엔드에서 ORM을 사용하는 것처럼 사용할 수 있다.</p><p>아직 채널팀에서는 사용하지 않고 있지만, 개인적으로 눈여겨 보고 있다.</p><h2>Redux-Saga</h2><p><a href="https://redux-saga.js.org/" target="_blank" rel="noopener noreferrer">Redux-Saga</a>는 인기있는 Redux Side Effect 관리 라이브러리이다.
+<span class="token punctuation">}</span></code></pre></div></span>
+<p>변환하기전 데이터를 보면 <code>comments[0].commenter</code>의 데이터를 변경하였을때, Reducer에서 변경을 인지하게 만들기가 까다로운데 비해, 변환 후 코드는 더 쉬워진다.
+Entity를 이용해 API Respose의 구조를 표현하는 곳도 재미 있지만, 더욱 재미 있는건, 변환후 데이터인데 마치 DB에서 Foreign key를 사용한것 처럼, ID만 가지고 있는걸 볼 수 있다.</p>
+<p>추가로 변환된 데이터들을 Immutable.js를 이용해 저장하면 <code>Users.get(id)</code>처럼 마치 백엔드에서 ORM을 사용하는 것처럼 사용할 수 있다.</p>
+<p>아직 채널팀에서는 사용하지 않고 있지만, 개인적으로 눈여겨 보고 있다.</p>
+<h2>Redux-Saga</h2>
+<p><a href="https://redux-saga.js.org/" target="_blank" rel="noopener noreferrer">Redux-Saga</a>는 인기있는 Redux Side Effect 관리 라이브러리이다.
 <code>fork</code>, <code>task</code>, <code>race</code>등등 쓰레드를 활용하는 것과 매우 유사한 경험을 제공해준다.
-워크인사이트 팀에서 사용하였는데, 특히 소켓을 활용할때 경험이 좋았다.</p><p>이 외에도 <code>Task Queue - WebWorker</code>등등 그간 백엔드에서 복잡도를 낮추기 위해 또는 관심사와 레이어를 나누기위해 사용한 여러 방법들을 React-Redux 생태계에서 활용할 수 있다.</p><h1>마치며</h1><p>현재의 프론트엔드는 점점 복잡해지고 있으며, 점점 더 많은 권한을 가지게 되고 있다.</p><p>프론트엔드를 단순하게만 생각하고 있거나 혹은 정반대로 복잡한 상태/작업 관리의 해결법의 모티브를 찾고 계시다면 이렇게 답하고 싶다.</p><blockquote><p>프론트엔드는 백엔드의 꿈을 꾸고 있다.</p></blockquote><h1>첨언</h1><p>샤딩처럼 백엔드만 가지고 있는 특성과 문제가 있는것 처럼, 프론트엔드만   가지고 있거나, 프론트엔드에서 더 문제가 되는 것들도 있다.</p><ul><li>번들파일 특히 JS 용량은 적어야 한다.<ul><li>JS파일은 파일을 읽은 후 파싱 -&gt; 컴파일 -&gt; 실행을 해야하니 용량의 증가가 더욱 치명적이다.</li></ul></li><li>JS의 실행속도는 빨라야한다.<ul><li>당연히 백엔드도 빨라야하지만, 더 좋은 서버를 이용할 수 있는 백엔드와 달리, 사용자의 기기를 업그레이드 할 수 없다.</li><li><em>일단은</em> 싱글쓰레드기 때문에 None-Blocking관리가 더 중요하다.</li><li>60fps 렌더링이 되면 더할나위 없다.</li></ul></li><li>보기 좋아야 한다 :)</li><li>클라이언트 기기가 모두 다르다<ul><li>아쉽게도 아직 IE를 사용하는 분들도 계시다 :(</li></ul></li></ul><p>JS의 Event Programming이 IO가 잦은 곳에 유용하다는 생각으로 <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">Node.js</a>가 탄생한 것 처럼,
-15년 전부터 웹앱(Gmail)을 만든 구글은 반대의 사례가 있을지 궁금하다.</p><p>또하나,</p><p><a href="https://channel.io" target="_blank" rel="noopener noreferrer">채널</a>과 <a href="https://walkinsights.com/" target="_blank" rel="noopener noreferrer">워크인사이트</a> 모두 큰 규모의 웹앱을 가지고 있으며,
-위와 같이 다양한 방법으로 많은 문제를 해결해가고 있고 매일 도전적인 과제를 해결하고 있다.</p><p>특히 채널팀에 오게된다면 쉽게 경험해볼 수 없는 많은 프론트 문제를 만나고, 해결할 수 있다!</p><p>프론트이외에도 <a href="https://zoyi.co/ko/jobs" target="_blank" rel="noopener noreferrer">여러 직군을 모집중</a>이니 많은 관심 가져주시면 감사하겠습니다 :)</p></article><div class="c-jEDjTQ"><img src="/images/profile.png" draggable="false" alt="" class="c-dvRuTq"/><div class="c-bZcNek"><h2 class="c-jwOSHF">이한</h2><p class="c-dMmbPO">Coding a Better World Together</p><a role="menuitem" href="https://hanlee.io" class="c-euCchw">About</a><a role="menuitem" href="https://github.com/hahnlee" class="c-euCchw">GitHub</a><a role="menuitem" href="/rss.xml" class="c-euCchw">RSS</a></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
-  
-  
-  if(true) {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  }
-  if (typeof ga === "function") {
-    ga('create', 'UA-111601591-4', 'auto', {});
-      
-      
-      
-      
-      
-      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2019/do-front-ends-dream-of-back-ends";window.___webpackCompilationHash="ab05a65e34cbf6d63963";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-38856857010c707155ba.js"],"app":["/app-ffbf6f45867c65215e0e.js"],"component---src-containers-post-tsx":["/component---src-containers-post-tsx-ea5eafc8cc8a562d5e15.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-87b3ba1c8c14ae231405.js"]};/*]]>*/</script><script src="/polyfill-38856857010c707155ba.js" nomodule=""></script><script src="/app-ffbf6f45867c65215e0e.js" async=""></script><script src="/framework-043a7c4ea56bed9a642b.js" async=""></script><script src="/webpack-runtime-0d0fbcf484b4dc586278.js" async=""></script></body></html>
+워크인사이트 팀에서 사용하였는데, 특히 소켓을 활용할때 경험이 좋았다.</p>
+<p>이 외에도 <code>Task Queue - WebWorker</code>등등 그간 백엔드에서 복잡도를 낮추기 위해 또는 관심사와 레이어를 나누기위해 사용한 여러 방법들을 React-Redux 생태계에서 활용할 수 있다.</p>
+<h1>마치며</h1>
+<p>현재의 프론트엔드는 점점 복잡해지고 있으며, 점점 더 많은 권한을 가지게 되고 있다.</p>
+<p>프론트엔드를 단순하게만 생각하고 있거나 혹은 정반대로 복잡한 상태/작업 관리의 해결법의 모티브를 찾고 계시다면 이렇게 답하고 싶다.</p>
+<blockquote>
+<p>프론트엔드는 백엔드의 꿈을 꾸고 있다.</p>
+</blockquote>
+<h1>첨언</h1>
+<p>샤딩처럼 백엔드만 가지고 있는 특성과 문제가 있는것 처럼, 프론트엔드만 가지고 있거나, 프론트엔드에서 더 문제가 되는 것들도 있다.</p>
+<ul>
+<li>번들파일 특히 JS 용량은 적어야 한다.<!-- -->
+<ul>
+<li>JS파일은 파일을 읽은 후 파싱 -&gt; 컴파일 -&gt; 실행을 해야하니 용량의 증가가 더욱 치명적이다.</li>
+</ul>
+</li>
+<li>JS의 실행속도는 빨라야한다.<!-- -->
+<ul>
+<li>당연히 백엔드도 빨라야하지만, 더 좋은 서버를 이용할 수 있는 백엔드와 달리, 사용자의 기기를 업그레이드 할 수 없다.</li>
+<li><em>일단은</em> 싱글쓰레드기 때문에 None-Blocking관리가 더 중요하다.</li>
+<li>60fps 렌더링이 되면 더할나위 없다.</li>
+</ul>
+</li>
+<li>보기 좋아야 한다 :)</li>
+<li>클라이언트 기기가 모두 다르다<!-- -->
+<ul>
+<li>아쉽게도 아직 IE를 사용하는 분들도 계시다 :(</li>
+</ul>
+</li>
+</ul>
+<p>JS의 Event Programming이 IO가 잦은 곳에 유용하다는 생각으로 <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">Node.js</a>가 탄생한 것 처럼,
+15년 전부터 웹앱(Gmail)을 만든 구글은 반대의 사례가 있을지 궁금하다.</p>
+<p>또하나,</p>
+<p><a href="https://channel.io" target="_blank" rel="noopener noreferrer">채널</a>과 <a href="https://walkinsights.com/" target="_blank" rel="noopener noreferrer">워크인사이트</a> 모두 큰 규모의 웹앱을 가지고 있으며,
+위와 같이 다양한 방법으로 많은 문제를 해결해가고 있고 매일 도전적인 과제를 해결하고 있다.</p>
+<p>특히 채널팀에 오게된다면 쉽게 경험해볼 수 없는 많은 프론트 문제를 만나고, 해결할 수 있다!</p>
+<p>프론트이외에도 <a href="https://zoyi.co/ko/jobs" target="_blank" rel="noopener noreferrer">여러 직군을 모집중</a>이니 많은 관심 가져주시면 감사하겠습니다 :)</p></article><div class="c-jEDjTQ"><img src="/images/profile.png" draggable="false" alt="" class="c-dvRuTq"/><div class="c-bZcNek"><h2 class="c-jwOSHF">이한</h2><p class="c-dMmbPO">Coding a Better World Together</p><a role="menuitem" href="https://github.com/hahnlee" class="c-euCchw">GitHub</a><a role="menuitem" href="/rss.xml" class="c-euCchw">RSS</a></div></div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2019/do-front-ends-dream-of-back-ends/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-dbf814faf8f84703a6d8.js\"],\"component---src-containers-post-tsx-content-file-path-posts-axiom-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-axiom-readme-md-a91837b8ad6f4ce5e5f4.js\"],\"component---src-containers-post-tsx-content-file-path-posts-brotli-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-brotli-readme-md-4d875b27b3d04ea1526a.js\"],\"component---src-containers-post-tsx-content-file-path-posts-business-and-philosophy-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-business-and-philosophy-readme-md-edfaef1a6299b01d9e42.js\"],\"component---src-containers-post-tsx-content-file-path-posts-do-front-ends-dream-of-back-ends-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-do-front-ends-dream-of-back-ends-readme-md-32e6eb597d281827a1df.js\"],\"component---src-containers-post-tsx-content-file-path-posts-high-density-display-and-images-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-high-density-display-and-images-readme-md-3efc2f2a7fe5ff63b4ae.js\"],\"component---src-containers-post-tsx-content-file-path-posts-hwp-rs-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-hwp-rs-readme-md-9b0e6ef0fb14cee6c0e6.js\"],\"component---src-containers-post-tsx-content-file-path-posts-javascript-bundle-diet-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-javascript-bundle-diet-readme-md-cc3bac3fc93694bfd640.js\"],\"component---src-containers-post-tsx-content-file-path-posts-napi-rs-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-napi-rs-readme-md-6b19d4a74e6c9e3c4f74.js\"],\"component---src-containers-post-tsx-content-file-path-posts-under-the-c-1-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-under-the-c-1-readme-md-f2533a4fbf0f3c751295.js\"],\"component---src-containers-post-tsx-content-file-path-posts-under-the-c-2-readme-md\":[\"/component---src-containers-post-tsx-content-file-path-posts-under-the-c-2-readme-md-5b14dd7e2956ea3cf0ca.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-be4c73996c9825a6dd5a.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="0d56eb696baab653b5cf";</script><script src="/webpack-runtime-9fa184b539be5d442914.js" async></script><script src="/fd6103b9-2e610859442899d666a2.js" async></script><script src="/app-dbf814faf8f84703a6d8.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
