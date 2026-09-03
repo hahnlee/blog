@@ -7,6 +7,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
 }) => {
   setHeadComponents([
     <style
+      key="stitches"
       id="stitches"
       dangerouslySetInnerHTML={{
         __html: getCssText(),

@@ -2,13 +2,19 @@
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "jsx": "react",
-    "baseUrl": "./src",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "es2022",
+    "noEmit": true,
     "paths": {
-      "@components/*": ["components/*"],
-      "@hooks/*": ["hooks/*"],
-      "@styles/*": ["styles/*"],
-      "@models/*": ["models/*"]
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@models/*": ["./src/models/*"]
     }
-  }
+  },
+  "include": ["src", "gatsby-*.ts", "gatsby-*.tsx"],
+  "exclude": ["node_modules", "public", ".cache"]
 }

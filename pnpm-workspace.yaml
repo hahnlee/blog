@@ -1,0 +1,15 @@
+allowBuilds:
+  '@parcel/watcher': true
+  core-js: false
+  core-js-pure: false
+  es5-ext: false
+  gatsby: true
+  gatsby-cli: true
+  lmdb: true
+  msgpackr-extract: true
+  sharp: true
+
+minimumReleaseAgeExclude:
+  - '@types/react-dom@19.2.7'
+  - framer-motion@13.2.0
+  - motion-dom@13.2.0

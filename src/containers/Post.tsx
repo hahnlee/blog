@@ -11,7 +11,6 @@ import React from 'react'
 export const query = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
-      body
       timeToRead
       frontmatter {
         title
@@ -28,7 +27,6 @@ export const query = graphql`
 `
 
 interface Post {
-  body: string
   timeToRead: number
   frontmatter: {
     title: string
@@ -46,7 +44,7 @@ interface Response {
   mdx: Post
 }
 
-export default function Post({ data }: PageProps<Response>) {
+export default function Post({ data, children }: PageProps<Response>) {
   return (
     <App>
       <Main>
@@ -55,7 +53,7 @@ export default function Post({ data }: PageProps<Response>) {
           title={data.mdx.frontmatter.title}
           date={data.mdx.frontmatter.date}
         >
-          {data.mdx.body}
+          {children}
         </Article>
         <Author />
       </Main>

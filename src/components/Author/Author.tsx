@@ -8,9 +8,6 @@ export default function Author() {
       <About>
         <Title>이한</Title>
         <Paragraph>Coding a Better World Together</Paragraph>
-        <Link role="menuitem" href="https://hanlee.io">
-          About
-        </Link>
         <Link role="menuitem" href="https://github.com/hahnlee">
           GitHub
         </Link>

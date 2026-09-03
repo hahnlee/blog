@@ -1,5 +1,4 @@
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Container } from './Article.styled'
 import 'prismjs/themes/prism.css'
 import { styled } from '@styles/stitches'
@@ -7,7 +6,7 @@ import { styled } from '@styles/stitches'
 interface Props {
   title: string
   date: string
-  children: string
+  children: ReactNode
 }
 
 export default function Article({ title, date, children }: Props) {
@@ -15,7 +14,7 @@ export default function Article({ title, date, children }: Props) {
     <Container>
       <Title>{title}</Title>
       <p>{date}</p>
-      <MDXRenderer>{children}</MDXRenderer>
+      {children}
     </Container>
   )
 }

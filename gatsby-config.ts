@@ -5,10 +5,9 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: '명시지(明示知)',
     description: '기록할 수 있는 지식을 나눕니다',
-    siteUrl: 'https://blog.hanlee.io',
+    siteUrl: 'https://hanlee.blog',
   },
   plugins: [
-    'gatsby-plugin-tsconfig-paths',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -41,7 +40,7 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-remark-external-links',
             options: {
               rel: 'noopener noreferrer',
-            },  
+            },
           },
         ],
       },
@@ -55,7 +54,7 @@ const config: GatsbyConfig = {
             query: `
               {
                 allMdx(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { frontmatter: { date: DESC } }
                 ) {
                   edges {
                     node {
@@ -67,7 +66,6 @@ const config: GatsbyConfig = {
                         title
                         date
                       }
-                      html
                     }
                   }
                 }
@@ -80,7 +78,6 @@ const config: GatsbyConfig = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
@@ -90,9 +87,13 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'UA-111601591-4',
+        trackingIds: ['G-NT3QYEL4NG'],
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
       },
     },
   ],
