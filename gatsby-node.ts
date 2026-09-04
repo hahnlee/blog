@@ -28,6 +28,13 @@ function getYear(date: string | Date) {
   return yearFormatter.format(new Date(date))
 }
 
+const dateTextFormatter = new Intl.DateTimeFormat('ko-KR', {
+  timeZone: 'Asia/Seoul',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({
   node,
   getNode,
@@ -46,6 +53,12 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({
       node,
       name: 'slug',
       value: `/${getYear(mdxNode.frontmatter.date)}/${parent.relativeDirectory}`,
+    })
+
+    createNodeField({
+      node,
+      name: 'dateText',
+      value: dateTextFormatter.format(new Date(mdxNode.frontmatter.date)),
     })
   }
 }

@@ -15,6 +15,13 @@ export const { styled, css, getCssText, globalCss } = createStitches({
       gray900: '#212529',
       blue700: '#1C7ED6',
     },
+    fonts: {
+      sans: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
+      serif: '"Noto Serif KR", "Apple Myungjo", Batang, Georgia, serif',
+    },
+    sizes: {
+      measure: '680px',
+    },
   },
 })
 
@@ -25,9 +32,14 @@ export const globalStyles = globalCss({
     fontSize: 16,
     color: '$gray800',
     fontWeight: 400,
-    fontFamily: ['Pretendard', 'sans-serif'].join(','),
+    fontFamily: '$sans',
+    textRendering: 'optimizeLegibility',
+    '-webkit-font-smoothing': 'antialiased',
   },
   '*': {
     boxSizing: 'border-box',
+  },
+  '::selection': {
+    backgroundColor: '$gray200',
   },
 })

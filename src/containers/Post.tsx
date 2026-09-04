@@ -12,9 +12,12 @@ export const query = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       timeToRead
+      fields {
+        dateText
+      }
       frontmatter {
         title
-        date(formatString: "YYYY-MM-DD")
+        date
         summary
         thumbnail {
           childImageSharp {
@@ -28,6 +31,9 @@ export const query = graphql`
 
 interface Post {
   timeToRead: number
+  fields: {
+    dateText: string
+  }
   frontmatter: {
     title: string
     date: string
@@ -52,6 +58,8 @@ export default function Post({ data, children }: PageProps<Response>) {
         <Article
           title={data.mdx.frontmatter.title}
           date={data.mdx.frontmatter.date}
+          dateText={data.mdx.fields.dateText}
+          timeToRead={data.mdx.timeToRead}
         >
           {children}
         </Article>
@@ -62,9 +70,12 @@ export default function Post({ data, children }: PageProps<Response>) {
 }
 
 const Main = styled('main', {
-  maxWidth: 1000,
-  padding: 24,
+  maxWidth: '$measure',
+  padding: '48px 24px 80px',
   margin: '0 auto',
+  '@media screen and (max-width: 720px)': {
+    padding: '32px 24px 48px',
+  },
 })
 
 export function Head({ data }: HeadProps<Response>) {

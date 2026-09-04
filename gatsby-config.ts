@@ -1,5 +1,6 @@
 import type { GatsbyConfig } from 'gatsby'
 import * as path from 'path'
+import remarkGfm from 'remark-gfm'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -23,6 +24,9 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
