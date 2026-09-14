@@ -40,7 +40,7 @@ const Body = styled('div', {
 
 const Name = styled('p', {
   margin: 0,
-  fontFamily: '$serif',
+  fontFamily: '$reader',
   fontSize: '1.05rem',
   color: '$gray800',
   fontWeight: 600,

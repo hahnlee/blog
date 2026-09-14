@@ -2,6 +2,7 @@ import App from '@components/App'
 import Article from '@components/Article'
 import Author from '@components/Author'
 import NavBar from '@components/NavBar'
+import ReaderSettings from '@components/ReaderSettings'
 import SEO from '@components/SEO'
 import { styled } from '@styles/stitches'
 import { graphql, HeadProps, PageProps } from 'gatsby'
@@ -54,7 +55,9 @@ export default function Post({ data, children }: PageProps<Response>) {
   return (
     <App>
       <Main>
-        <NavBar />
+        <NavBar>
+          <ReaderSettings />
+        </NavBar>
         <Article
           title={data.mdx.frontmatter.title}
           date={data.mdx.frontmatter.date}

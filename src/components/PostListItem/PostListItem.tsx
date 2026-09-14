@@ -45,7 +45,7 @@ const Date = styled('time', {
 })
 
 const Title = styled('h2', {
-  fontFamily: '$serif',
+  fontFamily: '$reader',
   fontSize: '1.35rem',
   lineHeight: 1.4,
   color: '$gray900',

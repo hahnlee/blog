@@ -2,6 +2,7 @@ import { styled } from '@styles/stitches'
 import PostListItem from '@components/PostListItem'
 import App from '@components/App'
 import Author from '@components/Author'
+import ReaderSettings from '@components/ReaderSettings'
 import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import { Post } from '@models/post'
@@ -37,10 +38,13 @@ export default function Home({ data: { allMdx } }: PageProps<Response>) {
     <App>
       <Main>
         <Header>
-          <Title>
-            명시지 <Token>明示知</Token>
-          </Title>
-          <Paragraph>기록할 수 있는 지식을 나눕니다</Paragraph>
+          <div>
+            <Title>
+              명시지 <Token>明示知</Token>
+            </Title>
+            <Paragraph>기록할 수 있는 지식을 나눕니다</Paragraph>
+          </div>
+          <ReaderSettings />
         </Header>
         <List>
           {allMdx.nodes.map((post) => (
@@ -67,13 +71,17 @@ const Main = styled('main', {
 })
 
 const Header = styled('header', {
+  display: 'flex',
+  alignItems: 'flex-start',
+  justifyContent: 'space-between',
+  gap: 16,
   marginBottom: 48,
   paddingBottom: 24,
   borderBottom: '1px solid $gray800',
 })
 
 const Title = styled('h1', {
-  fontFamily: '$serif',
+  fontFamily: '$reader',
   color: '$gray900',
   fontSize: '2rem',
   fontWeight: 600,

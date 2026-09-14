@@ -40,7 +40,7 @@ const Header = styled('header', {
 })
 
 const Title = styled('h1', {
-  fontFamily: '$serif',
+  fontFamily: '$reader',
   fontSize: '2.1rem',
   lineHeight: 1.35,
   fontWeight: 600,
